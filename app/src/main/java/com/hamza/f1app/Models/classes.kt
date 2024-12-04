@@ -46,6 +46,3 @@ data class Constructor(
     val historique: String,
     val pilotes: Driver,
 )
-
-data class Empty (val p0: Int)
-//TEST
