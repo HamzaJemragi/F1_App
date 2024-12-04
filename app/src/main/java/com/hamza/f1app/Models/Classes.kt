@@ -7,7 +7,7 @@ data class Race(
     val nom: String,
     val date: Date,
     val lieu: String,
-    val resultats: List<Résultat>?,
+    val resultats: List<Resultat>?,
     val circuit: Circuit,
     val info: Map<String, Any>,
 )
@@ -21,17 +21,17 @@ data class Circuit(
     val firstGP: Int,
 )
 
-data class Résultat(
+data class Resultat(
     val pilote: Driver,
     val position: Int,
     val temps: String,
-    val détails: String,
+    val details: String,
 )
 
 data class Driver(
     val id: Int,
     val nom: String,
-    val équipe: Constructor,
+    val equipe: Constructor,
     val nationalite: String,
     val points: Int,
     val statistiques: List<Map<String, Int>>,
