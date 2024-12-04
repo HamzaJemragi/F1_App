@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">F1 App</string>
+    <string name="main_racing">RACING</string>
+    <string name="main_drivers">DRIVERS</string>
+    <string name="main_constructors">CONSTRUCTORS</string>
+    <string name="main_standing">STANDINGS</string>
 </resources>

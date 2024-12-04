@@ -5,15 +5,157 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context=".activities.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/f1red"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp">
+
+            <ImageView
+                android:id="@+id/toolbar_logo"
+                android:layout_width="112dp"
+                android:layout_height="45dp"
+                android:src="@drawable/f1_logo_white_version"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/racingButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.21"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/main_racing" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/racingText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="@font/fredoka_one"
+        android:paddingHorizontal="15dp"
+        android:text="@string/main_racing"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/racingButton"
+        app:layout_constraintEnd_toEndOf="@+id/racingButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/racingButton"
+        app:layout_constraintTop_toTopOf="@+id/racingButton"
+        app:layout_constraintVertical_bias="0.925" />
 
+    <ImageView
+        android:id="@+id/driversButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.21"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/racingButton"
+        app:srcCompat="@drawable/main_drivers" />
+
+    <TextView
+        android:id="@+id/driversText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/fredoka_one"
+        android:paddingHorizontal="15dp"
+        android:text="@string/main_drivers"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/driversButton"
+        app:layout_constraintEnd_toEndOf="@+id/driversButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/driversButton"
+        app:layout_constraintVertical_bias="0.94" />
+
+    <ImageView
+        android:id="@+id/constructorButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.21"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driversText"
+        app:srcCompat="@drawable/main_constructors" />
+
+
+    <TextView
+        android:id="@+id/constructorText"
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_one"
+        android:paddingHorizontal="15dp"
+        android:text="@string/main_constructors"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/constructorButton"
+        app:layout_constraintEnd_toEndOf="@+id/constructorButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/constructorButton"
+        app:layout_constraintTop_toBottomOf="@+id/driversButton"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <ImageView
+        android:id="@+id/standingButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constructorButton"
+        app:srcCompat="@drawable/main_standings" />
+
+    <TextView
+        android:id="@+id/standingText"
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/fredoka_one"
+        android:paddingHorizontal="15dp"
+        android:text="@string/main_standing"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/standingButton"
+        app:layout_constraintEnd_toEndOf="@+id/standingButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/standingButton"
+        app:layout_constraintVertical_bias="0.923" />¿
 </androidx.constraintlayout.widget.ConstraintLayout>
