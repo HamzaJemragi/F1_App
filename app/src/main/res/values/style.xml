@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="TitlesFontStyle" >
-        <item name="android:fontFamily">@font/fredoka_one</item>
+        <item name="android:fontFamily">@font/formula1_bold_4</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:layout_marginStart">16sp</item>
-        <item name="android:layout_marginTop">16sp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="RacingCardsDate" >
+        <item name="android:fontFamily">@font/formula1_regular_1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="RacingCardsMonth" >
+        <item name="android:fontFamily">@font/formula1_bold_web</item>
+        <item name="android:textSize">7sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="RacingCardsLocation" >
+        <item name="android:fontFamily">@font/formula1_bold_web</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="mainTitles" >
-        <item name="android:fontFamily">@font/fredoka_one</item>
+        <item name="android:fontFamily">@font/formula1_bold_web</item>
         <item name="android:textSize">40sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:padding">8dp</item>
