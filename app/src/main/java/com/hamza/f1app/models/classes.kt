@@ -5,11 +5,12 @@ import java.util.Date
 data class Race(
     val id: Int,
     val nom: String,
-    val date: Date,
+    val date: String,
+    val time: String,
     val lieu: String,
     val resultats: List<Resultat>?,
     val circuit: Circuit,
-    val info: Map<String, Any>,
+    val track: Int
 )
 
 data class Circuit(
@@ -17,8 +18,9 @@ data class Circuit(
     val length: Double,
     val distance: Double,
     val laps: Int,
-    val LapRecord: String,
+    val LapRecord: Map<String, Any>,
     val firstGP: Int,
+    val Image: Int
 )
 
 data class Resultat(

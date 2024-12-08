@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:id="@+id/mainCardViewLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/dateLinearLayout"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/RacingCardsDate"
+                android:id="@+id/days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="21-23" />
+
+            <TextView
+                style="@style/RacingCardsMonth"
+                android:id="@+id/month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/month_shape_card_racing"
+                android:text="NOV.-DEC" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/dotted_vertical_line_racing_card" />
+
+        <LinearLayout
+            android:id="@+id/infosLinearLayout"
+            android:layout_width="262dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/roundNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Round 22"
+                android:textColor="@color/f1red" />
+
+            <TextView
+                style="@style/RacingCardsLocation"
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Las Vegas"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eventTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp">
+
+            <ImageButton
+                android:id="@+id/arrowButton"
+                android:layout_width="15sp"
+                android:layout_height="15sp"
+                android:src="@drawable/mix_arrow_forward_f1red"
+                android:backgroundTint="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
