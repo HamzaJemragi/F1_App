@@ -30,10 +30,12 @@ data class Resultat(
 
 data class Driver(
     val id: Int,
-    val nom: String,
+    val firsName: String,
+    val lastName: String,
     val equipe: Constructor,
     val nationalite: String,
     val points: Int,
+    val driverImage:Int,
     val statistiques: List<Map<String, Int>>,
 )
 
@@ -43,6 +45,7 @@ data class Constructor(
     val logo: Int,
     val nationalite: String,
     val points: Int,
+    val construcorColor:Int,
     val historique: String,
     val pilotes: Driver,
 )

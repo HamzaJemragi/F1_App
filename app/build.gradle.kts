@@ -6,7 +6,9 @@ plugins {
 android {
     namespace = "com.hamza.f1app"
     compileSdk = 35
-
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.hamza.f1app"
         minSdk = 24

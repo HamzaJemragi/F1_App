@@ -1,18 +1,19 @@
 package com.hamza.f1app.activities
 
 import android.animation.ObjectAnimator
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.LinearLayout
-import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.transition.Visibility
 import com.hamza.f1app.R
 
 
@@ -26,38 +27,31 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-//        val introVideo = findViewById<VideoView>(R.id.introVideo)
         val main = findViewById<LinearLayout>(R.id.main)
         val racingCard = findViewById<CardView>(R.id.racingCard)
         val driversCard = findViewById<CardView>(R.id.driversCard)
         val constructorsCard = findViewById<CardView>(R.id.constructorsCard)
         val standingsCard = findViewById<CardView>(R.id.standingsCard)
 
-        hide(racingCard)
-        hide(driversCard)
-        hide(constructorsCard)
-        hide(standingsCard)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
-        }
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            hide(racingCard)
+//            hide(driversCard)
+//            hide(constructorsCard)
+//            hide(standingsCard)
+//            main.visibility=LinearLayout.GONE
+//        },500)
 
-
-//        val introVideoUri = Uri.parse("android.resource://${packageName}/raw/mclaren_intro")
-//        introVideo.setVideoURI(introVideoUri)
-//
-//        introVideo.start()
+//        main.visibility = LinearLayout.VISIBLE
+        window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
 
 
 
-//        introVideo.setOnCompletionListener {
-//            introVideo.visibility = VideoView.GONE
-//            main.visibility = LinearLayout.VISIBLE
-            translater(racingCard, 1000)
-            translater(driversCard, 1100)
-            translater(constructorsCard, 1200)
-            translater(standingsCard, 1300)
 
-//        }
+        translater(racingCard, 1000)
+        translater(driversCard, 1100)
+        translater(constructorsCard, 1200)
+        translater(standingsCard, 1300)
+
     }
 
     private fun translater(card: CardView, duration: Long) {
