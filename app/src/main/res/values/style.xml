@@ -46,25 +46,46 @@
 
     
     <style name="number">
-        <item name="android:fontFamily">@font/fredoka_one</item>
+        <item name="android:fontFamily">@font/formula1_regular_1</item>
         <item name="android:textSize">40sp</item>
         <item name="android:padding">8dp</item>
     </style>
 
     <style name="drivers_name">
-        <item name="android:fontFamily">@font/fredoka_one</item>
+        <item name="android:fontFamily">@font/formula1_regular_1</item>
         <item name="android:textSize">30sp</item>
         <item name="android:paddingStart">5dp</item>
     </style>
 
     <style name="teamname_driversCard">
-        <item name="android:fontFamily">@font/fredoka_one</item>
+        <item name="android:fontFamily">@font/formula1_regular_1</item>
         <item name="android:textSize">15sp</item>
         <item name="android:paddingStart">3dp</item>
     </style>
 
+    <style name="driverame_constructorInfo">
+        <item name="android:fontFamily">@font/formula1_regular_1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="teamname_constructorInfo">
+        <item name="android:fontFamily">@font/formula1_regular_1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingStart">3dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="toolbar_text">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <style name="pts_style">
-        <item name="android:fontFamily">@font/fredoka_one</item>
+        <item name="android:fontFamily">@font/formula1_regular_1</item>
         <item name="android:textSize">20sp</item>
         <item name="android:padding">5dp</item>
         <item name="android:textColor">@color/black</item>
