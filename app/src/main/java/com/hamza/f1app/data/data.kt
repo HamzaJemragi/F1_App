@@ -247,7 +247,7 @@ val races = listOf(
         R.drawable.track_china
     ), Race(
         6,
-        "CRYPTO.COM Miami Grand Prix 2024",
+        "CRYPTO.COM MIAMI GRAND PRIX 2024",
         "03-05/MAI",
         "14:00",
         "Miami",
