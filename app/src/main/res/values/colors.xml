@@ -5,6 +5,7 @@
     <color name="f1red">#FF1E00</color>
     <color name="gray">#808080</color>
     <color name="backgroundGeneral">#d3d3d3</color>
+    <color name="darkGray">#626262</color>
 
 <!--    constructors colors-->
     <color name="mercedesColor">#27F4D2</color>
