@@ -1,4 +1,4 @@
 package com.hamza.f1app.adapters
 
-class recyclerViewRacingAdapter {
+class ViewPager2RacingAdapter {
 }
