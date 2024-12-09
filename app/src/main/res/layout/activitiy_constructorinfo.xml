@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    >
+    android:background="@color/backgroundGeneral">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -31,8 +30,9 @@
         <TextView
             android:id="@+id/constructorName"
             style="@style/teamname_constructorInfo"
-            android:layout_width="181dp"
-            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.45"
             android:layout_marginStart="12dp"
             android:layout_marginTop="104dp"
             android:text="Merceds-AMG PETRONAS F1 Team"
@@ -53,8 +53,10 @@
 
         <ImageView
             android:id="@+id/constructorsLogo"
-            android:layout_width="166dp"
-            android:layout_height="166dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.475"
+            app:layout_constraintWidth_percent="0.475"
             android:layout_marginTop="116dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,11 +68,11 @@
 
     <TextView
         android:id="@+id/stats"
+        style="@style/toolbar_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
         android:text="Stats"
-        style="@style/toolbar_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
@@ -85,42 +87,42 @@
         app:layout_constraintTop_toBottomOf="@id/stats" />
 
     <include
-        android:layout_marginTop="25dp"
         android:id="@+id/firstYear"
         layout="@layout/infos_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toStartOf="@id/chassis"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/standingInfo" />
 
     <include
-        android:layout_marginTop="25dp"
         android:id="@+id/chassis"
         layout="@layout/infos_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/firstYear"
         app:layout_constraintTop_toBottomOf="@id/standingInfo" />
 
 
     <include
-        android:layout_marginTop="25dp"
         android:id="@+id/powerUnit"
         layout="@layout/infos_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toStartOf="@id/teamChief"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/firstYear" />
 
     <include
-        android:layout_marginTop="25dp"
         android:id="@+id/teamChief"
         layout="@layout/infos_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/powerUnit"
         app:layout_constraintTop_toBottomOf="@id/chassis" />
@@ -196,7 +198,6 @@
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
