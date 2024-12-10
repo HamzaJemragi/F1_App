@@ -445,7 +445,8 @@ fun main() {
                 "23-03-1996",
                 R.drawable.driver_alexanderalbon_1,
                 R.drawable.driver_alexanderalbon_2,
-                23, R.drawable.flag_thailand
+                23, R.drawable.flag_thailand,
+                false
             ),
             Driver(
                 2,
@@ -462,7 +463,7 @@ fun main() {
                 "01-09-1994",
                 R.drawable.driver_carlossainz_1,
                 R.drawable.driver_carlossainz_2,
-                55, R.drawable.flag_spain
+                55, R.drawable.flag_spain,false
             ),
             Driver(
                 3,
@@ -478,7 +479,7 @@ fun main() {
                 "Monte Carlo, Monaco",
                 "16-10-1997",
                 R.drawable.driver_charlesleclerc_1,
-                R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco
+                R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco,false
             ),
             Driver(
                 4,
@@ -494,7 +495,7 @@ fun main() {
                 "Évreux, France",
                 "17-09-1996",
                 R.drawable.driver_estebanocon_1,
-                R.drawable.driver_estebanocon_2, 31,R.drawable.flag_france
+                R.drawable.driver_estebanocon_2, 31,R.drawable.flag_france,false
             ),
             Driver(
                 5,
@@ -510,7 +511,7 @@ fun main() {
                 "Oviedo, Spain",
                 "29-07-1981",
                 R.drawable.driver_fernandoalonso_1,
-                R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain
+                R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain,false
             ),
             Driver(
                 6,
@@ -526,7 +527,7 @@ fun main() {
                 "Pilar, Argentina",
                 "27-05-2003",
                 R.drawable.driver_francocolapinto_1,
-                R.drawable.driver_francocolapinto_2, 43, R.drawable.flag_argentina
+                R.drawable.driver_francocolapinto_2, 43, R.drawable.flag_argentina,false
             ),
             Driver(
                 7,
@@ -542,7 +543,7 @@ fun main() {
                 "King's Lynn, England",
                 "15-02-1998",
                 R.drawable.driver_georgerussell_1,
-                R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk
+                R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk,false
             ),
             Driver(
                 8,
@@ -558,7 +559,7 @@ fun main() {
                 "Roskilde, Denmark",
                 "05-10-1992",
                 R.drawable.driver_kevinmagnussen_1,
-                R.drawable.driver_kevinmagnussen_2, 20, R.drawable.flag_denmark
+                R.drawable.driver_kevinmagnussen_2, 20, R.drawable.flag_denmark,false
             ),
             Driver(
                 9,
@@ -574,7 +575,7 @@ fun main() {
                 "Montreal, Canada",
                 "29-10-1998",
                 R.drawable.driver_lancestroll_1,
-                R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada
+                R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada,false
             ),
             Driver(
                 10,
@@ -590,7 +591,7 @@ fun main() {
                 "Bristol, England",
                 "13-11-1999",
                 R.drawable.driver_landonorris_1,
-                R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk
+                R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk,false
             ),
             Driver(
                 11,
@@ -606,7 +607,7 @@ fun main() {
                 "Stevenage, England",
                 "07-01-1985",
                 R.drawable.driver_lewishamilton_1,
-                R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk
+                R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk,false
             ),
             Driver(
                 12,
@@ -622,7 +623,7 @@ fun main() {
                 "Hastings, New Zealand",
                 "11-02-2002",
                 R.drawable.driver_liamlawson_1,
-                R.drawable.driver_liamlawson_2, 30, R.drawable.flag_newzealand
+                R.drawable.driver_liamlawson_2, 30, R.drawable.flag_newzealand,false
             ),
             Driver(
                 13,
@@ -638,7 +639,7 @@ fun main() {
                 "Hasselt, Belgium",
                 "30-09-1997",
                 R.drawable.driver_maxverstappen_1,
-                R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands
+                R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands,false
             ),
             Driver(
                 14,
@@ -654,7 +655,7 @@ fun main() {
                 "Emmerich am Rhein, Germany",
                 "19-08-1987",
                 R.drawable.driver_nicohulkenberg_1,
-                R.drawable.driver_nicohulkenberg_2, 27, R.drawable.flag_germany
+                R.drawable.driver_nicohulkenberg_2, 27, R.drawable.flag_germany,false
             ),
             Driver(
                 15,
@@ -670,7 +671,7 @@ fun main() {
                 "Melbourne, Australia",
                 "06-04-2001",
                 R.drawable.driver_oscarpiastri_1,
-                R.drawable.driver_oscarpiastri_2, 81, R.drawable.flag_australia
+                R.drawable.driver_oscarpiastri_2, 81, R.drawable.flag_australia,false
             ),
             Driver(
                 16,
@@ -686,7 +687,7 @@ fun main() {
                 "Rouen, France",
                 "07-02-1996",
                 R.drawable.driver_pierregasly_1,
-                R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france
+                R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france,false
             ),
             Driver(
                 17,
@@ -702,7 +703,7 @@ fun main() {
                 "Guadalajara, Mexico",
                 "26-01-1990",
                 R.drawable.driver_sergioperez_1,
-                R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico
+                R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico,false
             ),
             Driver(
                 18,
@@ -718,7 +719,7 @@ fun main() {
                 "Nastola, Finland",
                 "28-08-1989",
                 R.drawable.driver_valtteribottas_1,
-                R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland
+                R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland,false
             ),
             Driver(
                 19,
@@ -734,7 +735,7 @@ fun main() {
                 "Sagamihara, Japan",
                 "11-05-2000",
                 R.drawable.driver_yukitsunoda_1,
-                R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan
+                R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan,false
             ),
             Driver(
                 20,
@@ -750,8 +751,12 @@ fun main() {
                 "Shanghai, China",
                 "30-05-1999",
                 R.drawable.driver_zhouguanyu_1,
-                R.drawable.driver_zhouguanyu_2, 24, R.drawable.flag_china
-            )
+                R.drawable.driver_zhouguanyu_2, 24, R.drawable.flag_china,false
+            ),
+            Driver(0,"Daniel","Riccardo",null,"",0,0,0,0,0,"","",R.drawable.f1_logo,R.drawable.f1_logo,3,0,true),
+            Driver(0,"Logan","Sargeant",null,"",0,0,0,0,0,"","",R.drawable.f1_logo,R.drawable.f1_logo,2,0,true),
+            Driver(0,"Jack","Doohan",null,"",0,0,0,0,0,"","",R.drawable.f1_logo,R.drawable.f1_logo,61,0,true),
+            Driver(0,"Oliver","Bearman",null,"",0,0,0,0,0,"","",R.drawable.f1_logo,R.drawable.f1_logo,55,0,true),
         )
     )
 

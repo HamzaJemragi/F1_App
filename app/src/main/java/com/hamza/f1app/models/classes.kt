@@ -33,7 +33,7 @@ data class Driver(
     val id: Int,
     val firsName: String,
     val lastName: String,
-    var equipe: Constructor,
+    var equipe: Constructor?,
     val nationalite: String,
     var points: Int,
     var podiums: Int,
@@ -45,7 +45,8 @@ data class Driver(
     var driverImage1: Int,
     var driverImage2: Int,
     var driverNumber: Int,
-    var flag: Int
+    var flag: Int,
+    var RetiredOrNot: Boolean
     )
 
 data class Constructor(
