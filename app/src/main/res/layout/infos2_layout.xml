@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="150dp"
-    android:layout_height="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
     android:layout_marginStart="28dp"
     android:layout_marginTop="16dp"
     android:background="@drawable/infos_border"
@@ -20,7 +20,8 @@
 
     <TextView
         android:id="@+id/info"
-        android:layout_width="160dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/formula1_bold_4"
         android:text="info"
