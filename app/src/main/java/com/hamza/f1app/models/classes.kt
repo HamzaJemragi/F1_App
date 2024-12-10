@@ -23,10 +23,10 @@ data class Circuit(
 )
 
 data class Resultat(
-    val pilote: Driver,
     val position: Int,
+    val pilote: Driver,
     val temps: String,
-    val details: String,
+    val points: Int,
 )
 
 data class Driver(
