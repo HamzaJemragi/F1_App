@@ -1,4 +1,4 @@
-package com.hamza.f1app.models
+package com.hamza.f1app.Models
 
 import java.util.Date
 
