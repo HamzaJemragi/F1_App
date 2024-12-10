@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
-import com.hamza.f1app.models.Race
 
 class RecyclerViewRacingAdapter(private val races: List<Race>) :
     RecyclerView.Adapter<RecyclerViewRacingAdapter.ViewHolder>() {

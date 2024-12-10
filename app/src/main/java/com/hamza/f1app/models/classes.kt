@@ -1,6 +1,5 @@
 package com.hamza.f1app.Models
 
-import java.util.Date
 
 data class Race(
     val id: Int,
@@ -10,7 +9,7 @@ data class Race(
     val lieu: String,
     val resultats: List<Resultat>?,
     val circuit: Circuit,
-    val track: Int
+    val track: Int,
 )
 
 data class Circuit(
@@ -20,7 +19,7 @@ data class Circuit(
     val laps: Int,
     val LapRecord: Map<String, Any>,
     val firstGP: Int,
-    val Image: Int
+    val Image: Int,
 )
 
 data class Resultat(
@@ -34,20 +33,32 @@ data class Driver(
     val id: Int,
     val firsName: String,
     val lastName: String,
-    val equipe: Constructor,
+    var equipe: Constructor,
     val nationalite: String,
-    val points: Int,
-    val driverImage:Int,
-    val statistiques: List<Map<String, Int>>,
-)
+    var points: Int,
+    var podiums: Int,
+    var fastestLap: Int,
+    var worldChampionships: Long,
+    var GPsEntered: Int,
+    val birthPlace: String,
+    val birthDate: String,
+    var driverImage1: Int,
+    var driverImage2: Int,
+    var driverNumber: Int,
+    var flag: Int
+    )
 
 data class Constructor(
     val id: Int,
-    val nom: String,
-    val logo: Int,
+    var nom: String,
+    var logo: Int,
+    val firstEntry: Int,
+    var chassis: String,
+    var powerUnit: String,
+    var teamChief: String,
     val nationalite: String,
-    val points: Int,
-    val construcorColor:Int,
-    val historique: String,
-    val pilotes: Driver,
+    var points: Int,
+    var construcorColor: Int,
+    val pilotes: List<Driver>,
+    var carImage:Int
 )

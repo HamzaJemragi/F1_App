@@ -1,5 +1,9 @@
 package com.hamza.f1app.data
 
+import com.hamza.f1app.Models.Circuit
+import com.hamza.f1app.Models.Constructor
+import com.hamza.f1app.Models.Driver
+import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
 import com.hamza.f1app.models.*
 
@@ -418,3 +422,400 @@ val races = listOf(
         R.drawable.track_abudhabi
     )
 )
+
+
+val constructors = mutableListOf<Constructor>()
+var drivers = mutableListOf<Driver>()
+
+fun main() {
+    drivers.addAll(
+        listOf(
+            Driver(
+                1,
+                "Alexander",
+                "Albon",
+                constructors[7],
+                "Thailand",
+                24,
+                0,
+                0,
+                0,
+                240,
+                "London, England",
+                "23-03-1996",
+                R.drawable.driver_alexanderalbon_1,
+                R.drawable.driver_alexanderalbon_2,
+                23, R.drawable.flag_thailand
+            ),
+            Driver(
+                2,
+                "Carlos",
+                "Sainz",
+                constructors[1],
+                "Spain",
+                818,
+                16,
+                0,
+                0,
+                170,
+                "Madrid, Spain",
+                "01-09-1994",
+                R.drawable.driver_carlossainz_1,
+                R.drawable.driver_carlossainz_2,
+                55, R.drawable.flag_spain
+            ),
+            Driver(
+                3,
+                "Charles",
+                "Leclerc",
+                constructors[1],
+                "Monaco",
+                1040,
+                25,
+                18,
+                0,
+                110,
+                "Monte Carlo, Monaco",
+                "16-10-1997",
+                R.drawable.driver_charlesleclerc_1,
+                R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco
+            ),
+            Driver(
+                4,
+                "Esteban",
+                "Ocon",
+                constructors[3],
+                "France",
+                372,
+                2,
+                0,
+                0,
+                134,
+                "Évreux, France",
+                "17-09-1996",
+                R.drawable.driver_estebanocon_1,
+                R.drawable.driver_estebanocon_2, 31,R.drawable.flag_france
+            ),
+            Driver(
+                5,
+                "Fernando",
+                "Alonso",
+                constructors[5],
+                "Spain",
+                2100,
+                105,
+                22,
+                2,
+                370,
+                "Oviedo, Spain",
+                "29-07-1981",
+                R.drawable.driver_fernandoalonso_1,
+                R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain
+            ),
+            Driver(
+                6,
+                "Franco",
+                "Colapinto",
+                constructors[0],
+                "Argentina",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "Pilar, Argentina",
+                "27-05-2003",
+                R.drawable.driver_francocolapinto_1,
+                R.drawable.driver_francocolapinto_2, 43, R.drawable.flag_argentina
+            ),
+            Driver(
+                7,
+                "George",
+                "Russell",
+                constructors[2],
+                "United Kingdom",
+                539,
+                10,
+                1,
+                0,
+                95,
+                "King's Lynn, England",
+                "15-02-1998",
+                R.drawable.driver_georgerussell_1,
+                R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk
+            ),
+            Driver(
+                8,
+                "Kevin",
+                "Magnussen",
+                constructors[6],
+                "Denmark",
+                183,
+                1,
+                0,
+                0,
+                160,
+                "Roskilde, Denmark",
+                "05-10-1992",
+                R.drawable.driver_kevinmagnussen_1,
+                R.drawable.driver_kevinmagnussen_2, 20, R.drawable.flag_denmark
+            ),
+            Driver(
+                9,
+                "Lance",
+                "Stroll",
+                constructors[5],
+                "Canada",
+                232,
+                3,
+                1,
+                0,
+                143,
+                "Montreal, Canada",
+                "29-10-1998",
+                R.drawable.driver_lancestroll_1,
+                R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada
+            ),
+            Driver(
+                10,
+                "Lando",
+                "Norris",
+                constructors[4],
+                "United Kingdom",
+                532,
+                11,
+                1,
+                0,
+                100,
+                "Bristol, England",
+                "13-11-1999",
+                R.drawable.driver_landonorris_1,
+                R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk
+            ),
+            Driver(
+                11,
+                "Lewis",
+                "Hamilton",
+                constructors[2],
+                "United Kingdom",
+                4400,
+                195,
+                104,
+                7,
+                320,
+                "Stevenage, England",
+                "07-01-1985",
+                R.drawable.driver_lewishamilton_1,
+                R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk
+            ),
+            Driver(
+                12,
+                "Liam",
+                "Lawson",
+                constructors[8],
+                "New Zealand",
+                2,
+                0,
+                0,
+                0,
+                5,
+                "Hastings, New Zealand",
+                "11-02-2002",
+                R.drawable.driver_liamlawson_1,
+                R.drawable.driver_liamlawson_2, 30, R.drawable.flag_newzealand
+            ),
+            Driver(
+                13,
+                "Max",
+                "Verstappen",
+                constructors[0],
+                "Netherlands",
+                2500,
+                100,
+                30,
+                3,
+                180,
+                "Hasselt, Belgium",
+                "30-09-1997",
+                R.drawable.driver_maxverstappen_1,
+                R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands
+            ),
+            Driver(
+                14,
+                "Nico",
+                "Hülkenberg",
+                constructors[6],
+                "Germany",
+                523,
+                0,
+                1,
+                0,
+                195,
+                "Emmerich am Rhein, Germany",
+                "19-08-1987",
+                R.drawable.driver_nicohulkenberg_1,
+                R.drawable.driver_nicohulkenberg_2, 27, R.drawable.flag_germany
+            ),
+            Driver(
+                15,
+                "Oscar",
+                "Piastri",
+                constructors[4],
+                "Australia",
+                97,
+                1,
+                0,
+                0,
+                23,
+                "Melbourne, Australia",
+                "06-04-2001",
+                R.drawable.driver_oscarpiastri_1,
+                R.drawable.driver_oscarpiastri_2, 81, R.drawable.flag_australia
+            ),
+            Driver(
+                16,
+                "Pierre",
+                "Gasly",
+                constructors[3],
+                "France",
+                342,
+                3,
+                1,
+                0,
+                123,
+                "Rouen, France",
+                "07-02-1996",
+                R.drawable.driver_pierregasly_1,
+                R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france
+            ),
+            Driver(
+                17,
+                "Sergio",
+                "Perez",
+                constructors[0],
+                "Mexico",
+                1500,
+                35,
+                2,
+                0,
+                245,
+                "Guadalajara, Mexico",
+                "26-01-1990",
+                R.drawable.driver_sergioperez_1,
+                R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico
+            ),
+            Driver(
+                18,
+                "Valtteri",
+                "Bottas",
+                constructors[9],
+                "Finland",
+                1800,
+                67,
+                20,
+                0,
+                200,
+                "Nastola, Finland",
+                "28-08-1989",
+                R.drawable.driver_valtteribottas_1,
+                R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland
+            ),
+            Driver(
+                19,
+                "Yuki",
+                "Tsunoda",
+                constructors[8],
+                "Japan",
+                53,
+                0,
+                0,
+                0,
+                65,
+                "Sagamihara, Japan",
+                "11-05-2000",
+                R.drawable.driver_yukitsunoda_1,
+                R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan
+            ),
+            Driver(
+                20,
+                "Guanyu",
+                "Zhou",
+                constructors[9],
+                "China",
+                20,
+                0,
+                0,
+                0,
+                45,
+                "Shanghai, China",
+                "30-05-1999",
+                R.drawable.driver_zhouguanyu_1,
+                R.drawable.driver_zhouguanyu_2, 24, R.drawable.flag_china
+            )
+        )
+    )
+
+    constructors.addAll(
+        listOf(
+            Constructor(
+                1,
+                "Red Bull Racing",
+                R.drawable.constructor_redbullrecing,
+                2005,
+                "RB19",
+                "Honda RBPT",
+                "Christian Horner",
+                "Austria",
+                700,
+                R.color.redbullracingColor,
+                listOf(drivers[12], drivers[16]),
+                R.drawable.car_redbullracing
+            ),
+            Constructor(
+                2, "Ferrari", R.drawable.constructor_ferrari, 1950, "SF-24", "Ferrari",
+                "Fred Vasseur", "Italy", 600, R.color.ferrariColor,
+                listOf(drivers[1], drivers[2]), R.drawable.car_ferrari
+            ),
+            Constructor(
+                3, "Mercedes", R.drawable.constructor_mercedes, 1954, "W15", "Mercedes",
+                "Toto Wolff", "Germany", 550, R.color.mercedesColor,
+                listOf(drivers[10], drivers[6]), R.drawable.car_mercedes
+            ),
+            Constructor(
+                4, "Alpine", R.drawable.constructor_alpine, 2021, "A524", "Renault",
+                "Bruno Famin", "France", 180, R.color.alpineColor,
+                listOf(drivers[3], drivers[15]), R.drawable.car_alpine
+            ),
+            Constructor(
+                5, "McLaren", R.drawable.constructor_mclaren, 1966, "MCL61", "Mercedes",
+                "Andrea Stella", "United Kingdom", 250, R.color.mclarenColor,
+                listOf(drivers[9], drivers[14]), R.drawable.car_mclaren
+            ),
+            Constructor(
+                6, "Aston Martin", R.drawable.constructor_astonmartin, 2021, "AMR24", "Mercedes",
+                "Mike Krack", "United Kingdom", 200, R.color.astonmartinColor,
+                listOf(drivers[4], drivers[8]), R.drawable.car_astonmartin
+            ),
+            Constructor(
+                7, "Haas", R.drawable.constuctor_haas, 2016, "VF-24", "Ferrari",
+                "Guenther Steiner", "United States", 80, R.color.haasColor,
+                listOf(drivers[7], drivers[13]), R.drawable.car_haas
+            ),
+            Constructor(
+                8, "Williams", R.drawable.constuctor_williams, 1977, "FW46", "Mercedes",
+                "James Vowles", "United Kingdom", 60, R.color.williamsColor,
+                listOf(drivers[0], drivers[5]), R.drawable.car_williams
+            ),
+            Constructor(
+                9, "Kick Sauber", R.drawable.constuctor_kicksauber, 1993, "C44", "Ferrari",
+                "Alessandro Alunni Bravi", "Switzerland", 45, R.color.kicksauberColor,
+                listOf(drivers[19], drivers[17]), R.drawable.car_kicksauber
+            ),
+            Constructor(
+                10, "RB", R.drawable.constuctor_rb, 1985, "VCARB 02", "Honda RBPT",
+                "Laurent Mekies", "Italy", 35, R.color.rbColor,
+                listOf(drivers[11], drivers[18]), R.drawable.car_rb
+            )
+        )
+    )
+}
