@@ -43,14 +43,19 @@ class RecyclerViewDriverAdapte(
         position: Int,
     ) {
         val driver = listDriver[position]
-        holder.driverNumber.text = "#${driver.driverNumber}"
-        holder.line.setBackgroundResource(driver.equipe.construcorColor)
-        holder.driverFirsName.text = driver.firsName
-        holder.driverLastName.text = driver.lastName
-        holder.driverTeam.text = driver.equipe.nom
-        holder.driverPhoto.setImageResource(driver.driverImage1)
-        holder.itemView.setOnClickListener {
-            listener.onItemClick(position)
+
+        if (!driver.retiredOrNot) {
+            holder.driverNumber.text = "#${driver.driverNumber}"
+            holder.line.setBackgroundResource(driver.equipe!!.construcorColor)
+            holder.driverFirsName.text = driver.firsName
+            holder.driverLastName.text = driver.lastName
+            holder.driverTeam.text = driver.equipe!!.nom
+            holder.driverPhoto.setImageResource(driver.driverImage1)
+            holder.itemView.setOnClickListener {
+                listener.onItemClick(position)
+            }
+        }else{
+            holder.itemView.visibility = View.GONE
         }
     }
 
