@@ -4,6 +4,7 @@ import com.hamza.f1app.Models.Circuit
 import com.hamza.f1app.Models.Constructor
 import com.hamza.f1app.Models.Driver
 import com.hamza.f1app.Models.Race
+import com.hamza.f1app.Models.Resultat
 import com.hamza.f1app.R
 import com.hamza.f1app.models.*
 
@@ -463,7 +464,7 @@ fun main() {
                 "01-09-1994",
                 R.drawable.driver_carlossainz_1,
                 R.drawable.driver_carlossainz_2,
-                55, R.drawable.flag_spain,false
+                55, R.drawable.flag_spain, false
             ),
             Driver(
                 3,
@@ -479,7 +480,7 @@ fun main() {
                 "Monte Carlo, Monaco",
                 "16-10-1997",
                 R.drawable.driver_charlesleclerc_1,
-                R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco,false
+                R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco, false
             ),
             Driver(
                 4,
@@ -495,7 +496,7 @@ fun main() {
                 "Évreux, France",
                 "17-09-1996",
                 R.drawable.driver_estebanocon_1,
-                R.drawable.driver_estebanocon_2, 31,R.drawable.flag_france,false
+                R.drawable.driver_estebanocon_2, 31, R.drawable.flag_france, false
             ),
             Driver(
                 5,
@@ -511,7 +512,7 @@ fun main() {
                 "Oviedo, Spain",
                 "29-07-1981",
                 R.drawable.driver_fernandoalonso_1,
-                R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain,false
+                R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain, false
             ),
             Driver(
                 6,
@@ -527,7 +528,7 @@ fun main() {
                 "Pilar, Argentina",
                 "27-05-2003",
                 R.drawable.driver_francocolapinto_1,
-                R.drawable.driver_francocolapinto_2, 43, R.drawable.flag_argentina,false
+                R.drawable.driver_francocolapinto_2, 43, R.drawable.flag_argentina, false
             ),
             Driver(
                 7,
@@ -543,7 +544,7 @@ fun main() {
                 "King's Lynn, England",
                 "15-02-1998",
                 R.drawable.driver_georgerussell_1,
-                R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk,false
+                R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk, false
             ),
             Driver(
                 8,
@@ -559,7 +560,7 @@ fun main() {
                 "Roskilde, Denmark",
                 "05-10-1992",
                 R.drawable.driver_kevinmagnussen_1,
-                R.drawable.driver_kevinmagnussen_2, 20, R.drawable.flag_denmark,false
+                R.drawable.driver_kevinmagnussen_2, 20, R.drawable.flag_denmark, false
             ),
             Driver(
                 9,
@@ -575,7 +576,7 @@ fun main() {
                 "Montreal, Canada",
                 "29-10-1998",
                 R.drawable.driver_lancestroll_1,
-                R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada,false
+                R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada, false
             ),
             Driver(
                 10,
@@ -591,7 +592,7 @@ fun main() {
                 "Bristol, England",
                 "13-11-1999",
                 R.drawable.driver_landonorris_1,
-                R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk,false
+                R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk, false
             ),
             Driver(
                 11,
@@ -607,7 +608,7 @@ fun main() {
                 "Stevenage, England",
                 "07-01-1985",
                 R.drawable.driver_lewishamilton_1,
-                R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk,false
+                R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk, false
             ),
             Driver(
                 12,
@@ -623,7 +624,7 @@ fun main() {
                 "Hastings, New Zealand",
                 "11-02-2002",
                 R.drawable.driver_liamlawson_1,
-                R.drawable.driver_liamlawson_2, 30, R.drawable.flag_newzealand,false
+                R.drawable.driver_liamlawson_2, 30, R.drawable.flag_newzealand, false
             ),
             Driver(
                 13,
@@ -639,7 +640,7 @@ fun main() {
                 "Hasselt, Belgium",
                 "30-09-1997",
                 R.drawable.driver_maxverstappen_1,
-                R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands,false
+                R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands, false
             ),
             Driver(
                 14,
@@ -655,7 +656,7 @@ fun main() {
                 "Emmerich am Rhein, Germany",
                 "19-08-1987",
                 R.drawable.driver_nicohulkenberg_1,
-                R.drawable.driver_nicohulkenberg_2, 27, R.drawable.flag_germany,false
+                R.drawable.driver_nicohulkenberg_2, 27, R.drawable.flag_germany, false
             ),
             Driver(
                 15,
@@ -671,7 +672,7 @@ fun main() {
                 "Melbourne, Australia",
                 "06-04-2001",
                 R.drawable.driver_oscarpiastri_1,
-                R.drawable.driver_oscarpiastri_2, 81, R.drawable.flag_australia,false
+                R.drawable.driver_oscarpiastri_2, 81, R.drawable.flag_australia, false
             ),
             Driver(
                 16,
@@ -687,7 +688,7 @@ fun main() {
                 "Rouen, France",
                 "07-02-1996",
                 R.drawable.driver_pierregasly_1,
-                R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france,false
+                R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france, false
             ),
             Driver(
                 17,
@@ -703,7 +704,7 @@ fun main() {
                 "Guadalajara, Mexico",
                 "26-01-1990",
                 R.drawable.driver_sergioperez_1,
-                R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico,false
+                R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico, false
             ),
             Driver(
                 18,
@@ -719,7 +720,7 @@ fun main() {
                 "Nastola, Finland",
                 "28-08-1989",
                 R.drawable.driver_valtteribottas_1,
-                R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland,false
+                R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland, false
             ),
             Driver(
                 19,
@@ -735,7 +736,7 @@ fun main() {
                 "Sagamihara, Japan",
                 "11-05-2000",
                 R.drawable.driver_yukitsunoda_1,
-                R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan,false
+                R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan, false
             ),
             Driver(
                 20,
@@ -751,12 +752,84 @@ fun main() {
                 "Shanghai, China",
                 "30-05-1999",
                 R.drawable.driver_zhouguanyu_1,
-                R.drawable.driver_zhouguanyu_2, 24, R.drawable.flag_china,false
+                R.drawable.driver_zhouguanyu_2, 24, R.drawable.flag_china, false
             ),
-            Driver(0,"Daniel","Riccardo",null,"",0,0,0,0,0,"","",R.drawable.f1_logo,R.drawable.f1_logo,3,0,true),
-            Driver(0,"Logan","Sargeant",null,"",0,0,0,0,0,"","",R.drawable.f1_logo,R.drawable.f1_logo,2,0,true),
-            Driver(0,"Jack","Doohan",null,"",0,0,0,0,0,"","",R.drawable.f1_logo,R.drawable.f1_logo,61,0,true),
-            Driver(0,"Oliver","Bearman",null,"",0,0,0,0,0,"","",R.drawable.f1_logo,R.drawable.f1_logo,55,0,true),
+            Driver(
+                0,
+                "Daniel",
+                "Riccardo",
+                null,
+                "",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "",
+                "",
+                R.drawable.f1_logo,
+                R.drawable.f1_logo,
+                3,
+                0,
+                true
+            ),
+            Driver(
+                0,
+                "Logan",
+                "Sargeant",
+                null,
+                "",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "",
+                "",
+                R.drawable.f1_logo,
+                R.drawable.f1_logo,
+                2,
+                0,
+                true
+            ),
+            Driver(
+                0,
+                "Jack",
+                "Doohan",
+                null,
+                "",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "",
+                "",
+                R.drawable.f1_logo,
+                R.drawable.f1_logo,
+                61,
+                0,
+                true
+            ),
+            Driver(
+                0,
+                "Oliver",
+                "Bearman",
+                null,
+                "",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "",
+                "",
+                R.drawable.f1_logo,
+                R.drawable.f1_logo,
+                55,
+                0,
+                true
+            ),
         )
     )
 
@@ -824,3 +897,71 @@ fun main() {
         )
     )
 }
+
+val resultats = listOf(
+    listOf(
+        Resultat(1, drivers[12], "1:31:44.742", 26),
+        Resultat(2, drivers[16], "+22.457s", 18),
+        Resultat(3, drivers[1], "+25.110s", 15),
+        Resultat(4, drivers[2], "+39.669s", 12),
+        Resultat(5, drivers[6], "+46.788s", 10),
+        Resultat(6, drivers[9], "+48.458s", 8),
+        Resultat(7, drivers[10], "+50.324s", 6),
+        Resultat(8, drivers[14], "+56.082s", 4),
+        Resultat(9, drivers[4], "+74.887s", 2),
+        Resultat(10, drivers[8], "+93.216s", 1),
+        Resultat(11, drivers[19], "+1 lap", 0),
+        Resultat(12, drivers[7], "+1 lap", 0),
+        Resultat(13, drivers[20], "+1 lap", 0),
+        Resultat(14, drivers[18], "+1 lap", 0),
+        Resultat(15, drivers[1], "+1 lap", 0),
+        Resultat(16, drivers[13], "+1 lap", 0),
+        Resultat(17, drivers[3], "+1 lap", 0),
+        Resultat(18, drivers[15], "+1 lap", 0),
+        Resultat(19, drivers[17], "+1 lap", 0),
+        Resultat(20, drivers[21], "+2 lap", 0),
+    ),
+    listOf(
+        Resultat(1, drivers[12], "1:20:43.273", 25),
+        Resultat(2, drivers[16], "+13.643s", 18),
+        Resultat(3, drivers[2], "+18.639s", 16),
+        Resultat(4, drivers[14], "+32.007s", 12),
+        Resultat(5, drivers[4], "+35.759s", 10),
+        Resultat(6, drivers[6], "+39.936s", 8),
+        Resultat(7, drivers[23], "+42.679s", 6),
+        Resultat(8, drivers[9], "+45.708s", 4),
+        Resultat(9, drivers[10], "+47.391s", 2),
+        Resultat(10, drivers[13], "+76.996s", 1),
+        Resultat(11, drivers[1], "+88.354s", 0),
+        Resultat(12, drivers[7], "+105.737s", 0),
+        Resultat(13, drivers[3], "+1 lap", 0),
+        Resultat(14, drivers[21], "+1 lap", 0),
+        Resultat(15, drivers[18], "+1 lap", 0),
+        Resultat(16, drivers[20], "+1 lap", 0),
+        Resultat(17, drivers[17], "+1 lap", 0),
+        Resultat(18, drivers[19], "+1 lap", 0),
+        Resultat("NC", drivers[8], "DNF", 0),
+        Resultat("NC", drivers[15], "DNF", 0),
+    ),
+    listOf(
+        Resultat(1, drivers[1], "1:20:26.843", 25),
+        Resultat(2, drivers[2], "+2.366s", 19),
+        Resultat(3, drivers[9], "+5.904s", 15),
+        Resultat(4, drivers[14], "+35.770s", 12),
+        Resultat(5, drivers[16], "+56.309s", 10),
+        Resultat(6, drivers[8], "+93.222s", 8),
+        Resultat(7, drivers[18], "+95.601s", 6),
+        Resultat(8, drivers[4], "+100.992s", 4),
+        Resultat(9, drivers[13], "+104.553s", 2),
+        Resultat(10, drivers[7], "+1 lap", 1),
+        Resultat(11, drivers[1], "+1 lap", 0),
+        Resultat(12, drivers[20], "+1 lap", 0),
+        Resultat(13, drivers[15], "+1 lap", 0),
+        Resultat(14, drivers[17], "+1 lap", 0),
+        Resultat(15, drivers[19], "+1 lap", 0),
+        Resultat(16, drivers[3], "+1 lap", 0),
+        Resultat(17, drivers[6], "DNF", 0),
+        Resultat("NC", drivers[10], "DNF", 0),
+        Resultat("NC", drivers[12], "DNF", 0)
+    )
+)
