@@ -63,3 +63,16 @@ data class Constructor(
     val pilotes: List<Driver>,
     var carImage:Int
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
