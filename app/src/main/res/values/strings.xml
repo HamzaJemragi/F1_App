@@ -4,6 +4,10 @@
     <string name="main_drivers">DRIVERS</string>
     <string name="main_constructors">CONSTRUCTORS</string>
     <string name="main_standing">STANDINGS</string>
+    <string name="first_team_entry">First Team Entry</string>
+    <string name="chassis">Chassis</string>
+    <string name="powerUnit">Power Unit</string>
+    <string name="teamChief">Team Chief</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

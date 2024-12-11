@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.hamza.f1app.R
 import com.hamza.f1app.data.constructors
 
-class constructorinfoActivity : AppCompatActivity() {
+class ConstructorinfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -70,16 +70,16 @@ class constructorinfoActivity : AppCompatActivity() {
         val orderdConstructors = constructors.sortedByDescending { it.pilotes.sumOf { it.points } }
         standingNumber.text = (orderdConstructors.indexOf(constructors[constructorPosition]) + 1).toString()
 
-        firstYearTitle.text = "First Team Entry"
+        firstYearTitle.text = R.string.first_team_entry.toString()
         firstYearInfo.text = constructors[constructorPosition].firstEntry.toString()
 
-        chassisTitle.text = "Chassis"
+        chassisTitle.text = R.string.chassis.toString()
         chassisrInfo.text = constructors[constructorPosition].chassis
 
-        powerUnitTitle.text = "Power Unit"
+        powerUnitTitle.text = R.string.powerUnit.toString()
         powerUnitInfo.text = constructors[constructorPosition].powerUnit
 
-        teamChiefTitle.text = "Team Chief"
+        teamChiefTitle.text = R.string.teamChief.toString()
         teamChiefInfo.text = constructors[constructorPosition].teamChief
 
         driverImage1.setImageResource(constructors[constructorPosition].pilotes[0].driverImage2)
