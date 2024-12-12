@@ -14,7 +14,7 @@
         android:background="@color/white">
 
         <TextView
-            android:id="@+id/driverNumber"
+            android:id="@+id/standingNumber"
             style="@style/number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_marginStart="4dp"
             android:background="#FF9800"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/driverNumber"
+            app:layout_constraintStart_toEndOf="@+id/standingNumber"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.666" />
 

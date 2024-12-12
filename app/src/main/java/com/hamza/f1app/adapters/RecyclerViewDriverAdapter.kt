@@ -3,18 +3,17 @@ package com.hamza.f1app.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Driver
 import com.hamza.f1app.R
 
-class RecyclerViewDriverAdapte(
+class RecyclerViewDriverAdapter(
     private val listDriver: List<Driver>,
     private val listener: OnItemClickListener,
 ) :
-    RecyclerView.Adapter<RecyclerViewDriverAdapte.ViewHolderDriver>() {
+    RecyclerView.Adapter<RecyclerViewDriverAdapter.ViewHolderDriver>() {
 
     interface OnItemClickListener {
         fun onItemClick(position: Int)

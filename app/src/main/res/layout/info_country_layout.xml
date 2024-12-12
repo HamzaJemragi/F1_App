@@ -19,7 +19,7 @@
         android:text="Country" />
 
     <TextView
-        android:id="@+id/info"
+        android:id="@+id/countryName"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

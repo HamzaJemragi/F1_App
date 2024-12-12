@@ -4,10 +4,28 @@
     <string name="main_drivers">DRIVERS</string>
     <string name="main_constructors">CONSTRUCTORS</string>
     <string name="main_standing">STANDINGS</string>
+
+    <!-- Strings titles for constructor info activity -->
     <string name="first_team_entry">First Team Entry</string>
     <string name="chassis">Chassis</string>
     <string name="powerUnit">Power Unit</string>
     <string name="teamChief">Team Chief</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--strings titles for driver info activity -->
+    <string name="podiums">Podiums</string>
+    <string name="fastestLap">Fastest Lap</string>
+    <string name="worldChampoionships">World Champoion ships</string>
+    <string name="GPsEntered">GPs Entered</string>
+    <string name="team">Team</string>
+    <string name="country">Country</string>
+    <string name="placeBirth">Place Birth</string>
+    <string name="dateBirth">Date Birth</string>
+    <string name="Stats">Stats</string>
+    <string name="Bio">Bio</string>
+
+    <!--strings titles for standing activity -->
+    <string name="Drivers">Drivers</string>
+    <string name="Constructors">Constructors</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

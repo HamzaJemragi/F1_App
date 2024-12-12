@@ -315,7 +315,7 @@ fun main() {
                 retiredOrNot = true
             ),
             Driver(
-                id = 3,
+                id = 26,
                 firsName = "Mick",
                 lastName = "Schumacher",
                 equipe = constructors2021[6],
@@ -334,7 +334,7 @@ fun main() {
                 retiredOrNot = true
             ),
             Driver(
-                id = 4,
+                id = 27,
                 firsName = "Robert",
                 lastName = "Kubica",
                 equipe = constructors2021[9],
