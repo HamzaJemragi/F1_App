@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/racing"
+    android:background="@color/backgroundGeneral"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -19,8 +19,7 @@
             style="@style/TitlesFontStyle"
             android:id="@+id/racingTextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/main_racing" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

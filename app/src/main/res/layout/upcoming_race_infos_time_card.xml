@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/dateLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintWidth_percent="0.20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                style="@style/RacingCardsDate"
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                style="@style/RacingCardsMonth"
+                android:id="@+id/month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/month_shape_card_racing"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dottedLine"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="@drawable/dotted_vertical_line_racing_card"
+            app:layout_constraintHeight_percent="0.75"
+            app:layout_constraintStart_toEndOf="@+id/dateLinearLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/raceInfos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dottedLine">
+
+            <TextView
+                android:id="@+id/race"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/race"
+                android:textColor="@color/black"
+                android:fontFamily="@font/formula1_bold_4"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintWidth_percent="0.05"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/raceInfos">
+
+            <ImageView
+                android:id="@+id/arrowButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="next"
+                android:src="@drawable/mix_arrow_forward_f1red"
+                android:backgroundTint="@color/white"/>
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
