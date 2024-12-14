@@ -1,6 +1,10 @@
 package com.hamza.f1app.activities
 
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -12,6 +16,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.hamza.f1app.R
+import com.hamza.f1app.data.constructors
+import com.hamza.f1app.data.drivers
 import com.hamza.f1app.fragments.DriverBioFragment
 import com.hamza.f1app.fragments.DriverStatsFragment
 
@@ -26,10 +32,28 @@ class DriverinfoActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.darkGray)
         val driverPosition = intent?.extras?.getInt("driverPosition")!!.toInt()
+
+        val driverImage=findViewById<ImageView>(R.id.driverImage)
+        val driverNumber=findViewById<TextView>(R.id.driverNumber)
+        val driverFirsName=findViewById<TextView>(R.id.driverFirsName)
+        val driverLastName=findViewById<TextView>(R.id.driverLastName)
+        val driverTeam=findViewById<TextView>(R.id.driverTeam)
+        val line=findViewById<View>(R.id.line)
+
+        driverImage.setImageResource(drivers[driverPosition].driverImage1)
+        driverNumber.text="#${drivers[driverPosition].driverNumber}"
+        driverFirsName.text=drivers[driverPosition].firsName
+        driverLastName.text=drivers[driverPosition].lastName
+        driverTeam.text=constructors.find { it.id == drivers[driverPosition].equipe }?.nom
+        line.setBackgroundColor(constructors.find { it.id == drivers[driverPosition].equipe }?.construcorColor!!)
+        Toast.makeText(this, constructors.find { it.id == drivers[driverPosition].equipe }?.construcorColor!!, Toast.LENGTH_LONG).show()
+
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+
+
 
         val adapter = ViewPagerDriverAdapter(this, driverPosition)
         viewPager.adapter = adapter
