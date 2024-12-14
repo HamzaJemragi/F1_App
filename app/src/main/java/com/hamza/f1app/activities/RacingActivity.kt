@@ -2,26 +2,18 @@ package com.hamza.f1app.activities
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.hamza.f1app.R
-import com.hamza.f1app.adapters.RecyclerViewRacingAdapter
-import com.hamza.f1app.data.races
 import com.hamza.f1app.fragments.past_racing_fragment
 import com.hamza.f1app.fragments.upcoming_racing_fragment
 
@@ -39,7 +31,6 @@ class RacingActivity : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager2 = findViewById<ViewPager2>(R.id.viewPager)
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav_racing)
 
         val adapter = ViewPagerAdapter(this)
         viewPager2.adapter = adapter

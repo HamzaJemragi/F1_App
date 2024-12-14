@@ -28,4 +28,22 @@
     <string name="Constructors">Constructors</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="circuit_length_title">Circuit length</string>
+    <string name="distance_unit_km">KM</string>
+    <string name="lap_record_title">Lap record</string>
+    <string name="view_results_button">VIEW RESULTS</string>
+    <string name="relive_the_action">RELIVE THE ACTION</string>
+    <string name="race">Race</string>
+    <string name="see_highlights_and_standing">See highlights and standing</string>
+    <string name="race_result_title">RACE RESULT</string>
+    <string name="recycler_view_header_pos">POS</string>
+    <string name="recycler_view_header_driver">DRIVER</string>
+    <string name="recycler_view_header_time_ret">TIME/RET</string>
+    <string name="recycler_view_header_pts">PTS</string>
+    <string name="race_distance_title">Race distance</string>
+    <string name="grand_prix_weekend">GRAND PRIX WEEKEND</string>
+    <string name="days">DAYS</string>
+    <string name="hrs">HRS</string>
+    <string name="mins">MINS</string>
+    <string name="rolex_logo">rolex logo</string>
 </resources>
