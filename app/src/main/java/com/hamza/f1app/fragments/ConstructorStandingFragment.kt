@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.R
 import com.hamza.f1app.activities.ConstructorinfoActivity
@@ -23,7 +24,7 @@ class ConstructorStandingFragment(): Fragment() {
         val view = inflater.inflate(R.layout.standing_constructors, container, false)
 
         val constructorStandingRecyclerView=view.findViewById<RecyclerView>(R.id.constructorStandingRecyclerView)
-
+        constructorStandingRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         val adapter= StandingConstructorAdapter(constructors.toList(),object : StandingConstructorAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(requireContext(), ConstructorinfoActivity::class.java)
