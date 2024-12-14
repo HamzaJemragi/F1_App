@@ -3,18 +3,17 @@ package com.hamza.f1app.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Driver
 import com.hamza.f1app.R
 
-class RecyclerViewDriverAdapte(
+class RecyclerViewDriverAdapter(
     private val listDriver: List<Driver>,
     private val listener: OnItemClickListener,
 ) :
-    RecyclerView.Adapter<RecyclerViewDriverAdapte.ViewHolderDriver>() {
+    RecyclerView.Adapter<RecyclerViewDriverAdapter.ViewHolderDriver>() {
 
     interface OnItemClickListener {
         fun onItemClick(position: Int)
@@ -43,14 +42,19 @@ class RecyclerViewDriverAdapte(
         position: Int,
     ) {
         val driver = listDriver[position]
-        holder.driverNumber.text = "#${driver.driverNumber}"
-        holder.line.setBackgroundResource(driver.equipe.construcorColor)
-        holder.driverFirsName.text = driver.firsName
-        holder.driverLastName.text = driver.lastName
-        holder.driverTeam.text = driver.equipe.nom
-        holder.driverPhoto.setImageResource(driver.driverImage1)
-        holder.itemView.setOnClickListener {
-            listener.onItemClick(position)
+
+        if (!driver.retiredOrNot) {
+            holder.driverNumber.text = "#${driver.driverNumber}"
+            holder.line.setBackgroundResource(driver.equipe!!.construcorColor)
+            holder.driverFirsName.text = driver.firsName
+            holder.driverLastName.text = driver.lastName
+            holder.driverTeam.text = driver.equipe!!.nom
+            holder.driverPhoto.setImageResource(driver.driverImage1)
+            holder.itemView.setOnClickListener {
+                listener.onItemClick(position)
+            }
+        }else{
+            holder.itemView.visibility = View.GONE
         }
     }
 

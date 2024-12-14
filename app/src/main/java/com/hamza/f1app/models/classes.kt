@@ -46,7 +46,7 @@ data class Driver(
     var driverImage2: Int,
     var driverNumber: Int,
     var flag: Int,
-    var RetiredOrNot: Boolean
+    var retiredOrNot: Boolean
     )
 
 data class Constructor(
@@ -63,3 +63,16 @@ data class Constructor(
     val pilotes: List<Driver>,
     var carImage:Int
 )
+
+
+
+
+
+
+
+
+
+
+
+
+

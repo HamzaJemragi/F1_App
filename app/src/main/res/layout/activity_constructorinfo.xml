@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constructorInfoActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundGeneral">
@@ -32,13 +33,13 @@
             style="@style/teamname_constructorInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintWidth_percent="0.45"
             android:layout_marginStart="12dp"
             android:layout_marginTop="104dp"
             android:text="Merceds-AMG PETRONAS F1 Team"
             android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/line"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45" />
 
         <TextView
             android:id="@+id/constructorCountry"
@@ -55,12 +56,12 @@
             android:id="@+id/constructorsLogo"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.475"
-            app:layout_constraintWidth_percent="0.475"
             android:layout_marginTop="116dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.475"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.475"
             app:srcCompat="@drawable/constructor_mercedes" />
 
 
