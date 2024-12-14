@@ -36,7 +36,8 @@ class RecyclerViewConstructorAdabter(
         parent: ViewGroup,
         viewType: Int,
     ): ViewHolderConstructor {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.driver_card, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.constructor_card
+            , parent, false)
         return ViewHolderConstructor(view)
     }
 

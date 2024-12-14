@@ -13,7 +13,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.hamza.f1app.R
 
 
-class StandingFragment(context: Context) : Fragment(R.layout.fragment_standing) {
+class StandingFragment : Fragment(R.layout.fragment_standing) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

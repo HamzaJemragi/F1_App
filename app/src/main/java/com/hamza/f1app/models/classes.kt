@@ -33,7 +33,7 @@ data class Driver(
     val id: Int,
     val firsName: String,
     val lastName: String,
-    var equipe: Constructor?,
+    var equipe: Int,
     val nationalite: String,
     var points: Int,
     var podiums: Int,
@@ -60,7 +60,7 @@ data class Constructor(
     val nationalite: String,
     var points: Int,
     var construcorColor: Int,
-    val pilotes: List<Driver>,
+    var pilotes: List<Driver>,
     var carImage:Int
 )
 

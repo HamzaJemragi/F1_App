@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.R
 import com.hamza.f1app.activities.DriverinfoActivity
 
-import com.hamza.f1app.adapters.RecyclerViewDriverAdapte
+import com.hamza.f1app.adapters.RecyclerViewDriverAdapter
 import com.hamza.f1app.data.drivers
 
 class DriversFragment(context: Context) : Fragment(R.layout.fragment_constructors) {
@@ -21,7 +21,7 @@ class DriversFragment(context: Context) : Fragment(R.layout.fragment_constructor
 
         driverRecyclerView = view.findViewById(R.id.driverRecyclerView)
         driverRecyclerView.layoutManager = LinearLayoutManager(context)
-        val adapter= RecyclerViewDriverAdapte(drivers.toList(),object : RecyclerViewDriverAdapte.OnItemClickListener {
+        val adapter= RecyclerViewDriverAdapter(drivers.toList(),object : RecyclerViewDriverAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(context, DriverinfoActivity::class.java)
                 intent.putExtra("driverPosition", position)

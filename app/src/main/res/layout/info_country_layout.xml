@@ -16,7 +16,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="Country" />
+        android:text="Country"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/countryName"
@@ -25,6 +26,7 @@
         android:layout_gravity="bottom"
         android:fontFamily="@font/formula1_bold_4"
         android:text="Netherlands"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
 

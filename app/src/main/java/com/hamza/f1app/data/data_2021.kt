@@ -1,3 +1,4 @@
+/*
 package com.hamza.f1app.data
 
 import com.hamza.f1app.Models.Constructor
@@ -355,7 +356,8 @@ fun main() {
         )
     )
 
-    constructors2021.addAll(
+    */
+/*constructors2021.addAll(
         listOf(
             Constructor(
                 1,
@@ -435,5 +437,6 @@ fun main() {
                 carImage = 0
             )
         )
-    )
-}
+    )*//*
+
+}*/

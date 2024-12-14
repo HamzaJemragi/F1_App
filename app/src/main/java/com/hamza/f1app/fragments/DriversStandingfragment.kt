@@ -23,7 +23,7 @@ class DriversStandingFragment(): Fragment() {
 
         val driversStandingRecyclerView=view.findViewById<RecyclerView>(R.id.driversStandingRecyclerView)
 
-        val adapter= StandingDriversAdapter(drivers.toList(),object : StandingDriversAdapter.OnItemClickListener {
+        val adapter= StandingDriversAdapter(drivers,object : StandingDriversAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(requireContext(), DriverinfoActivity::class.java)
                 intent.putExtra("driverPosition", position)

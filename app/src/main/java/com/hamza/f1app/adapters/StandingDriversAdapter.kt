@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Driver
 import com.hamza.f1app.R
+import com.hamza.f1app.data.constructors
 
 class StandingDriversAdapter(
     private val listDriver: List<Driver>,
@@ -69,10 +70,10 @@ class StandingDriversAdapter(
 
         fun bind(driver: Driver) {
             standingNumber.text = "1"
-            line.setBackgroundResource(driver.equipe!!.construcorColor)
+            line.setBackgroundResource(constructors.find { it.id == driver.equipe }!!.construcorColor)
             driverFirstName.text = driver.firsName
             driverLastName.text = driver.lastName
-            driverTeam.text = driver.equipe?.nom ?: "Unknown"
+            driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
             driverPhoto.setImageResource(driver.driverImage1)
             pts.text = "${driver.points} pts"
         }
@@ -88,10 +89,10 @@ class StandingDriversAdapter(
 
         fun bind(driver: Driver, position: Int) {
             standingNumber.text = "${position + 1}"
-            line.setBackgroundResource(driver.equipe!!.construcorColor)
+            line.setBackgroundResource(constructors.find { it.id == driver.equipe }!!.construcorColor)
             driverFirstName.text = driver.firsName
             driverLastName.text = driver.lastName
-            driverTeam.text = driver.equipe?.nom ?: "Unknown"
+            driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
             pts.text = "${driver.points} pts"
         }
     }

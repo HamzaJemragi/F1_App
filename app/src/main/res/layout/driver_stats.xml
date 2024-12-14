@@ -1,110 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/backgroundGeneral">
+    android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/standingInfo"
-        layout="@layout/champinfos_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <include
-        android:id="@+id/podiums"
-        layout="@layout/infos_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toStartOf="@id/fastestLap"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/standingInfo" />
-
-    <include
-        android:id="@+id/fastestLap"
-        layout="@layout/infos_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toEndOf="@id/podiums"
-        app:layout_constraintTop_toBottomOf="@id/standingInfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+<androidx.constraintlayout.widget.ConstraintLayout
+android:background="@color/backgroundGeneral"
+android:layout_height="match_parent"
+android:layout_width="match_parent">
 
 
-    <include
-        android:id="@+id/worldChampoionships"
-        layout="@layout/infos_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toStartOf="@id/GPsEntered"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/podiums" />
+<include
+    android:id="@+id/standingInfo"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    layout="@layout/champinfos_card" />
 
-    <include
-        android:id="@+id/GPsEntered"
-        layout="@layout/infos_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toEndOf="@id/worldChampoionships"
-        app:layout_constraintTop_toBottomOf="@id/fastestLap"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+<include
+    android:id="@+id/podiums"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:layout_width="wrap_content"
+    app:layout_constraintEnd_toStartOf="@id/fastestLap"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/standingInfo"
+    layout="@layout/infos_layout" />
 
-    <include
-        android:id="@+id/team"
-        layout="@layout/team_driverinfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/GPsEntered" />
-
-    <include
-        android:id="@+id/country"
-        layout="@layout/info_country_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/team" />
-
-    <include
-        android:id="@+id/placeBirth"
-        layout="@layout/infos2_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/country" />
-
-    <include
-        android:id="@+id/dateBirth"
-        layout="@layout/infos2_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/placeBirth" />
+<include
+    android:id="@+id/fastestLap"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:layout_width="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/podiums"
+    app:layout_constraintTop_toBottomOf="@id/standingInfo"
+    layout="@layout/infos_layout" />
 
 
+<include
+    android:id="@+id/worldChampoionships"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:layout_width="wrap_content"
+    app:layout_constraintEnd_toStartOf="@id/GPsEntered"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/podiums"
+    layout="@layout/infos_layout" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<include
+    android:id="@+id/GPsEntered"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:layout_width="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/worldChampoionships"
+    app:layout_constraintTop_toBottomOf="@id/fastestLap"
+    layout="@layout/infos_layout" />
+
+<include
+    android:id="@+id/team"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="24dp"
+    android:layout_width="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/GPsEntered"
+    layout="@layout/team_driverinfo" />
+
+<include
+    android:id="@+id/country"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="24dp"
+    android:layout_width="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/team"
+    layout="@layout/info_country_layout" />
+
+<include
+    android:id="@+id/placeBirth"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="24dp"
+    android:layout_width="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/country"
+    layout="@layout/infos2_layout" />
+
+<include
+    android:id="@+id/dateBirth"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="24dp"
+    android:layout_width="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/placeBirth"
+    layout="@layout/infos2_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout></ScrollView>

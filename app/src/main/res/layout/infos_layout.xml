@@ -16,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
         android:text="info Title" />
 
     <TextView
@@ -25,5 +26,6 @@
         android:fontFamily="@font/formula1_bold_4"
         android:text="info"
         android:textSize="20sp"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 </LinearLayout>

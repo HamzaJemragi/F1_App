@@ -12,12 +12,14 @@ import androidx.fragment.app.Fragment
 import com.hamza.f1app.R
 import com.hamza.f1app.data.drivers
 import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.hamza.f1app.data.constructors
 
-class DriverStatsFragment(val driverPosition:Int): Fragment() {
+class DriverStatsFragment(val driverPosition: Int) : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.driver_stats, container, false)
 
@@ -46,11 +48,11 @@ class DriverStatsFragment(val driverPosition:Int): Fragment() {
 
 
         val team = view.findViewById<View>(R.id.team)
-        val layoutImage = team.findViewById<FrameLayout>(R.id.layoutImage)
+        val layoutImage = team.findViewById<ConstraintLayout>(R.id.layoutImage)
         val layerDrawableTeam = layoutImage.background as LayerDrawable
         val borderDrawableTeam = layerDrawableTeam.getDrawable(1) as GradientDrawable
-        val imageViewCar = standingInfo.findViewById<ImageView>(R.id.imageViewCar)
-        val teamName = standingInfo.findViewById<TextView>(R.id.teamName)
+        val imageViewCar = layoutImage.findViewById<ImageView>(R.id.imageViewCar)
+        val teamName = team.findViewById<TextView>(R.id.teamName)
 
         val country = view.findViewById<View>(R.id.country)
         val countryName = country.findViewById<TextView>(R.id.countryName)
@@ -65,34 +67,39 @@ class DriverStatsFragment(val driverPosition:Int): Fragment() {
         val dateBirthhInfo = dateBirth.findViewById<TextView>(R.id.info)
 
 
-        borderDrawable.setStroke(4, drivers[driverPosition].equipe!!.construcorColor)
+        borderDrawable.setStroke(
+            4,
+            constructors.find { it.id == drivers[driverPosition].equipe }!!.construcorColor
+        )
         totalPts.text = drivers[driverPosition].points.toString()
         val orderdDrivers = drivers.sortedByDescending { it.points }
         standingNumber.text = (orderdDrivers.indexOf(drivers[driverPosition]) + 1).toString()
 
-        podiumsTitle.text = R.string.podiums.toString()
+        podiumsTitle.text = getString(R.string.podiums)
         podiumsInfo.text = drivers[driverPosition].podiums.toString()
 
-        fastestLapTitle.text = R.string.fastestLap.toString()
+        fastestLapTitle.text = getString(R.string.fastestLap)
         fastestLapInfo.text = drivers[driverPosition].fastestLap.toString()
 
-        worldChampoionshipsTitle.text = R.string.worldChampoionships.toString()
+        worldChampoionshipsTitle.text =getString( R.string.worldChampoionships)
         worldChampoionshipsInfo.text = drivers[driverPosition].worldChampionships.toString()
 
-        GPsEnteredTitle.text = R.string.GPsEntered.toString()
+        GPsEnteredTitle.text =getString( R.string.GPsEntered)
         GPsEnteredInfo.text = drivers[driverPosition].GPsEntered.toString()
 
-        imageViewCar.setImageResource(drivers[driverPosition].equipe!!.carImage)
-        borderDrawableTeam.setStroke(4, drivers[driverPosition].equipe!!.construcorColor)
-        teamName.text = drivers[driverPosition].equipe!!.nom
-
+        imageViewCar.setImageResource(constructors.find { it.id == drivers[driverPosition].equipe }!!.carImage)
+        borderDrawableTeam.setStroke(
+            4,
+            constructors.find { it.id == drivers[driverPosition].equipe }!!.construcorColor
+        )
+        teamName.text = constructors.find { it.id == drivers[driverPosition].equipe }!!.nom
         countryName.text = drivers[driverPosition].nationalite
         countryFlag.setImageResource(drivers[driverPosition].flag)
 
-        placeBirthTitle.text = R.string.placeBirth.toString()
+        placeBirthTitle.text = getString(R.string.placeBirth)
         placeBirthInfo.text = drivers[driverPosition].birthPlace
 
-        dateBirthTitle.text = R.string.dateBirth.toString()
+        dateBirthTitle.text = getString(R.string.dateBirth)
         dateBirthhInfo.text = drivers[driverPosition].birthDate
 
         return view
