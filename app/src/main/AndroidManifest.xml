@@ -13,7 +13,7 @@
         android:theme="@style/Theme.F1App"
         tools:targetApi="31">
         <activity
-            android:name=".activities.RacingActivity"
+            android:name=".activities.SecondActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
