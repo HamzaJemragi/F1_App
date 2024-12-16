@@ -1,9 +1,11 @@
 package com.hamza.f1app.fragments
 
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,9 +25,23 @@ class DriversFragment(context: Context) : Fragment(R.layout.fragment_constructor
         driverRecyclerView.layoutManager = LinearLayoutManager(context)
         val adapter= RecyclerViewDriverAdapter(drivers.toList(),object : RecyclerViewDriverAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
-                val intent = Intent(context, DriverinfoActivity::class.java)
-                intent.putExtra("driverPosition", position)
-                startActivity(intent)
+                if(!drivers[position].retiredOrNot){
+                    val intent = Intent(context, DriverinfoActivity::class.java)
+                    intent.putExtra("driverPosition", position)
+                    startActivity(intent)
+                }else{
+                    val dialog = Dialog(requireContext())
+                    dialog.setContentView(R.layout.custom_dialog)
+
+                    val okBTN = dialog.findViewById<TextView>(R.id.okBTN)
+                    okBTN.setOnClickListener {
+                        dialog.dismiss()
+                    }
+
+                    dialog.show()
+
+                }
+
             }
         })
         driverRecyclerView.adapter = adapter

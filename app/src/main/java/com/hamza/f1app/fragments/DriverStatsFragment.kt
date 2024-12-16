@@ -1,5 +1,8 @@
 package com.hamza.f1app.fragments
 
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
@@ -13,9 +16,11 @@ import com.hamza.f1app.R
 import com.hamza.f1app.data.drivers
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.hamza.f1app.activities.ConstructorinfoActivity
 import com.hamza.f1app.data.constructors
 
 class DriverStatsFragment(val driverPosition: Int) : Fragment() {
+    @SuppressLint("ResourceAsColor")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -26,7 +31,7 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
         val standingInfo = view.findViewById<View>(R.id.standingInfo)
         val frame = standingInfo.findViewById<FrameLayout>(R.id.frame)
         val layerDrawable = frame.background as LayerDrawable
-        val borderDrawable = layerDrawable.getDrawable(1) as GradientDrawable
+        val borderDrawable = layerDrawable.getDrawable(0) as GradientDrawable
         val standingNumber = standingInfo.findViewById<TextView>(R.id.standingNumber)
         val totalPts = standingInfo.findViewById<TextView>(R.id.totalPts)
 
@@ -50,7 +55,7 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
         val team = view.findViewById<View>(R.id.team)
         val layoutImage = team.findViewById<ConstraintLayout>(R.id.layoutImage)
         val layerDrawableTeam = layoutImage.background as LayerDrawable
-        val borderDrawableTeam = layerDrawableTeam.getDrawable(1) as GradientDrawable
+        val borderDrawableTeam = layerDrawableTeam.getDrawable(0) as GradientDrawable
         val imageViewCar = layoutImage.findViewById<ImageView>(R.id.imageViewCar)
         val teamName = team.findViewById<TextView>(R.id.teamName)
 
@@ -68,11 +73,11 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
 
 
         borderDrawable.setStroke(
-            4,
+            25,
             constructors.find { it.id == drivers[driverPosition].equipe }!!.construcorColor
         )
-        totalPts.text = drivers[driverPosition].points.toString()
-        val orderdDrivers = drivers.sortedByDescending { it.points }
+        totalPts.text = drivers[driverPosition].currentPoints.toString()
+        val orderdDrivers = drivers.sortedByDescending { it.currentPoints }
         standingNumber.text = (orderdDrivers.indexOf(drivers[driverPosition]) + 1).toString()
 
         podiumsTitle.text = getString(R.string.podiums)
@@ -89,7 +94,7 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
 
         imageViewCar.setImageResource(constructors.find { it.id == drivers[driverPosition].equipe }!!.carImage)
         borderDrawableTeam.setStroke(
-            4,
+            25,
             constructors.find { it.id == drivers[driverPosition].equipe }!!.construcorColor
         )
         teamName.text = constructors.find { it.id == drivers[driverPosition].equipe }!!.nom
@@ -101,6 +106,12 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
 
         dateBirthTitle.text = getString(R.string.dateBirth)
         dateBirthhInfo.text = drivers[driverPosition].birthDate
+
+        team.setOnClickListener{
+            val intent = Intent(context, ConstructorinfoActivity::class.java)
+            intent.putExtra("constructorPosition", (constructors.find { it.id == drivers[driverPosition].equipe }!!.id)-1)
+            startActivity(intent)
+        }
 
         return view
     }

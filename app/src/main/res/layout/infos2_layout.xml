@@ -12,6 +12,7 @@
     app:layout_constraintTop_toBottomOf="@+id/standingInfo">
 
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/infoTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +20,7 @@
         android:text="info Title" />
 
     <TextView
-        style="@style/circuitInfos"
+        style="@style/infoText"
         android:id="@+id/info"
         android:layout_gravity="center_vertical"
         android:layout_width="wrap_content"

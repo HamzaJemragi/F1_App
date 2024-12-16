@@ -44,7 +44,7 @@ class RecyclerViewDriverAdapter(
     ) {
         val driver = listDriver[position]
 
-        if (!driver.retiredOrNot) {
+
             holder.driverNumber.text = "#${driver.driverNumber}"
             holder.line.setBackgroundResource(constructors.find { it.id == driver.equipe }!!.construcorColor)
             holder.driverFirsName.text = driver.firsName
@@ -54,9 +54,7 @@ class RecyclerViewDriverAdapter(
             holder.itemView.setOnClickListener {
                 listener.onItemClick(position)
             }
-        }else{
-            holder.itemView.visibility = View.GONE
-        }
+
     }
 
     override fun getItemCount(): Int = listDriver.size

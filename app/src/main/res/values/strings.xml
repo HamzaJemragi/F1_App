@@ -10,6 +10,8 @@
     <string name="chassis">Chassis</string>
     <string name="powerUnit">Power Unit</string>
     <string name="teamChief">Team Chief</string>
+    <string name="constructorChampionships">Constructor Championships</string>
+    <string name="polePositions">Pole Positions</string>
 
     <!--strings titles for driver info activity -->
     <string name="podiums">Podiums</string>
@@ -46,4 +48,9 @@
     <string name="hrs">HRS</string>
     <string name="mins">MINS</string>
     <string name="rolex_logo">rolex logo</string>
+
+
+    <!--alert dialog text-->
+    <string name="dialogNoStatsDriverText">There is no performance data available for this driver yet!</string>
+    <string name="dialogNoStatsDriverButton">Understood</string>
 </resources>

@@ -34,6 +34,7 @@ class DriverinfoActivity : AppCompatActivity() {
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.darkGray)
         val driverPosition = intent?.extras?.getInt("driverPosition")!!.toInt()
+//        val driverPosition =1
 
         val driverImage=findViewById<ImageView>(R.id.driverImage)
         val driverNumber=findViewById<TextView>(R.id.driverNumber)
@@ -52,6 +53,8 @@ class DriverinfoActivity : AppCompatActivity() {
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+
+
 
 
 
