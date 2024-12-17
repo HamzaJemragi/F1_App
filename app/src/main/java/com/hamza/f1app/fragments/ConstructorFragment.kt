@@ -12,7 +12,7 @@ import com.hamza.f1app.adapters.RecyclerViewConstructorAdabter
 import com.hamza.f1app.data.constructors
 import com.hamza.f1app.activities.ConstructorinfoActivity
 
-class ConstructorFragment(context: Context) : Fragment(R.layout.fragment_constructors) {
+class ConstructorFragment: Fragment(R.layout.fragment_constructors) {
     private lateinit var constructorRecyclerView: RecyclerView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

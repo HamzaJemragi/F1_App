@@ -1,6 +1,5 @@
 package com.hamza.f1app.fragments
 
-import android.content.Context
 
 import android.os.Bundle
 import android.view.View
