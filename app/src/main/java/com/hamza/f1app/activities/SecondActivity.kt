@@ -2,7 +2,6 @@ package com.hamza.f1app.activities
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.FrameLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,15 +9,11 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.hamza.f1app.R
-import com.hamza.f1app.databinding.ActivityMainBinding
 import com.hamza.f1app.fragments.ConstructorFragment
 import com.hamza.f1app.fragments.DriversFragment
 import com.hamza.f1app.fragments.RacingFragment
 import com.hamza.f1app.fragments.StandingFragment
-import com.hamza.f1app.fragments.past_racing_fragment
-import com.hamza.f1app.fragments.upcoming_racing_fragment
 
 
 class SecondActivity: AppCompatActivity() {
@@ -37,6 +32,7 @@ class SecondActivity: AppCompatActivity() {
         val frameLayout = findViewById<FrameLayout>(R.id.frameLayout)
         val bottomNavigationView = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_nav)
 
+        val homeActivity = MainActivity()
         val racingFragment = RacingFragment()
         val driversFragment = DriversFragment()
         val constructorsFragment = ConstructorFragment()

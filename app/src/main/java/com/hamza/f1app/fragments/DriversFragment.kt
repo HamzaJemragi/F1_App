@@ -13,7 +13,7 @@ import com.hamza.f1app.activities.DriverinfoActivity
 import com.hamza.f1app.adapters.RecyclerViewDriverAdapter
 import com.hamza.f1app.data.drivers
 
-class DriversFragment() : Fragment(R.layout.fragment_constructors) {
+class DriversFragment() : Fragment(R.layout.fragment_drivers) {
     private lateinit var driverRecyclerView: RecyclerView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

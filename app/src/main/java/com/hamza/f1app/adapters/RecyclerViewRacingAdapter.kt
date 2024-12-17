@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Race
@@ -13,7 +14,7 @@ class RecyclerViewRacingAdapter(private val races: List<Race>) :
     RecyclerView.Adapter<RecyclerViewRacingAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val arrowButton = view.findViewById<ImageButton>(R.id.arrowButton)
+        val arrowButton = view.findViewById<ImageView>(R.id.arrowButton)
         val days = view.findViewById<TextView>(R.id.days)
         val month = view.findViewById<TextView>(R.id.month)
         val roundNumber = view.findViewById<TextView>(R.id.roundNumber)

@@ -13,8 +13,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.hamza.f1app.R
-import com.hamza.f1app.fragments.past_racing_fragment
-import com.hamza.f1app.fragments.upcoming_racing_fragment
+import com.hamza.f1app.fragments.PastRacingFragment
+import com.hamza.f1app.fragments.UpcomingRacingFragment
 
 class RacingActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -47,8 +47,8 @@ class RacingActivity : AppCompatActivity() {
 class ViewPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
     override fun getItemCount(): Int = 2
     override fun createFragment(position: Int): Fragment = when (position) {
-        0 -> upcoming_racing_fragment()
-        1 -> past_racing_fragment()
+        0 -> UpcomingRacingFragment()
+        1 -> PastRacingFragment()
         else -> throw IllegalArgumentException("Invalid position")
     }
 }

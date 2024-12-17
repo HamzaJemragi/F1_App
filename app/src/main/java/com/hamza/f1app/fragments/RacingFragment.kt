@@ -1,7 +1,5 @@
 package com.hamza.f1app.fragments
 
-import android.content.Context
-
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -36,8 +34,8 @@ class RacingFragment() : Fragment(R.layout.racing_fragment) {
 class ViewPagerRacingAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
     override fun getItemCount(): Int = 2
     override fun createFragment(position: Int): Fragment = when (position) {
-        0 -> upcoming_racing_fragment()
-        1 -> past_racing_fragment()
+        0 -> UpcomingRacingFragment()
+        1 -> PastRacingFragment()
         else -> throw IllegalArgumentException("Invalid position")
     }
 }

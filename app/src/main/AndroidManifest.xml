@@ -21,9 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--        <activity android:name=".activities.SplachActivity" />-->
-<!--        <activity android:name=".activities.MainActivity" />-->
-<!--        <activity android:name=".activities.RacingActivity" />-->
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.SplachActivity" />
+        <activity android:name=".activities.DriverinfoActivity" />
+        <activity android:name=".activities.ConstructorinfoActivity" />
+        <activity android:name=".activities.RaceInfosActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

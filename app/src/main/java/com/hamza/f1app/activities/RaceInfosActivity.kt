@@ -13,15 +13,15 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.hamza.f1app.R
-import com.hamza.f1app.fragments.past_racing_fragment
-import com.hamza.f1app.fragments.upcoming_racing_fragment
+import com.hamza.f1app.fragments.PastRacingFragment
+import com.hamza.f1app.fragments.UpcomingRacingFragment
 
 class RaceInfosActivity: AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.race_infos_activity)
+        setContentView(R.layout.past_race_infos_activity)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.racingInfos)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -46,8 +46,8 @@ class RaceInfosActivity: AppCompatActivity() {
 class ViewPagerAdapter2(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
     override fun getItemCount(): Int = 2
     override fun createFragment(position: Int): Fragment = when (position) {
-        0 -> upcoming_racing_fragment()
-        1 -> past_racing_fragment()
+        0 -> UpcomingRacingFragment()
+        1 -> PastRacingFragment()
         else -> throw IllegalArgumentException("Invalid position")
     }
 }

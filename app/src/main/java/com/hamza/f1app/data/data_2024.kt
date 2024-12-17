@@ -1099,7 +1099,7 @@ val Bio = mapOf<Int, String>(
             "That was enough to convince Team Principal Fred Vasseur to put his faith in Zhou for 2022 and field him alongside ex-Mercedes racer Valtteri Bottas – allowing Zhou to achieve his dream of racing in F1, and even to see how he fares against his own childhood hero, Fernando Alonso."
 )
 
-/*
+
 val resultats = listOf(
     listOf(
         Resultat(1, drivers[12], "1:31:44.742", 26),
@@ -1166,4 +1166,4 @@ val resultats = listOf(
         Resultat("NC", drivers[10], "DNF", 0),
         Resultat("NC", drivers[12], "DNF", 0)
     )
-)*/
+)
