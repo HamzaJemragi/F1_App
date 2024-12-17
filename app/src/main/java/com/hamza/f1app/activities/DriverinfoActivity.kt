@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -24,6 +23,7 @@ import com.hamza.f1app.fragments.DriverStatsFragment
 
 class DriverinfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_driverinfo)
@@ -34,28 +34,21 @@ class DriverinfoActivity : AppCompatActivity() {
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.darkGray)
         val driverPosition = intent?.extras?.getInt("driverPosition")!!.toInt()
-//        val driverPosition =1
 
-        val driverImage=findViewById<ImageView>(R.id.driverImage)
-        val driverNumber=findViewById<TextView>(R.id.driverNumber)
-        val driverFirsName=findViewById<TextView>(R.id.driverFirsName)
-        val driverLastName=findViewById<TextView>(R.id.driverLastName)
-        val driverTeam=findViewById<TextView>(R.id.driverTeam)
-        val line=findViewById<View>(R.id.line)
+        val driverImage = findViewById<ImageView>(R.id.driverImage)
+        val driverNumber = findViewById<TextView>(R.id.driverNumber)
+        val driverFirsName = findViewById<TextView>(R.id.driverFirsName)
+        val driverLastName = findViewById<TextView>(R.id.driverLastName)
+        val line = findViewById<View>(R.id.line)
 
         driverImage.setImageResource(drivers[driverPosition].driverImage1)
-        driverNumber.text="#${drivers[driverPosition].driverNumber}"
-        driverFirsName.text=drivers[driverPosition].firsName
-        driverLastName.text=drivers[driverPosition].lastName
-        driverTeam.text=constructors.find { it.id == drivers[driverPosition].equipe }?.nom
-        line.setBackgroundColor(constructors.find { it.id == drivers[driverPosition].equipe }?.construcorColor!!)
-        Toast.makeText(this, constructors.find { it.id == drivers[driverPosition].equipe }?.construcorColor!!, Toast.LENGTH_LONG).show()
+        driverNumber.text = "#${drivers[driverPosition].driverNumber}"
+        driverFirsName.text = drivers[driverPosition].firsName
+        driverLastName.text = drivers[driverPosition].lastName
+        line.setBackgroundColor(getColor(constructors.find { it.id == drivers[driverPosition].equipe }?.construcorColor!!))
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
-
-
-
 
 
         val adapter = ViewPagerDriverAdapter(this, driverPosition)
@@ -69,6 +62,7 @@ class DriverinfoActivity : AppCompatActivity() {
             }
         }.attach()
     }
+
     class ViewPagerDriverAdapter(activity: AppCompatActivity, val driverPosition: Int) :
         FragmentStateAdapter(activity) {
         override fun getItemCount(): Int = 2
@@ -77,5 +71,11 @@ class DriverinfoActivity : AppCompatActivity() {
             1 -> DriverBioFragment(driverPosition)
             else -> throw IllegalArgumentException("Invalid position")
         }
+    }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+
     }
 }

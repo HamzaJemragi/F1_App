@@ -15,7 +15,7 @@ class StandingDriversAdapter(
     private val listener: OnItemClickListener,
 ) : RecyclerView.Adapter<StandingDriversAdapter.ViewHolderDriverStanding>() {
 
-    private val orderedList = listDriver.sortedByDescending { it.currentPoints }
+    private val orderedList = listDriver.sortedByDescending { it.seasonPoint }
 
     companion object {
         private const val FIRST_PLACE = 1
@@ -80,7 +80,7 @@ class StandingDriversAdapter(
             driverLastName.text = driver.lastName
             driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
             driverPhoto.setImageResource(driver.driverImage1)
-            pts.text = "${driver.currentPoints} pts"
+            pts.text = "${driver.seasonPoint} pts"
             itemView.setOnClickListener {
                 listener.onItemClick(adapterPosition)
             }
@@ -101,7 +101,7 @@ class StandingDriversAdapter(
             driverFirstName.text = driver.firsName
             driverLastName.text = driver.lastName
             driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
-            pts.text = "${driver.currentPoints} pts"
+            pts.text = "${driver.seasonPoint} pts"
             itemView.setOnClickListener {
                 listener.onItemClick(adapterPosition)
             }

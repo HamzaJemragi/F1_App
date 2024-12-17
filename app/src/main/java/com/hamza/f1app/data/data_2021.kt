@@ -1,21 +1,17 @@
-/*
 package com.hamza.f1app.data
 
 import com.hamza.f1app.Models.Constructor
 import com.hamza.f1app.Models.Driver
 import com.hamza.f1app.R
 
-fun main() {
-    val constructors2021 = mutableListOf<Constructor>()
-    val drivers2021 = mutableListOf<Driver>()
 
-    drivers2021.addAll(
-        listOf(
+
+    val drivers2021 =listOf(
             Driver(
                 2,
                 "Carlos",
                 "Sainz",
-                constructors2021[1],
+                2,
                 "Spain",
                 818,
                 16,
@@ -26,13 +22,13 @@ fun main() {
                 "01-09-1994",
                 R.drawable.driver_carlossainz_1,
                 R.drawable.driver_carlossainz_2,
-                55, R.drawable.flag_spain, false
+                55, R.drawable.flag_spain, false,0
             ),
             Driver(
                 3,
                 "Charles",
                 "Leclerc",
-                constructors2021[1],
+                2,
                 "Monaco",
                 1040,
                 25,
@@ -42,13 +38,13 @@ fun main() {
                 "Monte Carlo, Monaco",
                 "16-10-1997",
                 R.drawable.driver_charlesleclerc_1,
-                R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco, false
+                R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco, false,0
             ),
             Driver(
                 4,
                 "Esteban",
                 "Ocon",
-                constructors2021[3],
+                4,
                 "France",
                 372,
                 2,
@@ -58,13 +54,13 @@ fun main() {
                 "Évreux, France",
                 "17-09-1996",
                 R.drawable.driver_estebanocon_1,
-                R.drawable.driver_estebanocon_2, 31, R.drawable.flag_france, false
+                R.drawable.driver_estebanocon_2, 31, R.drawable.flag_france, false,0
             ),
             Driver(
                 5,
                 "Fernando",
                 "Alonso",
-                constructors2021[3],
+               4,
                 "Spain",
                 2100,
                 105,
@@ -74,13 +70,13 @@ fun main() {
                 "Oviedo, Spain",
                 "29-07-1981",
                 R.drawable.driver_fernandoalonso_1,
-                R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain, false
+                R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain, false,0
             ),
             Driver(
                 7,
                 "George",
                 "Russell",
-                constructors2021[7],
+                8,
                 "United Kingdom",
                 539,
                 10,
@@ -90,13 +86,13 @@ fun main() {
                 "King's Lynn, England",
                 "15-02-1998",
                 R.drawable.driver_georgerussell_1,
-                R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk, false
+                R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk, false,0
             ),
             Driver(
                 9,
                 "Lance",
                 "Stroll",
-                constructors2021[5],
+                6,
                 "Canada",
                 232,
                 3,
@@ -106,13 +102,13 @@ fun main() {
                 "Montreal, Canada",
                 "29-10-1998",
                 R.drawable.driver_lancestroll_1,
-                R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada, false
+                R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada, false,0
             ),
             Driver(
                 10,
                 "Lando",
                 "Norris",
-                constructors2021[4],
+                5,
                 "United Kingdom",
                 532,
                 11,
@@ -122,13 +118,13 @@ fun main() {
                 "Bristol, England",
                 "13-11-1999",
                 R.drawable.driver_landonorris_1,
-                R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk, false
+                R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk, false,0
             ),
             Driver(
                 11,
                 "Lewis",
                 "Hamilton",
-                constructors2021[2],
+                3,
                 "United Kingdom",
                 4400,
                 195,
@@ -138,13 +134,13 @@ fun main() {
                 "Stevenage, England",
                 "07-01-1985",
                 R.drawable.driver_lewishamilton_1,
-                R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk, false
+                R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk, false,0
             ),
             Driver(
                 13,
                 "Max",
                 "Verstappen",
-                constructors2021[0],
+                1,
                 "Netherlands",
                 2500,
                 100,
@@ -154,13 +150,13 @@ fun main() {
                 "Hasselt, Belgium",
                 "30-09-1997",
                 R.drawable.driver_maxverstappen_1,
-                R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands, false
+                R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands, false,0
             ),
             Driver(
                 16,
                 "Pierre",
                 "Gasly",
-                constructors2021[3],
+                9,
                 "France",
                 342,
                 3,
@@ -170,13 +166,13 @@ fun main() {
                 "Rouen, France",
                 "07-02-1996",
                 R.drawable.driver_pierregasly_1,
-                R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france, false
+                R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france, false,0
             ),
             Driver(
                 17,
                 "Sergio",
                 "Perez",
-                constructors2021[0],
+                1,
                 "Mexico",
                 1500,
                 35,
@@ -186,13 +182,13 @@ fun main() {
                 "Guadalajara, Mexico",
                 "26-01-1990",
                 R.drawable.driver_sergioperez_1,
-                R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico, false
+                R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico, false,0
             ),
             Driver(
                 18,
                 "Valtteri",
                 "Bottas",
-                constructors2021[2],
+                3,
                 "Finland",
                 1800,
                 67,
@@ -202,13 +198,13 @@ fun main() {
                 "Nastola, Finland",
                 "28-08-1989",
                 R.drawable.driver_valtteribottas_1,
-                R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland, false
+                R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland, false,0
             ),
             Driver(
                 19,
                 "Yuki",
                 "Tsunoda",
-                constructors2021[8],
+                9,
                 "Japan",
                 53,
                 0,
@@ -218,13 +214,13 @@ fun main() {
                 "Sagamihara, Japan",
                 "11-05-2000",
                 R.drawable.driver_yukitsunoda_1,
-                R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan, false
+                R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan, false,0
             ),
             Driver(
                 21,
                 "Daniel",
                 "Riccardo",
-                constructors2021[4],
+                5,
                 "Australia",
                 115,
                 32,
@@ -237,13 +233,13 @@ fun main() {
                 R.drawable.f1_logo,
                 3,
                 R.drawable.flag_australia,
-                true
+                true,0
             ),
             Driver(
                 22,
                 "Sebastian",
                 "Vettel",
-                constructors2021[5],
+                6,
                 "Germany",
                 3098,
                 122,
@@ -256,13 +252,13 @@ fun main() {
                 R.drawable.f1_logo,
                 5,
                 R.drawable.flag_germany,
-                true
+                true,0
             ),
             Driver(
                 23,
                 "Kimi",
                 "Räikkönen",
-                constructors2021[9],
+               10,
                 "Finland",
                 1873,
                 103,
@@ -275,13 +271,13 @@ fun main() {
                 R.drawable.f1_logo,
                 7,
                 R.drawable.flag_finland,
-                true
+                true,0
             ),
             Driver(
                 id = 24,
                 firsName = "Antonio",
                 lastName = "Giovinazzi",
-                equipe = constructors2021[9],
+                equipe = 10,
                 nationalite = "Italian",
                 points = 3,
                 podiums = 0,
@@ -294,13 +290,13 @@ fun main() {
                 driverImage2 = 0,
                 driverNumber = 99,
                 flag = 0,
-                retiredOrNot = true
+                retiredOrNot = true,0
             ),
             Driver(
                 id = 25,
                 firsName = "Nicholas",
                 lastName = "Latifi",
-                equipe = constructors2021[7],
+                equipe = 8,
                 nationalite = "Canadian",
                 points = 7,
                 podiums = 0,
@@ -313,13 +309,13 @@ fun main() {
                 driverImage2 = 0,
                 driverNumber = 6,
                 flag = R.drawable.flag_canada,
-                retiredOrNot = true
+                retiredOrNot = true,0
             ),
             Driver(
                 id = 26,
                 firsName = "Mick",
                 lastName = "Schumacher",
-                equipe = constructors2021[6],
+                equipe = 7,
                 nationalite = "German",
                 points = 0,
                 podiums = 0,
@@ -332,13 +328,13 @@ fun main() {
                 driverImage2 = 0,
                 driverNumber = 47,
                 flag = R.drawable.flag_germany,
-                retiredOrNot = true
+                retiredOrNot = true,0
             ),
             Driver(
                 id = 27,
                 firsName = "Robert",
                 lastName = "Kubica",
-                equipe = constructors2021[9],
+                equipe = 10,
                 nationalite = "Polish",
                 points = 0,
                 podiums = 0,
@@ -351,14 +347,12 @@ fun main() {
                 driverImage2 = 0,
                 driverNumber = 88,
                 flag = 0,
-                retiredOrNot = true
+                retiredOrNot = true,0
             )
         )
-    )
 
-    */
-/*constructors2021.addAll(
-        listOf(
+
+val constructors2021= listOf(
             Constructor(
                 1,
                 "Red Bull Racing",
@@ -371,60 +365,60 @@ fun main() {
                 700,
                 R.color.redbullracingColor,
                 listOf(drivers[12], drivers[16]),
-                R.drawable.car_redbullracing
+                R.drawable.car_redbullracing, 103, 6, "1 (x122)"
             ),
             Constructor(
                 2, "Ferrari", R.drawable.constructor_ferrari, 1950, "SF-24", "Ferrari",
                 "Fred Vasseur", "Italy", 600, R.color.ferrariColor,
-                listOf(drivers[1], drivers[2]), R.drawable.car_ferrari
+                listOf(drivers[1], drivers[2]), R.drawable.car_ferrari,253, 16, "1 (x249)"
             ),
             Constructor(
                 3, "Mercedes", R.drawable.constructor_mercedes, 1954, "W15", "Mercedes",
                 "Toto Wolff", "Germany", 550, R.color.mercedesColor,
-                listOf(drivers[10], drivers[6]), R.drawable.car_mercedes
+                listOf(drivers[10], drivers[6]), R.drawable.car_mercedes,133, 8, "1 (x120)"
             ),
             Constructor(
                 4, "Alpine", R.drawable.constructor_alpine, 2021, "A524", "Renault",
                 "Bruno Famin", "France", 180, R.color.alpineColor,
-                listOf(drivers[3], drivers[15]), R.drawable.car_alpine
+                listOf(drivers[3], drivers[15]), R.drawable.car_alpine,20, 2, "1 (x21)"
             ),
             Constructor(
                 5, "McLaren", R.drawable.constructor_mclaren, 1966, "MCL61", "Mercedes",
                 "Andrea Stella", "United Kingdom", 250, R.color.mclarenColor,
-                listOf(drivers[9], drivers[14]), R.drawable.car_mclaren
+                listOf(drivers[9], drivers[14]), R.drawable.car_mclaren, 164, 9, "1 (x189)"
             ),
             Constructor(
                 6, "Aston Martin", R.drawable.constructor_astonmartin, 2021, "AMR24", "Mercedes",
                 "Mike Krack", "United Kingdom", 200, R.color.astonmartinColor,
-                listOf(drivers[4], drivers[8]), R.drawable.car_astonmartin
+                listOf(drivers[4], drivers[8]), R.drawable.car_astonmartin, 1, 0, "1 (x1)"
             ),
             Constructor(
                 7, "Haas", R.drawable.constuctor_haas, 2016, "VF-24", "Ferrari",
                 "Guenther Steiner", "United States", 80, R.color.haasColor,
-                listOf(drivers[7], drivers[13]), R.drawable.car_haas
+                listOf(drivers[7], drivers[13]), R.drawable.car_haas,1, 0, "4 (x1)"
             ),
             Constructor(
                 8, "Williams", R.drawable.constuctor_williams, 1977, "FW46", "Mercedes",
                 "James Vowles", "United Kingdom", 60, R.color.williamsColor,
-                listOf(drivers[0], drivers[5]), R.drawable.car_williams
+                listOf(drivers[0], drivers[5]), R.drawable.car_williams,128, 9, "1 (x114)"
             ),
             Constructor(
                 id = 9,
                 nom = "AlphaTauri Honda",
                 logo = 0,
-                firstEntry = 2006,
+                firstEntry = 2020,
                 chassis = "AT02",
                 powerUnit = "Honda",
                 teamChief = "Franz Tost",
                 nationalite = "Italian",
-                points = 142,
+                points = 309,
                 construcorColor = R.color.alphatauriColor,
                 pilotes = listOf(drivers2021[9], drivers2021[12]),
-                carImage = 0
+                carImage = 0,1,0, "1 (x1)"
             ),
             Constructor(
                 id = 10,
-                nom = "Alfa Romeo Racing Ferrari",
+                nom = "Alfa Romeo",
                 logo = 0,
                 firstEntry = 1950,
                 chassis = "C41",
@@ -434,9 +428,9 @@ fun main() {
                 points = 13,
                 construcorColor = R.color.alfaromioColor,
                 pilotes = listOf(drivers2021[15], drivers2021[16]),
-                carImage = 0
+                carImage = 0,12,0,"1 (x12)"
             )
         )
-    )*//*
 
-}*/
+
+

@@ -12,6 +12,7 @@
     <string name="teamChief">Team Chief</string>
     <string name="constructorChampionships">Constructor Championships</string>
     <string name="polePositions">Pole Positions</string>
+    <string name="highestFinish">Highest Finish</string>
 
     <!--strings titles for driver info activity -->
     <string name="podiums">Podiums</string>
