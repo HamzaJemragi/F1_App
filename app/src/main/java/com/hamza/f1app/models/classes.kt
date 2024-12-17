@@ -46,7 +46,8 @@ data class Driver(
     var driverImage2: Int,
     var driverNumber: Int,
     var flag: Int,
-    var retiredOrNot: Boolean
+    var retiredOrNot: Boolean,
+    var currentPoints: Int,
     )
 
 data class Constructor(
@@ -61,7 +62,9 @@ data class Constructor(
     var points: Int,
     var construcorColor: Int,
     var pilotes: List<Driver>,
-    var carImage:Int
+    var carImage:Int,
+    var polePositions:Int,
+    var constructorChampionships:Int
 )
 
 

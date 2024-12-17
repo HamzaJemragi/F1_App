@@ -1,5 +1,6 @@
 package com.hamza.f1app.activities
 
+import android.content.Intent
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
@@ -9,11 +10,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.hamza.f1app.R
 import com.hamza.f1app.data.constructors
+import com.hamza.f1app.data.drivers
 
 class ConstructorinfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,8 +28,9 @@ class ConstructorinfoActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.darkGray)
         val constructorPosition = intent?.extras?.getInt("constructorPosition")!!.toInt()
+//        val constructorPosition =0
 
         val line = findViewById<View>(R.id.line)
         val constructorName = findViewById<TextView>(R.id.constructorName)
@@ -36,7 +40,7 @@ class ConstructorinfoActivity : AppCompatActivity() {
         val standingInfo = findViewById<View>(R.id.standingInfo)
         val frame = standingInfo.findViewById<FrameLayout>(R.id.frame)
         val layerDrawable = frame.background as LayerDrawable
-        val borderDrawable = layerDrawable.getDrawable(1) as GradientDrawable
+        val borderDrawable = layerDrawable.getDrawable(0) as GradientDrawable
         val standingNumber = standingInfo.findViewById<TextView>(R.id.standingNumber)
         val totalPts = standingInfo.findViewById<TextView>(R.id.totalPts)
 
@@ -48,6 +52,14 @@ class ConstructorinfoActivity : AppCompatActivity() {
         val chassisTitle = chassis.findViewById<TextView>(R.id.infoTitle)
         val chassisrInfo = chassis.findViewById<TextView>(R.id.info)
 
+        val constructorChampionships = findViewById<View>(R.id.constructorChampionships)
+        val constructorChampionshipsTitle = constructorChampionships.findViewById<TextView>(R.id.infoTitle)
+        val constructorChampionshipsInfo = constructorChampionships.findViewById<TextView>(R.id.info)
+
+        val polePositions = findViewById<View>(R.id.polePositions)
+        val polePositionsTitle = polePositions.findViewById<TextView>(R.id.infoTitle)
+        val polePositionsInfo = polePositions.findViewById<TextView>(R.id.info)
+
         val powerUnit = findViewById<View>(R.id.powerUnit)
         val powerUnitTitle = powerUnit.findViewById<TextView>(R.id.infoTitle)
         val powerUnitInfo = powerUnit.findViewById<TextView>(R.id.info)
@@ -56,9 +68,11 @@ class ConstructorinfoActivity : AppCompatActivity() {
         val teamChiefTitle = teamChief.findViewById<TextView>(R.id.infoTitle)
         val teamChiefInfo = teamChief.findViewById<TextView>(R.id.info)
 
+        val driver1=findViewById<ConstraintLayout>(R.id.driver1)
         val driverImage1 = findViewById<ImageView>(R.id.driverImage1)
         val drivername1 = findViewById<TextView>(R.id.drivername1)
 
+        val driver2=findViewById<ConstraintLayout>(R.id.driver2)
         val driverImage2 = findViewById<ImageView>(R.id.driverImage2)
         val drivername2 = findViewById<TextView>(R.id.drivername2)
 
@@ -68,22 +82,28 @@ class ConstructorinfoActivity : AppCompatActivity() {
         constructorCountry.text = constructors[constructorPosition].nationalite
         constructorsLogo.setImageResource(constructors[constructorPosition].logo)
 
-        borderDrawable.setStroke(4, constructors[constructorPosition].construcorColor)
-        totalPts.text = constructors[constructorPosition].pilotes.sumOf { it.points }.toString()
-        val orderdConstructors = constructors.sortedByDescending { it.pilotes.sumOf { it.points } }
+        borderDrawable.setStroke(25, constructors[constructorPosition].construcorColor)
+        totalPts.text = constructors[constructorPosition].pilotes.sumOf { it.currentPoints }.toString()
+        val orderdConstructors = constructors.sortedByDescending { it.pilotes.sumOf { it.currentPoints } }
         standingNumber.text =
             (orderdConstructors.indexOf(constructors[constructorPosition]) + 1).toString()
 
-        firstYearTitle.text = R.string.first_team_entry.toString()
+        firstYearTitle.text = getString(R.string.first_team_entry)
         firstYearInfo.text = constructors[constructorPosition].firstEntry.toString()
 
-        chassisTitle.text = R.string.chassis.toString()
+        chassisTitle.text =getString( R.string.chassis)
         chassisrInfo.text = constructors[constructorPosition].chassis
 
-        powerUnitTitle.text = R.string.powerUnit.toString()
+        constructorChampionshipsTitle.text = getString(R.string.constructorChampionships)
+        constructorChampionshipsInfo.text = constructors[constructorPosition].constructorChampionships.toString()
+
+        polePositionsTitle.text = getString(R.string.polePositions)
+        polePositionsInfo.text = constructors[constructorPosition].polePositions.toString()
+
+        powerUnitTitle.text = getString(R.string.powerUnit)
         powerUnitInfo.text = constructors[constructorPosition].powerUnit
 
-        teamChiefTitle.text = R.string.teamChief.toString()
+        teamChiefTitle.text = getString(R.string.teamChief)
         teamChiefInfo.text = constructors[constructorPosition].teamChief
 
         driverImage1.setImageResource(constructors[constructorPosition].pilotes[0].driverImage2)
@@ -91,6 +111,19 @@ class ConstructorinfoActivity : AppCompatActivity() {
 
         driverImage2.setImageResource(constructors[constructorPosition].pilotes[1].driverImage2)
         drivername2.text = constructors[constructorPosition].pilotes[1].lastName
+
+
+        driver1.setOnClickListener{
+            val intent = Intent(this, DriverinfoActivity::class.java)
+            intent.putExtra("driverPosition", drivers.indexOf(constructors[constructorPosition].pilotes[0]))
+            startActivity(intent)
+        }
+
+        driver2.setOnClickListener{
+            val intent = Intent(this, DriverinfoActivity::class.java)
+            intent.putExtra("driverPosition", drivers.indexOf(constructors[constructorPosition].pilotes[1]))
+            startActivity(intent)
+        }
     }
 
 }

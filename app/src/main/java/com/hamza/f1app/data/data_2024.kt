@@ -442,7 +442,8 @@ var drivers = listOf(
             R.drawable.driver_alexanderalbon_1,
             R.drawable.driver_alexanderalbon_2,
             23, R.drawable.flag_thailand,
-            false
+            false,
+            12
         ),
         Driver(
             2,
@@ -459,7 +460,7 @@ var drivers = listOf(
             "01-09-1994",
             R.drawable.driver_carlossainz_1,
             R.drawable.driver_carlossainz_2,
-            55, R.drawable.flag_spain, false
+            55, R.drawable.flag_spain, false, 290
         ),
         Driver(
             3,
@@ -475,7 +476,7 @@ var drivers = listOf(
             "Monte Carlo, Monaco",
             "16-10-1997",
             R.drawable.driver_charlesleclerc_1,
-            R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco, false
+            R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco, false, 356
         ),
         Driver(
             4,
@@ -491,7 +492,7 @@ var drivers = listOf(
             "Évreux, France",
             "17-09-1996",
             R.drawable.driver_estebanocon_1,
-            R.drawable.driver_estebanocon_2, 31, R.drawable.flag_france, false
+            R.drawable.driver_estebanocon_2, 31, R.drawable.flag_france, false, 23
         ),
         Driver(
             5,
@@ -507,7 +508,7 @@ var drivers = listOf(
             "Oviedo, Spain",
             "29-07-1981",
             R.drawable.driver_fernandoalonso_1,
-            R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain, false
+            R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain, false, 70
         ),
         Driver(
             6,
@@ -523,7 +524,7 @@ var drivers = listOf(
             "Pilar, Argentina",
             "27-05-2003",
             R.drawable.driver_francocolapinto_1,
-            R.drawable.driver_francocolapinto_2, 43, R.drawable.flag_argentina, false
+            R.drawable.driver_francocolapinto_2, 43, R.drawable.flag_argentina, false, 5
         ),
         Driver(
             7,
@@ -539,7 +540,7 @@ var drivers = listOf(
             "King's Lynn, England",
             "15-02-1998",
             R.drawable.driver_georgerussell_1,
-            R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk, false
+            R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk, false, 245
         ),
         Driver(
             8,
@@ -555,7 +556,7 @@ var drivers = listOf(
             "Roskilde, Denmark",
             "05-10-1992",
             R.drawable.driver_kevinmagnussen_1,
-            R.drawable.driver_kevinmagnussen_2, 20, R.drawable.flag_denmark, false
+            R.drawable.driver_kevinmagnussen_2, 20, R.drawable.flag_denmark, false, 16
         ),
         Driver(
             9,
@@ -571,7 +572,7 @@ var drivers = listOf(
             "Montreal, Canada",
             "29-10-1998",
             R.drawable.driver_lancestroll_1,
-            R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada, false
+            R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada, false, 24
         ),
         Driver(
             10,
@@ -587,7 +588,7 @@ var drivers = listOf(
             "Bristol, England",
             "13-11-1999",
             R.drawable.driver_landonorris_1,
-            R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk, false
+            R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk, false, 374
         ),
         Driver(
             11,
@@ -603,7 +604,7 @@ var drivers = listOf(
             "Stevenage, England",
             "07-01-1985",
             R.drawable.driver_lewishamilton_1,
-            R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk, false
+            R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk, false, 223
         ),
         Driver(
             12,
@@ -619,7 +620,7 @@ var drivers = listOf(
             "Hastings, New Zealand",
             "11-02-2002",
             R.drawable.driver_liamlawson_1,
-            R.drawable.driver_liamlawson_2, 30, R.drawable.flag_newzealand, false
+            R.drawable.driver_liamlawson_2, 30, R.drawable.flag_newzealand, false,4
         ),
         Driver(
             13,
@@ -635,7 +636,7 @@ var drivers = listOf(
             "Hasselt, Belgium",
             "30-09-1997",
             R.drawable.driver_maxverstappen_1,
-            R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands, false
+            R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands, false,437
         ),
         Driver(
             14,
@@ -651,7 +652,7 @@ var drivers = listOf(
             "Emmerich am Rhein, Germany",
             "19-08-1987",
             R.drawable.driver_nicohulkenberg_1,
-            R.drawable.driver_nicohulkenberg_2, 27, R.drawable.flag_germany, false
+            R.drawable.driver_nicohulkenberg_2, 27, R.drawable.flag_germany, false, 41
         ),
         Driver(
             15,
@@ -667,7 +668,7 @@ var drivers = listOf(
             "Melbourne, Australia",
             "06-04-2001",
             R.drawable.driver_oscarpiastri_1,
-            R.drawable.driver_oscarpiastri_2, 81, R.drawable.flag_australia, false
+            R.drawable.driver_oscarpiastri_2, 81, R.drawable.flag_australia, false, 292
         ),
         Driver(
             16,
@@ -683,7 +684,7 @@ var drivers = listOf(
             "Rouen, France",
             "07-02-1996",
             R.drawable.driver_pierregasly_1,
-            R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france, false
+            R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france, false, 42
         ),
         Driver(
             17,
@@ -699,7 +700,7 @@ var drivers = listOf(
             "Guadalajara, Mexico",
             "26-01-1990",
             R.drawable.driver_sergioperez_1,
-            R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico, false
+            R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico, false, 152
         ),
         Driver(
             18,
@@ -715,7 +716,7 @@ var drivers = listOf(
             "Nastola, Finland",
             "28-08-1989",
             R.drawable.driver_valtteribottas_1,
-            R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland, false
+            R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland, false, 0
         ),
         Driver(
             19,
@@ -731,7 +732,7 @@ var drivers = listOf(
             "Sagamihara, Japan",
             "11-05-2000",
             R.drawable.driver_yukitsunoda_1,
-            R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan, false
+            R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan, false, 30
         ),
         Driver(
             20,
@@ -747,10 +748,10 @@ var drivers = listOf(
             "Shanghai, China",
             "30-05-1999",
             R.drawable.driver_zhouguanyu_1,
-            R.drawable.driver_zhouguanyu_2, 24, R.drawable.flag_china, false
+            R.drawable.driver_zhouguanyu_2, 24, R.drawable.flag_china, false, 4
         ),
         Driver(
-            0,
+            21,
             "Daniel",
             "Riccardo",
             10,
@@ -762,14 +763,14 @@ var drivers = listOf(
             0,
             "",
             "",
-            R.drawable.f1_logo,
+            R.drawable.driver_danielriccardo_1,
             R.drawable.f1_logo,
             3,
             0,
-            true
+            true, 12
         ),
         Driver(
-            0,
+            22,
             "Logan",
             "Sargeant",
             8,
@@ -781,14 +782,14 @@ var drivers = listOf(
             0,
             "",
             "",
-            R.drawable.f1_logo,
+            R.drawable.driver_logansargeant_1,
             R.drawable.f1_logo,
             2,
             0,
-            true
+            true, 0
         ),
         Driver(
-            0,
+            23,
             "Jack",
             "Doohan",
             4,
@@ -800,14 +801,14 @@ var drivers = listOf(
             0,
             "",
             "",
-            R.drawable.f1_logo,
+            R.drawable.driver_jackdoohan_1,
             R.drawable.f1_logo,
             61,
             0,
-            true
+            true, 0
         ),
         Driver(
-            0,
+            24,
             "Oliver",
             "Bearman",
             7,
@@ -819,11 +820,11 @@ var drivers = listOf(
             0,
             "",
             "",
-            R.drawable.f1_logo,
+            R.drawable.driver_oliverbearman_1,
             R.drawable.f1_logo,
             55,
             0,
-            true
+            true, 7
         ),
     )
 
@@ -840,52 +841,52 @@ val constructors = listOf(
                 700,
                 R.color.redbullracingColor,
                 listOf(drivers[12], drivers[16]),
-                R.drawable.car_redbullracing
+                R.drawable.car_redbullracing, 103,6
             ),
             Constructor(
                 2, "Ferrari", R.drawable.constructor_ferrari, 1950, "SF-24", "Ferrari",
                 "Fred Vasseur", "Italy", 600, R.color.ferrariColor,
-                listOf(drivers[1], drivers[2]), R.drawable.car_ferrari
+                listOf(drivers[1], drivers[2]), R.drawable.car_ferrari, 253, 16
             ),
             Constructor(
                 3, "Mercedes", R.drawable.constructor_mercedes, 1954, "W15", "Mercedes",
                 "Toto Wolff", "Germany", 550, R.color.mercedesColor,
-                listOf(drivers[10], drivers[6]), R.drawable.car_mercedes
+                listOf(drivers[10], drivers[6]), R.drawable.car_mercedes, 133,8
             ),
             Constructor(
                 4, "Alpine", R.drawable.constructor_alpine, 2021, "A524", "Renault",
                 "Bruno Famin", "France", 180, R.color.alpineColor,
-                listOf(drivers[3], drivers[15]), R.drawable.car_alpine
+                listOf(drivers[3], drivers[15]), R.drawable.car_alpine,20, 2
             ),
             Constructor(
                 5, "McLaren", R.drawable.constructor_mclaren, 1966, "MCL61", "Mercedes",
                 "Andrea Stella", "United Kingdom", 250, R.color.mclarenColor,
-                listOf(drivers[9], drivers[14]), R.drawable.car_mclaren
+                listOf(drivers[9], drivers[14]), R.drawable.car_mclaren, 164,9
             ),
             Constructor(
                 6, "Aston Martin", R.drawable.constructor_astonmartin, 2021, "AMR24", "Mercedes",
                 "Mike Krack", "United Kingdom", 200, R.color.astonmartinColor,
-                listOf(drivers[4], drivers[8]), R.drawable.car_astonmartin
+                listOf(drivers[4], drivers[8]), R.drawable.car_astonmartin, 1 ,0
             ),
             Constructor(
                 7, "Haas", R.drawable.constuctor_haas, 2016, "VF-24", "Ferrari",
                 "Guenther Steiner", "United States", 80, R.color.haasColor,
-                listOf(drivers[7], drivers[13]), R.drawable.car_haas
+                listOf(drivers[7], drivers[13]), R.drawable.car_haas,1,0
             ),
             Constructor(
                 8, "Williams", R.drawable.constuctor_williams, 1977, "FW46", "Mercedes",
                 "James Vowles", "United Kingdom", 60, R.color.williamsColor,
-                listOf(drivers[0], drivers[5]), R.drawable.car_williams
+                listOf(drivers[0], drivers[5]), R.drawable.car_williams, 128, 9
             ),
             Constructor(
                 9, "Kick Sauber", R.drawable.constuctor_kicksauber, 1993, "C44", "Ferrari",
                 "Alessandro Alunni Bravi", "Switzerland", 45, R.color.kicksauberColor,
-                listOf(drivers[19], drivers[17]), R.drawable.car_kicksauber
+                listOf(drivers[19], drivers[17]), R.drawable.car_kicksauber,1 ,0
             ),
             Constructor(
                 10, "RB", R.drawable.constuctor_rb, 1985, "VCARB 02", "Honda RBPT",
                 "Laurent Mekies", "Italy", 35, R.color.rbColor,
-                listOf(drivers[11], drivers[18]), R.drawable.car_rb
+                listOf(drivers[11], drivers[18]), R.drawable.car_rb,1 ,0
             )
         )
 

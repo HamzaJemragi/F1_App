@@ -28,7 +28,7 @@ class DriversStandingFragment: Fragment() {
         val adapter= StandingDriversAdapter(drivers,object : StandingDriversAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(requireContext(), DriverinfoActivity::class.java)
-                intent.putExtra("driverPosition", position)
+                intent.putExtra("driverPosition", position )
                 startActivity(intent)
             }
         } )

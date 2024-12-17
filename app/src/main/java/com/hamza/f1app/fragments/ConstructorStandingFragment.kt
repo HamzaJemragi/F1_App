@@ -28,7 +28,7 @@ class ConstructorStandingFragment(): Fragment() {
         val adapter= StandingConstructorAdapter(constructors.toList(),object : StandingConstructorAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(requireContext(), ConstructorinfoActivity::class.java)
-                intent.putExtra("constructorPosition", position)
+                intent.putExtra("constructorPosition", constructors.indexOf(constructors.find { it.id == constructors[position].id }) )
                 startActivity(intent)
             }
         } )

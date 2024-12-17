@@ -15,7 +15,7 @@ class StandingDriversAdapter(
     private val listener: OnItemClickListener,
 ) : RecyclerView.Adapter<StandingDriversAdapter.ViewHolderDriverStanding>() {
 
-    private val orderedList = listDriver.sortedByDescending { it.points }
+    private val orderedList = listDriver.sortedByDescending { it.currentPoints }
 
     companion object {
         private const val FIRST_PLACE = 1
@@ -37,13 +37,13 @@ class StandingDriversAdapter(
             FIRST_PLACE -> {
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.standing_firstplacedriver_card, parent, false)
-                FirstPlaceLayout(view)
+                FirstPlaceLayout(view, listener)
             }
 
             OTHER_PLACES -> {
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.standing_otherplacesdriver_card, parent, false)
-                OtherPlacesLayout(view)
+                OtherPlacesLayout(view, listener)
             }
 
             else -> throw IllegalArgumentException("Invalid view type")
@@ -55,11 +55,16 @@ class StandingDriversAdapter(
             is FirstPlaceLayout -> holder.bind(orderedList[position])
             is OtherPlacesLayout -> holder.bind(orderedList[position], position)
         }
+        holder.itemView.setOnClickListener {
+            val driver = orderedList[position]
+            val originalIndex = listDriver.indexOf(driver)
+            listener.onItemClick(originalIndex)
+        }
     }
 
     override fun getItemCount(): Int = orderedList.size
 
-    class FirstPlaceLayout(itemView: View) : ViewHolderDriverStanding(itemView) {
+    class FirstPlaceLayout(itemView: View, private val listener: OnItemClickListener) : ViewHolderDriverStanding(itemView) {
         private val standingNumber = itemView.findViewById<TextView>(R.id.standingNumber)
         private val line = itemView.findViewById<View>(R.id.line)
         private val driverFirstName = itemView.findViewById<TextView>(R.id.driverFirsName)
@@ -75,11 +80,14 @@ class StandingDriversAdapter(
             driverLastName.text = driver.lastName
             driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
             driverPhoto.setImageResource(driver.driverImage1)
-            pts.text = "${driver.points} pts"
+            pts.text = "${driver.currentPoints} pts"
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
         }
     }
 
-    class OtherPlacesLayout(itemView: View) : ViewHolderDriverStanding(itemView) {
+    class OtherPlacesLayout(itemView: View, private val listener: OnItemClickListener) : ViewHolderDriverStanding(itemView) {
         private val standingNumber = itemView.findViewById<TextView>(R.id.standingNumber)
         private val line = itemView.findViewById<View>(R.id.line)
         private val driverFirstName = itemView.findViewById<TextView>(R.id.driverFirsName)
@@ -93,7 +101,10 @@ class StandingDriversAdapter(
             driverFirstName.text = driver.firsName
             driverLastName.text = driver.lastName
             driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
-            pts.text = "${driver.points} pts"
+            pts.text = "${driver.currentPoints} pts"
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ class StandingConstructorAdapter(
     private val listener: OnItemClickListener,
 ) : RecyclerView.Adapter<StandingConstructorAdapter.ViewHolderConstructorStanding>() {
 
-    private val orderedList = listConstructor.sortedByDescending { it.pilotes.sumOf { it.points } }
+    private val orderedList = listConstructor.sortedByDescending { it.pilotes.sumOf { it.currentPoints } }
 
     companion object {
         private const val FIRST_PLACE = 1
@@ -38,13 +38,13 @@ class StandingConstructorAdapter(
             FIRST_PLACE -> {
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.standing_firstplaceconstructor_card, parent, false)
-                FirstPlaceLayout(view)
+                FirstPlaceLayout(view,listener)
             }
 
             OTHER_PLACES -> {
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.standing_otherplacesconstructor_card, parent, false)
-                OtherPlacesLayout(view)
+                OtherPlacesLayout(view,listener)
             }
 
             else -> throw IllegalArgumentException("Invalid view type")
@@ -56,11 +56,16 @@ class StandingConstructorAdapter(
             is FirstPlaceLayout -> holder.bind(orderedList[position])
             is OtherPlacesLayout -> holder.bind(orderedList[position], position)
         }
+        holder.itemView.setOnClickListener {
+            val constructor = orderedList[position]
+            val originalIndex = listConstructor.indexOf(constructor)
+            listener.onItemClick(originalIndex)
+        }
     }
 
     override fun getItemCount(): Int = orderedList.size
 
-    class FirstPlaceLayout(itemView: View) : ViewHolderConstructorStanding(itemView) {
+    class FirstPlaceLayout(itemView: View,private val listener: OnItemClickListener) : ViewHolderConstructorStanding(itemView) {
         private val standingNumber = itemView.findViewById<TextView>(R.id.standingNumber)
         private val line = itemView.findViewById<View>(R.id.line)
         private val constructorName = itemView.findViewById<TextView>(R.id.constructorName)
@@ -80,11 +85,14 @@ class StandingConstructorAdapter(
             driver1.text = constructor.pilotes[0].firsName
             driver2.text = constructor.pilotes[1].firsName
             carPhoto.setImageResource(constructor.carImage)
-            pts.text = "${constructor.pilotes.sumOf { it.points }} pts"
+            pts.text = "${constructor.pilotes.sumOf { it.currentPoints }} pts"
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
         }
     }
 
-    class OtherPlacesLayout(itemView: View) : ViewHolderConstructorStanding(itemView) {
+    class OtherPlacesLayout(itemView: View,private val listener: OnItemClickListener) : ViewHolderConstructorStanding(itemView) {
         private val standingNumber = itemView.findViewById<TextView>(R.id.standingNumber)
         private val line = itemView.findViewById<View>(R.id.line)
         private val constructorName = itemView.findViewById<TextView>(R.id.constructorName)
@@ -96,7 +104,10 @@ class StandingConstructorAdapter(
             line.setBackgroundResource(constructor.construcorColor)
             constructorName.text = constructor.nom
             drivers.text="${constructor.pilotes[0].lastName} / ${constructor.pilotes[1].lastName}"
-            pts.text="${constructor.pilotes.sumOf{it.points}}pts"
+            pts.text="${constructor.pilotes.sumOf{it.currentPoints}}pts"
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
         }
     }
 }
