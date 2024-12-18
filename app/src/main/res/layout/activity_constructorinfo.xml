@@ -23,12 +23,12 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="100dp"
             android:layout_marginBottom="32dp"
-            app:layout_constraintVertical_bias="0.7"
             android:background="@color/mercedesColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHeight_percent="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7" />
 
         <TextView
             android:id="@+id/constructorName"
@@ -107,47 +107,74 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <include
-                android:id="@+id/firstYear"
-                layout="@layout/infos_layout"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_marginHorizontal="16dp"
+                android:id="@+id/rowInfos1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                app:layout_constraintEnd_toStartOf="@id/chassis"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/standingInfo" />
-
-            <include
-                android:id="@+id/chassis"
-                layout="@layout/infos_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/firstYear"
-                app:layout_constraintTop_toBottomOf="@id/standingInfo" />
-
-
-            <include
-                android:id="@+id/constructorChampionships"
-                layout="@layout/infos_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                app:layout_constraintEnd_toStartOf="@id/polePositions"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/firstYear" />
+                app:layout_constraintTop_toBottomOf="@id/standingInfo">
 
-            <include
-                android:id="@+id/polePositions"
-                layout="@layout/infos_layout"
-                android:layout_width="wrap_content"
+                <include
+                    android:id="@+id/firstYear"
+                    layout="@layout/infos_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintEnd_toStartOf="@id/highestFinish"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/standingInfo" />
+
+                <include
+                    android:id="@+id/highestFinish"
+                    layout="@layout/infos_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/firstYear"
+                    app:layout_constraintTop_toBottomOf="@id/standingInfo" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginHorizontal="16dp"
+                android:id="@+id/rowInfos2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/constructorChampionships"
-                app:layout_constraintTop_toBottomOf="@id/chassis" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rowInfos1">
 
+                <include
+                    android:id="@+id/constructorChampionships"
+                    layout="@layout/infos_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintEnd_toStartOf="@id/polePositions"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/firstYear" />
+
+                <include
+                    android:id="@+id/polePositions"
+                    layout="@layout/infos_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/constructorChampionships"
+                    app:layout_constraintTop_toBottomOf="@id/highestFinish" />
+            </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/driver1"
@@ -156,7 +183,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toStartOf="@id/driver2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/constructorChampionships">
+                app:layout_constraintTop_toBottomOf="@id/rowInfos2">
 
                 <ImageView
                     android:id="@+id/driverImage1"
@@ -192,7 +219,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/driver1"
-                app:layout_constraintTop_toBottomOf="@id/polePositions">
+                app:layout_constraintTop_toBottomOf="@id/rowInfos2">
 
                 <ImageView
                     android:id="@+id/driverImage2"
@@ -241,6 +268,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/teamChief" />
+
+
+            <include
+                android:id="@+id/chassis"
+                layout="@layout/infos2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/powerUnit" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

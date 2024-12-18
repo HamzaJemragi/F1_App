@@ -1,5 +1,6 @@
 package com.hamza.f1app.adapters
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,8 +44,6 @@ class RecyclerViewDriverAdapter(
         position: Int,
     ) {
         val driver = listDriver[position]
-
-
             holder.driverNumber.text = "#${driver.driverNumber}"
             holder.line.setBackgroundResource(constructors.find { it.id == driver.equipe }!!.construcorColor)
             holder.driverFirsName.text = driver.firsName

@@ -7,16 +7,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Constructor
-import com.hamza.f1app.Models.Driver
 import com.hamza.f1app.R
-import com.hamza.f1app.data.constructors
 
 class StandingConstructorAdapter(
     private val listConstructor: List<Constructor>,
     private val listener: OnItemClickListener,
 ) : RecyclerView.Adapter<StandingConstructorAdapter.ViewHolderConstructorStanding>() {
 
-    private val orderedList = listConstructor.sortedByDescending { it.pilotes.sumOf { it.currentPoints } }
+    private val orderedList = listConstructor.sortedByDescending { it.pilotes.sumOf { it.seasonPoint } }
 
     companion object {
         private const val FIRST_PLACE = 1
@@ -85,7 +83,7 @@ class StandingConstructorAdapter(
             driver1.text = constructor.pilotes[0].firsName
             driver2.text = constructor.pilotes[1].firsName
             carPhoto.setImageResource(constructor.carImage)
-            pts.text = "${constructor.pilotes.sumOf { it.currentPoints }} pts"
+            pts.text = "${constructor.pilotes.sumOf { it.seasonPoint }} pts"
             itemView.setOnClickListener {
                 listener.onItemClick(adapterPosition)
             }
@@ -104,7 +102,7 @@ class StandingConstructorAdapter(
             line.setBackgroundResource(constructor.construcorColor)
             constructorName.text = constructor.nom
             drivers.text="${constructor.pilotes[0].lastName} / ${constructor.pilotes[1].lastName}"
-            pts.text="${constructor.pilotes.sumOf{it.currentPoints}}pts"
+            pts.text="${constructor.pilotes.sumOf{it.seasonPoint}}pts"
             itemView.setOnClickListener {
                 listener.onItemClick(adapterPosition)
             }

@@ -22,6 +22,7 @@
     <TextView
         style="@style/infoNumbers"
         android:id="@+id/info"
+        android:paddingBottom="1dp"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:text="info" />

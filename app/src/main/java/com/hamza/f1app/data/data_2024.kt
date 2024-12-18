@@ -745,6 +745,9 @@ val constructors = listOf(
             )
         )
 
+
+
+
 val Bio = mapOf<Int, String>(
     1 to "Born in London but racing under the flag of Thailand, Alexander Albon’s first word was in fact Italian. That word was Ferrari – though it was with another Italian team that he got his big F1 break.\n" +
             "\n" +
@@ -949,7 +952,31 @@ val Bio = mapOf<Int, String>(
             "\n" +
             "A move to Renault’s academy for 2019 coincided with his debut in Formula 2, with Zhou building his confidence in the series via multiple wins and pole positions across three seasons, leading to him challenging for the drivers’ title in 2021.\n" +
             "\n" +
-            "That was enough to convince Team Principal Fred Vasseur to put his faith in Zhou for 2022 and field him alongside ex-Mercedes racer Valtteri Bottas – allowing Zhou to achieve his dream of racing in F1, and even to see how he fares against his own childhood hero, Fernando Alonso."
+            "That was enough to convince Team Principal Fred Vasseur to put his faith in Zhou for 2022 and field him alongside ex-Mercedes racer Valtteri Bottas – allowing Zhou to achieve his dream of racing in F1, and even to see how he fares against his own childhood hero, Fernando Alonso.",
+    21 to "Daniel Ricciardo est un pilote de Formule 1 australien né le 1er juillet 1989 à Perth, en Australie. Connu pour son grand sourire, son charisme et son style de conduite agressif mais maîtrisé, il est l'une des figures les plus populaires du paddock. \nPoints clés de sa carrière :\n- Débuts en Formule 1 : Daniel a fait ses débuts en F1 en 2011 avec HRT avant de rejoindre Toro Rosso en 2012. \n- Équipe Red Bull : Il a intégré l'équipe principale Red Bull Racing en 2014, où il a remporté sept victoires jusqu'en 2018. \n- Autres équipes : Après son départ de Red Bull, il a couru pour Renault (2019-2020) et McLaren (2021-2022), remportant une victoire mémorable au Grand Prix d'Italie 2021 avec McLaren. \n- Retour chez Red Bull : En 2023, après une pause, il revient en F1 avec AlphaTauri (équipe sœur de Red Bull). \nStyle de conduite :\nRicciardo est connu pour ses dépassements audacieux et son habileté à freiner tard, ce qui lui a valu le surnom de \"The Honey Badger\", en référence à un animal féroce malgré sa petite taille. \n Personnalité :\nEn dehors des circuits, Daniel est apprécié pour son attitude positive, son humour et son approche détendue de la vie. Il aime la musique, les voyages, et est aussi passionné par le vin et les motos. \n Palmarès notable :\n 8 victoires en Grand Prix (au 2024). \\n- Meilleur classement au championnat : 3e en 2014 et 2016. \nnRicciardo reste une figure inspirante et un favori des fans dans le monde du sport automobile.",
+    22 to "Logan Sargeant est un pilote de Formule 1 américain né le 31 décembre 2000 à Fort Lauderdale, en Floride. Il est le premier Américain à participer à un championnat de F1 depuis 2015. \n Carrière :\nLogan a commencé sa carrière en karting avant de rejoindre les séries de monoplaces, notamment la F3 européenne et la F2, où il a obtenu de bons résultats. \nF1 :\nIl a fait ses débuts en Formule 1 en 2023 avec l’équipe Williams, après avoir été choisi comme pilote de réserve en 2022. \nPersonnalité :\nSargeant est apprécié pour sa détermination et son calme sous pression, représentant l'émergence de nouveaux talents américains en F1.",
+    23 to "Alpine’s F1 reserve since 2023, Jack Doohan steps up to full-time racer for 2025, having been handed an early Grand Prix debut for the team at 2024’s season finale.\n" +
+            "\n" +
+            "Doohan is the latest Aussie to join the F1 grid, and the young Queenslander is not short of racing pedigree – he already has plenty of F3 and F2 wins to his name, and that’s before we mention his father, five-time motorcycle world champion, Mick.\n" +
+            "\n" +
+            "After his single-seater debut in British Formula 4, followed by stints in Italian F4, ADAC F4 and Asian F3, Doohan stepped up to FIA Formula 3 in 2020, finishing championship runner-up the following year.\n" +
+            "\n" +
+            "The 2022 season saw him join Alpine’s driver development programme and finish sixth overall in his rookie FIA Formula 2 campaign. The following year he was up to third, thanks to three race wins, including impressive back-to-back feature race victories in Hungary and Belgium.\n" +
+            "\n" +
+            "Formula 1 experience came via Alpine, with free practice outings at Grands Prix in 2022, 2023 and 2024. And having served his apprenticeship with the French squad, Doohan’s reward is a shot at the big time as team mate to F1 race winner Pierre Gasly.",
+    24 to "He's an official Ferrari reserve and he made his F1 race debut in Saudi Arabia in place of the ill Carlos Sainz.\n" +
+            "\n" +
+            "Bearman, 18, got his first taste of F1 machinery with the Scuderia towards the end of last year, in preparation for a pair of FP1 outings for Haas at the Mexican and Abu Dhabi Grands Prix.\n" +
+            "\n" +
+            "He has since completed several more F1 test runs with and is currently competing in F2 with the Prema Racing team, having won four races and placed sixth in the feeder series standings last year.\n" +
+            "\n" +
+            "After a tough start to the 2024 campaign for Prema in Bahrain, Bearman struck back to claim pole position at the high-speed Jeddah track but, with Sainz-subbing duties calling, he was required to temporarily drop his F2 commitments.\n" +
+            "\n" +
+            "Not that he was complaining - a stunning performance saw the young Englishman score six points for seventh place in his first Grand Prix, enhancing his future F1 prospects no end.\n" +
+            "\n" +
+            "Indeed, that drive helped him secure a full-time F1 seat with the Ferrari-powered Haas squad for 2025 – as well as an early Grand Prix debut with them in Azerbaijan ’24, as team regular Kevin Magnussen served out a one-race ban.\n" +
+            "\n" +
+            "Bearman was called into action again at the start of the Sao Paulo Grand Prix weekend, after Magnussen was taken ill ahead of Friday's running."
 )
 
 val resultats = listOf(

@@ -10,6 +10,9 @@
     <string name="chassis">Chassis</string>
     <string name="powerUnit">Power Unit</string>
     <string name="teamChief">Team Chief</string>
+    <string name="constructorChampionships">Constructor Championships</string>
+    <string name="polePositions">Pole Positions</string>
+    <string name="highestFinish">Highest Finish</string>
 
     <!--strings titles for driver info activity -->
     <string name="podiums">Podiums</string>
@@ -52,6 +55,6 @@
     <string name="Circuit">Circuit</string>
     <string name="race_weekend">RACE WEEKEND</string>
     <string name="next">next</string>
-    <string name="dialogNoStatsDriverText"> </string>
-    <string name="dialogNoStatsDriverButton"> </string>
+    <string name="dialogNoStatsDriverText">There is no performance data available for this driver yet!</string>
+    <string name="dialogNoStatsDriverButton">Understood</string>
 </resources>

@@ -48,13 +48,15 @@ class ConstructorinfoActivity : AppCompatActivity() {
         val firstYearTitle = firstYear.findViewById<TextView>(R.id.infoTitle)
         val firstYearInfo = firstYear.findViewById<TextView>(R.id.info)
 
-        val chassis = findViewById<View>(R.id.chassis)
-        val chassisTitle = chassis.findViewById<TextView>(R.id.infoTitle)
-        val chassisrInfo = chassis.findViewById<TextView>(R.id.info)
+        val highestFinish = findViewById<View>(R.id.highestFinish)
+        val highestFinishTitle = highestFinish.findViewById<TextView>(R.id.infoTitle)
+        val highestFinishInfo = highestFinish.findViewById<TextView>(R.id.info)
 
         val constructorChampionships = findViewById<View>(R.id.constructorChampionships)
-        val constructorChampionshipsTitle = constructorChampionships.findViewById<TextView>(R.id.infoTitle)
-        val constructorChampionshipsInfo = constructorChampionships.findViewById<TextView>(R.id.info)
+        val constructorChampionshipsTitle =
+            constructorChampionships.findViewById<TextView>(R.id.infoTitle)
+        val constructorChampionshipsInfo =
+            constructorChampionships.findViewById<TextView>(R.id.info)
 
         val polePositions = findViewById<View>(R.id.polePositions)
         val polePositionsTitle = polePositions.findViewById<TextView>(R.id.infoTitle)
@@ -68,14 +70,17 @@ class ConstructorinfoActivity : AppCompatActivity() {
         val teamChiefTitle = teamChief.findViewById<TextView>(R.id.infoTitle)
         val teamChiefInfo = teamChief.findViewById<TextView>(R.id.info)
 
-        val driver1=findViewById<ConstraintLayout>(R.id.driver1)
+        val driver1 = findViewById<ConstraintLayout>(R.id.driver1)
         val driverImage1 = findViewById<ImageView>(R.id.driverImage1)
         val drivername1 = findViewById<TextView>(R.id.drivername1)
 
-        val driver2=findViewById<ConstraintLayout>(R.id.driver2)
+        val driver2 = findViewById<ConstraintLayout>(R.id.driver2)
         val driverImage2 = findViewById<ImageView>(R.id.driverImage2)
         val drivername2 = findViewById<TextView>(R.id.drivername2)
 
+        val chassis= findViewById<View>(R.id.chassis)
+        val chassisTitle = chassis.findViewById<TextView>(R.id.infoTitle)
+        val chassisInfo = chassis.findViewById<TextView>(R.id.info)
 
         line.setBackgroundColor(getColor(constructors[constructorPosition].construcorColor))
         constructorName.text = constructors[constructorPosition].nom
@@ -83,19 +88,22 @@ class ConstructorinfoActivity : AppCompatActivity() {
         constructorsLogo.setImageResource(constructors[constructorPosition].logo)
 
         borderDrawable.setStroke(25, constructors[constructorPosition].construcorColor)
-        totalPts.text = constructors[constructorPosition].pilotes.sumOf { it.currentPoints }.toString()
-        val orderdConstructors = constructors.sortedByDescending { it.pilotes.sumOf { it.currentPoints } }
+        totalPts.text =
+            constructors[constructorPosition].pilotes.sumOf { it.seasonPoint }.toString()
+        val orderdConstructors =
+            constructors.sortedByDescending { it.pilotes.sumOf { it.seasonPoint } }
         standingNumber.text =
             (orderdConstructors.indexOf(constructors[constructorPosition]) + 1).toString()
 
         firstYearTitle.text = getString(R.string.first_team_entry)
         firstYearInfo.text = constructors[constructorPosition].firstEntry.toString()
 
-        chassisTitle.text =getString( R.string.chassis)
-        chassisrInfo.text = constructors[constructorPosition].chassis
+        highestFinishTitle.text = getString(R.string.highestFinish)
+        highestFinishInfo.text = constructors[constructorPosition].highestFinish
 
         constructorChampionshipsTitle.text = getString(R.string.constructorChampionships)
-        constructorChampionshipsInfo.text = constructors[constructorPosition].constructorChampionships.toString()
+        constructorChampionshipsInfo.text =
+            constructors[constructorPosition].constructorChampionships.toString()
 
         polePositionsTitle.text = getString(R.string.polePositions)
         polePositionsInfo.text = constructors[constructorPosition].polePositions.toString()
@@ -112,18 +120,32 @@ class ConstructorinfoActivity : AppCompatActivity() {
         driverImage2.setImageResource(constructors[constructorPosition].pilotes[1].driverImage2)
         drivername2.text = constructors[constructorPosition].pilotes[1].lastName
 
+        chassisTitle.text=getString(R.string.chassis)
+        chassisInfo.text=constructors[constructorPosition].chassis
 
-        driver1.setOnClickListener{
+
+        driver1.setOnClickListener {
             val intent = Intent(this, DriverinfoActivity::class.java)
-            intent.putExtra("driverPosition", drivers.indexOf(constructors[constructorPosition].pilotes[0]))
+            intent.putExtra(
+                "driverPosition",
+                drivers.indexOf(constructors[constructorPosition].pilotes[0])
+            )
             startActivity(intent)
         }
 
-        driver2.setOnClickListener{
+        driver2.setOnClickListener {
             val intent = Intent(this, DriverinfoActivity::class.java)
-            intent.putExtra("driverPosition", drivers.indexOf(constructors[constructorPosition].pilotes[1]))
+            intent.putExtra(
+                "driverPosition",
+                drivers.indexOf(constructors[constructorPosition].pilotes[1])
+            )
             startActivity(intent)
         }
+    }
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+
     }
 
 }

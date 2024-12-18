@@ -2,7 +2,6 @@ package com.hamza.f1app.fragments
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
@@ -16,6 +15,7 @@ import com.hamza.f1app.R
 import com.hamza.f1app.data.drivers
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.getColor
 import com.hamza.f1app.activities.ConstructorinfoActivity
 import com.hamza.f1app.data.constructors
 
@@ -74,10 +74,10 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
 
         borderDrawable.setStroke(
             25,
-            constructors.find { it.id == drivers[driverPosition].equipe }!!.construcorColor
+            getColor(requireContext(),constructors.find { it.id == drivers[driverPosition].equipe }!!.construcorColor)
         )
-        totalPts.text = drivers[driverPosition].currentPoints.toString()
-        val orderdDrivers = drivers.sortedByDescending { it.currentPoints }
+        totalPts.text = drivers[driverPosition].seasonPoint.toString()
+        val orderdDrivers = drivers.sortedByDescending { it.seasonPoint }
         standingNumber.text = (orderdDrivers.indexOf(drivers[driverPosition]) + 1).toString()
 
         podiumsTitle.text = getString(R.string.podiums)
@@ -95,7 +95,7 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
         imageViewCar.setImageResource(constructors.find { it.id == drivers[driverPosition].equipe }!!.carImage)
         borderDrawableTeam.setStroke(
             25,
-            constructors.find { it.id == drivers[driverPosition].equipe }!!.construcorColor
+            getColor(requireContext(),constructors.find { it.id == drivers[driverPosition].equipe }!!.construcorColor)
         )
         teamName.text = constructors.find { it.id == drivers[driverPosition].equipe }!!.nom
         countryName.text = drivers[driverPosition].nationalite
