@@ -13,19 +13,17 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.hamza.f1app.R
-import com.hamza.f1app.activities.DriverinfoActivity.ViewPagerDriverAdapter
 import com.hamza.f1app.data.races
-import com.hamza.f1app.fragments.DriverBioFragment
-import com.hamza.f1app.fragments.DriverStatsFragment
 import com.hamza.f1app.fragments.PastRaceCircuitFragment
 import com.hamza.f1app.fragments.PastRaceScheduleFragment
+import com.hamza.f1app.fragments.UpcomingRaceCircuitFragment
+import com.hamza.f1app.fragments.UpcomingRaceScheduleFragment
 
-class PastRaceInfosActivity: AppCompatActivity() {
-
+class UpcomingRaceInfosActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.past_race_infos_activity)
+        setContentView(R.layout.upcoming_race_infos_activity)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.racingInfos)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -55,8 +53,8 @@ class PastRaceInfosActivity: AppCompatActivity() {
         FragmentStateAdapter(activity) {
         override fun getItemCount(): Int = 2
         override fun createFragment(position: Int): Fragment = when (position) {
-            0 -> PastRaceScheduleFragment(racePosition)
-            1 -> PastRaceCircuitFragment(racePosition)
+            0 -> UpcomingRaceScheduleFragment(racePosition)
+            1 -> UpcomingRaceCircuitFragment(racePosition)
             else -> throw IllegalArgumentException("Invalid position")
         }
     }

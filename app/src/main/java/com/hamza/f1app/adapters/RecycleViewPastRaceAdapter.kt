@@ -33,6 +33,5 @@ class RecycleViewPastRaceAdapter(private val results: List<Resultat>): RecyclerV
         holder.driverFirstName.text = result.pilote.firsName
         holder.driverLastName.text = result.pilote.lastName
         holder.time.text = result.temps
-
     }
 }

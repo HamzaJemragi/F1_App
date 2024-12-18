@@ -91,7 +91,7 @@
                 android:id="@+id/arrowButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="next"
+                android:contentDescription="@string/next"
                 android:src="@drawable/mix_arrow_forward_f1red"
                 android:backgroundTint="@color/white"/>
         </LinearLayout>

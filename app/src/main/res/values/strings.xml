@@ -46,4 +46,12 @@
     <string name="hrs">HRS</string>
     <string name="mins">MINS</string>
     <string name="rolex_logo">rolex logo</string>
+    <string name="Upcoming">Upcoming</string>
+    <string name="Past">Past</string>
+    <string name="Schedule">Schedule</string>
+    <string name="Circuit">Circuit</string>
+    <string name="race_weekend">RACE WEEKEND</string>
+    <string name="next">next</string>
+    <string name="dialogNoStatsDriverText"> </string>
+    <string name="dialogNoStatsDriverButton"> </string>
 </resources>

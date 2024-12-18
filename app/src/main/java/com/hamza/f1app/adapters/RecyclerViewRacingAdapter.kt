@@ -9,9 +9,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
+import com.hamza.f1app.adapters.RecyclerViewDriverAdapter.OnItemClickListener
 
-class RecyclerViewRacingAdapter(private val races: List<Race>) :
+class RecyclerViewRacingAdapter(private val races: List<Race>, private val listener: OnItemClickListener,) :
     RecyclerView.Adapter<RecyclerViewRacingAdapter.ViewHolder>() {
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val arrowButton = view.findViewById<ImageView>(R.id.arrowButton)

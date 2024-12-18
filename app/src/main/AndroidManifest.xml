@@ -26,6 +26,10 @@
         <activity android:name=".activities.DriverinfoActivity" />
         <activity android:name=".activities.ConstructorinfoActivity" />
         <activity android:name=".activities.RaceInfosActivity" />
+        <activity android:name=".activities.PastRaceInfosActivity"/>
+        <activity android:name=".activities.UpcomingRaceInfosActivity"/>
+        <activity android:name=".activities.PastRaceResultActivity"/>
+        <activity android:name=".activities.UpcomingRaceResultActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
