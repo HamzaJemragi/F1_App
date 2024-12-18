@@ -6,20 +6,26 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.R
+import com.hamza.f1app.adapters.RecyclerViewPastRaceResultAdapter
+import com.hamza.f1app.data.resultats
 
+class PastRaceResultActivity: AppCompatActivity() {
 
-class MegaActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_mega)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.megaActivity)) { v, insets ->
+        setContentView(R.layout.past_race_result_activity)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.resultActivity)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
+        val racePosition = intent?.extras?.getInt("racePosition")!!.toInt()
 
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.adapter = RecyclerViewPastRaceResultAdapter(resultats[racePosition-1])
     }
 }

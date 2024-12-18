@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/resultActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundGeneral">
@@ -47,7 +48,9 @@
         app:layout_constraintBottom_toBottomOf="@id/imageView"
         app:cardCornerRadius="16dp">
 
-        <include layout="@layout/rolex_card" />
+        <include
+            android:id="@+id/rolexCardInclude"
+            layout="@layout/rolex_card" />
 
     </androidx.cardview.widget.CardView>
 

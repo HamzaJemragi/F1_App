@@ -1,10 +1,16 @@
 package com.hamza.f1app.Models
 
 
+data class Country(
+    val nom: String,
+    val flag: Int
+)
+
 data class Race(
     val id: Int,
     val nom: String,
     val date: String,
+    val annee: Int,
     val time: String,
     val lieu: String,
     val resultats: List<Resultat>?,
@@ -20,6 +26,8 @@ data class Circuit(
     val LapRecord: Map<String, Any>,
     val firstGP: Int,
     val Image: Int,
+    val country: Country,
+    val race: Int
 )
 
 data class Resultat(

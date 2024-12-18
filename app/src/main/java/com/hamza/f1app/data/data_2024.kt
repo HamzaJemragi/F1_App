@@ -5,7 +5,36 @@ import com.hamza.f1app.Models.Constructor
 import com.hamza.f1app.Models.Driver
 import com.hamza.f1app.Models.Race
 import com.hamza.f1app.Models.Resultat
+import com.hamza.f1app.Models.Country
 import com.hamza.f1app.R
+
+val countries = listOf(
+    Country("Bahrain", R.drawable.flag_bahrain),
+    Country("Saudi Arabia", R.drawable.flag_saudi),
+    Country("Australia", R.drawable.flag_australia),
+    Country("Japan", R.drawable.flag_japan),
+    Country("China", R.drawable.flag_china),
+    Country("Miami", R.drawable.flag_usa),
+    Country("Emilia-Romagna", R.drawable.flag_italy),
+    Country("Monaco", R.drawable.flag_monaco),
+    Country("Canada", R.drawable.flag_canada),
+    Country("Spain", R.drawable.flag_spain),
+    Country("Austria", R.drawable.flag_austria),
+    Country("Great Britain", R.drawable.flag_uk),
+    Country("Hungary", R.drawable.flag_hungary),
+    Country("Belgium", R.drawable.flag_belgium),
+    Country("Netherlands", R.drawable.flag_netherlands),
+    Country("Italy", R.drawable.flag_italy),
+    Country("Azerbaijan", R.drawable.flag_azrabidjan),
+    Country("Singapore", R.drawable.flag_singapore),
+    Country("United States", R.drawable.flag_usa),
+    Country("Mexico", R.drawable.flag_mexico),
+    Country("Brazil", R.drawable.flag_brazil),
+    Country("Las Vegas", R.drawable.flag_usa),
+    Country("Qatar", R.drawable.flag_qatar),
+    Country("Abu Dhabi", R.drawable.flag_abudhabi)
+)
+
 
 val circuits = listOf(
     Circuit(
@@ -15,7 +44,9 @@ val circuits = listOf(
         57,
         mapOf("Time" to "1:31.447", "Driver" to "Pedro de la Rosa", "Year" to 2005),
         2004,
-        R.drawable.circuit_bahrain
+        R.drawable.circuit_bahrain,
+        countries[0],
+        1
     ), Circuit(
         "Jeddah Corniche Circuit",
         6.174,
@@ -23,7 +54,9 @@ val circuits = listOf(
         50,
         mapOf("Time" to "1:30.734", "Driver" to "Lewis Hamilton", "Year" to 2021),
         2021,
-        R.drawable.circuit_saudi
+        R.drawable.circuit_saudi,
+        countries[1],
+        2
     ), Circuit(
         "Albert Park Grand Prix Circuit",
         5.278,
@@ -31,7 +64,9 @@ val circuits = listOf(
         58,
         mapOf("Time" to "1:19.813", "Driver" to "Charles Leclerc", "Year" to 2024),
         1996,
-        R.drawable.circuit_australia
+        R.drawable.circuit_australia,
+        countries[2],
+        3
     ), Circuit(
         "Suzaka Circuit",
         5.807,
@@ -39,7 +74,9 @@ val circuits = listOf(
         57,
         mapOf("Time" to "1:30.983", "Driver" to "Lewis Hamilton", "Year" to 2019),
         1987,
-        R.drawable.circuit_japan
+        R.drawable.circuit_japan,
+        countries[3],
+        4
     ), Circuit(
         "Shanghai International Circuit",
         5.451,
@@ -47,7 +84,9 @@ val circuits = listOf(
         56,
         mapOf("Time" to "1:32.238", "Driver" to "Michael Schumacher", "Year" to 2004),
         2004,
-        R.drawable.circuit_china
+        R.drawable.circuit_china,
+        countries[4],
+        5
     ), Circuit(
         "Miami International Circuit",
         5.412,
@@ -55,7 +94,9 @@ val circuits = listOf(
         57,
         mapOf("Time" to "1:29.708", "Driver" to "Max Verstappen", "Year" to 2023),
         2022,
-        R.drawable.circuit_miami
+        R.drawable.circuit_miami,
+        countries[5],
+        6
     ), Circuit(
         "Autodromo Internationale Enzo e Dino Ferrari",
         4.909,
@@ -63,7 +104,9 @@ val circuits = listOf(
         63,
         mapOf("Time" to "1:15.484", "Driver" to "Lewis Hamilton", "Year" to 2020),
         1980,
-        R.drawable.circuit_emiliaromagna
+        R.drawable.circuit_emiliaromagna,
+        countries[6],
+        7
     ), Circuit(
         "Circuit de Monaco",
         3.337,
@@ -71,7 +114,9 @@ val circuits = listOf(
         78,
         mapOf("Time" to "1:12.909", "Driver" to "Lewis Hamilton", "Year" to 2021),
         1950,
-        R.drawable.circuit_monaco
+        R.drawable.circuit_monaco,
+        countries[7],
+        8
     ), Circuit(
         "Circuit Gilles-Villeneuve",
         4.361,
@@ -79,7 +124,9 @@ val circuits = listOf(
         70,
         mapOf("Time" to "1:13.078", "Driver" to "Valtteri Bottas", "Year" to 2019),
         1978,
-        R.drawable.circuit_canada
+        R.drawable.circuit_canada,
+        countries[8],
+        9
     ), Circuit(
         "Circuit de Barcelona-Catalunya",
         4.657,
@@ -87,7 +134,9 @@ val circuits = listOf(
         66,
         mapOf("Time" to "1:16.330", "Driver" to "Max Verstappen", "Year" to 2023),
         1991,
-        R.drawable.circuit_spain
+        R.drawable.circuit_spain,
+        countries[9],
+        10
     ), Circuit(
         "Red Bull Ring",
         4.318,
@@ -95,7 +144,9 @@ val circuits = listOf(
         71,
         mapOf("Time" to "1:05.619", "Driver" to "Carlos Sainz", "Year" to 2020),
         1970,
-        R.drawable.circuit_austria
+        R.drawable.circuit_austria,
+        countries[10],
+        11
     ), Circuit(
         "Silverstone Circuit",
         5.891,
@@ -103,7 +154,9 @@ val circuits = listOf(
         52,
         mapOf("Time" to "1:27.097", "Driver" to "Max Verstappen", "Year" to 2020),
         1950,
-        R.drawable.circuit_uk
+        R.drawable.circuit_uk,
+        countries[11],
+        12
     ), Circuit(
         "Hungaroring",
         4.381,
@@ -111,7 +164,9 @@ val circuits = listOf(
         70,
         mapOf("Time" to "1:16.627", "Driver" to "Lewis Hamilton", "Year" to 2020),
         1986,
-        R.drawable.circuit_hungary
+        R.drawable.circuit_hungary,
+        countries[12],
+        13
     ), Circuit(
         "Circuit de Spa-Francorchamps",
         7.004,
@@ -119,7 +174,9 @@ val circuits = listOf(
         44,
         mapOf("Time" to "1:44.701", "Driver" to "Sergio Pérez", "Year" to 2024),
         1950,
-        R.drawable.circuit_belium
+        R.drawable.circuit_belium,
+        countries[13],
+        14
     ), Circuit(
         "Circuit Zandvoort",
         4.259,
@@ -127,7 +184,9 @@ val circuits = listOf(
         72,
         mapOf("Time" to "1:11.097", "Driver" to "Lewis Hamilton", "Year" to 2021),
         1952,
-        R.drawable.circuit_netherlands
+        R.drawable.circuit_netherlands,
+        countries[14],
+        15
     ), Circuit(
         "Autodromo Nazionale di Monza",
         5.793,
@@ -135,7 +194,9 @@ val circuits = listOf(
         53,
         mapOf("Time" to "1:21.046", "Driver" to "Rubens Barrichello", "Year" to 2004),
         1950,
-        R.drawable.circuit_italy
+        R.drawable.circuit_italy,
+        countries[15],
+        16
     ), Circuit(
         "Baku City Circuit",
         6.003,
@@ -143,7 +204,9 @@ val circuits = listOf(
         57,
         mapOf("Time" to "1:43.009", "Driver" to "Charles Leclerc", "Year" to 2019),
         2016,
-        R.drawable.circuit_azerbijan
+        R.drawable.circuit_azerbijan,
+        countries[16],
+        17
     ), Circuit(
         "Marina Bay Street Circuit",
         4.94,
@@ -151,7 +214,9 @@ val circuits = listOf(
         62,
         mapOf("Time" to "1:34.486", "Driver" to "Daniel Ricciardo", "Year" to 2024),
         2008,
-        R.drawable.circuit_singapore
+        R.drawable.circuit_singapore,
+        countries[17],
+        18
     ), Circuit(
         "Circuit of The Americas",
         5.513,
@@ -159,7 +224,9 @@ val circuits = listOf(
         56,
         mapOf("Time" to "1:36.169", "Driver" to "Charles Leclerc", "Year" to 2019),
         2012,
-        R.drawable.circuit_us
+        R.drawable.circuit_us,
+        countries[18],
+        19
     ), Circuit(
         "Autodromo Hermanos Rodríguez",
         4.304,
@@ -167,7 +234,9 @@ val circuits = listOf(
         71,
         mapOf("Time" to "1:17.774", "Driver" to "Valtteri Bottas", "Year" to 2021),
         1963,
-        R.drawable.circuit_mexico
+        R.drawable.circuit_mexico,
+        countries[19],
+        20
     ), Circuit(
         "Autodromo José Carlos Pace",
         4.309,
@@ -175,7 +244,9 @@ val circuits = listOf(
         71,
         mapOf("Time" to "1:10.540", "Driver" to "Valtteri Bottas", "Year" to 2018),
         1973,
-        R.drawable.circuit_brazil
+        R.drawable.circuit_brazil,
+        countries[20],
+        21
     ), Circuit(
         "Las Vegas Strip Circuit",
         6.201,
@@ -183,7 +254,9 @@ val circuits = listOf(
         50,
         mapOf("Time" to "1:34.876", "Driver" to "Lando Norris", "Year" to 2024),
         2023,
-        R.drawable.circuit_lasvegas
+        R.drawable.circuit_lasvegas,
+        countries[21],
+        22
     ), Circuit(
         "Lusall International Circuit",
         5.419,
@@ -191,7 +264,9 @@ val circuits = listOf(
         57,
         mapOf("Time" to "1:22.384", "Driver" to "Lando Norris", "Year" to 2024),
         2021,
-        R.drawable.circuit_qatar
+        R.drawable.circuit_qatar,
+        countries[22],
+        23
     ), Circuit(
         "Yas Marina Circuit",
         5.281,
@@ -199,696 +274,476 @@ val circuits = listOf(
         58,
         mapOf("Time" to "1:26.103", "Driver" to "Max Verstappen", "Year" to 2021),
         2009,
-        R.drawable.circuit_abudhabi
+        R.drawable.circuit_abudhabi,
+        countries[23],
+        24
     )
 )
-
-val races = listOf(
-    Race(
-        1,
-        "GULF AIR BAHRAIN GRAND PRIX 2024",
-        "29-02/FEV.-MARS",
-        "14:00",
-        "Bahrain",
-        null,
-        circuits[0],
-        R.drawable.track_bahrain
-    ), Race(
-        2,
-        "STC SAUDI ARABIA GRAND PRIX 2024",
-        "07-09/MARS",
-        "14:00",
-        "Saudi Arabia",
-        null,
-        circuits[1],
-        R.drawable.track_saudi
-    ), Race(
-        3,
-        "ROLEX AUSTRALIAN GRAND PRIX 2024",
-        "22-24/MARS",
-        "14:00",
-        "Australia",
-        null,
-        circuits[2],
-        R.drawable.track_australia
-    ), Race(
-        4,
-        "MSC CRUISES JAPANESE GRAND PRIX 2024",
-        "05-07/AVR.",
-        "14:00",
-        "Japan",
-        null,
-        circuits[3],
-        R.drawable.track_japan
-    ), Race(
-        5,
-        "LENOVO CHINESE GRAND PRIX 2024",
-        "19-21/AVR.",
-        "14:00",
-        "China",
-        null,
-        circuits[4],
-        R.drawable.track_china
-    ), Race(
-        6,
-        "CRYPTO.COM MIAMI GRAND PRIX 2024",
-        "03-05/MAI",
-        "14:00",
-        "Miami",
-        null,
-        circuits[5],
-        R.drawable.track_miami
-    ), Race(
-        7,
-        "MSC CRUISES GRAN PREMIO DEL MADE IN ITALY EDELL'EMILIA-ROMAGNA 2024",
-        "17-19/MAI",
-        "14:00",
-        "Emilia-Romagna",
-        null,
-        circuits[6],
-        R.drawable.track_emiliaromagna
-    ), Race(
-        8,
-        "GRAND PRIX DE MONACO 2024",
-        "24-26/MAI",
-        "14:00",
-        "Monaco",
-        null,
-        circuits[7],
-        R.drawable.track_monaco
-    ), Race(
-        9,
-        "AWS GRAND PRIX DE CANADA 2024",
-        "07-09/JUIN",
-        "14:00",
-        "Canada",
-        null,
-        circuits[8],
-        R.drawable.track_canada
-    ), Race(
-        10,
-        "ARAMCO GRAN PREMIO DE ESPAÑA 2024",
-        "21-23/JUIN",
-        "14:00",
-        "Spain",
-        null,
-        circuits[9],
-        R.drawable.track_spain
-    ), Race(
-        11,
-        "QATAR AIRWAYS AUSTRIAN GRAND PRIX 2024",
-        "28-30/JUIN",
-        "14:00",
-        "Austria",
-        null,
-        circuits[10],
-        R.drawable.track_austria
-    ), Race(
-        12,
-        "QATAR AIRWAYS BRITISH GRAND PRIX 2024",
-        "05-07/JUIL.",
-        "14:00",
-        "Great Britain",
-        null,
-        circuits[11],
-        R.drawable.track_uk
-    ), Race(
-        13,
-        "HUNGARIAN GRAND PRIX 2024",
-        "19-21/JUIL.",
-        "14:00",
-        "Hungary",
-        null,
-        circuits[12],
-        R.drawable.track_hungary
-    ), Race(
-        14,
-        "ROLEX BELGIUM GRAND PRIX 2024",
-        "26-28/JUIL.",
-        "14:00",
-        "Belgium",
-        null,
-        circuits[13],
-        R.drawable.track_belgium
-    ), Race(
-        15,
-        "HEIKEKEN DUTCH GRAND PRIX 2024",
-        "23-25/AOUT",
-        "14:00",
-        "Netherlands",
-        null,
-        circuits[14],
-        R.drawable.track_netherlands
-    ), Race(
-        16,
-        "PIRELLI GRAN PREMIO D'ITALIA 2024",
-        "30-01/AOUT-SEPT.",
-        "14:00",
-        "Italy",
-        null,
-        circuits[15],
-        R.drawable.track_italy
-    ), Race(
-        17,
-        "QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2024",
-        "13-15/SEPT.",
-        "14:00",
-        "Azerbaijan",
-        null,
-        circuits[16],
-        R.drawable.track_azerbijan
-    ), Race(
-        18,
-        "SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2024",
-        "20-22/SEPT.",
-        "14:00",
-        "Singapore",
-        null,
-        circuits[17],
-        R.drawable.track_singapour
-    ), Race(
-        19,
-        "PIRELLI UNITED STATES GRAND PRIX 2024",
-        "18-20/OCT.",
-        "14:00",
-        "United States",
-        null,
-        circuits[18],
-        R.drawable.track_us
-    ), Race(
-        20,
-        "GRAN PREMIO DE LA CIUDAD DE MEXICO 2024",
-        "25-27/OCT.",
-        "14:00",
-        "Mexico",
-        null,
-        circuits[19],
-        R.drawable.track_mexico
-    ), Race(
-        21,
-        "LENOVO GRANDE PREMIO DE SAO PAULO 2024",
-        "01-03/NOV.",
-        "14:00",
-        "Brazil",
-        null,
-        circuits[20],
-        R.drawable.track_brazil
-    ), Race(
-        22,
-        "HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024",
-        "21-23/NOV.",
-        "14:00",
-        "Las Vegas",
-        null,
-        circuits[21],
-        R.drawable.track_lasvegas
-    ), Race(
-        23,
-        "QATAR AIRWAYS QATAR GRAND PRIX 2024",
-        "29-01/NOV.-DEC.",
-        "14:00",
-        "Qatar",
-        null,
-        circuits[22],
-        R.drawable.track_qatar
-    ), Race(
-        24,
-        "ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2024",
-        "06-08/DEC.",
-        "14:00",
-        "Abu Dhabi",
-        null,
-        circuits[23],
-        R.drawable.track_abudhabi
-    )
-)
-
 
 var drivers = listOf(
-    Driver(
-        1,
-        "Alexander",
-        "Albon",
-        8,
-        "Thailand",
-        24,
-        0,
-        0,
-        0,
-        240,
-        "London, England",
-        "23-03-1996",
-        R.drawable.driver_alexanderalbon_1,
-        R.drawable.driver_alexanderalbon_2,
-        23, R.drawable.flag_thailand,
-        false,
-        12
-    ),
-    Driver(
-        2,
-        "Carlos",
-        "Sainz",
-        2,
-        "Spain",
-        818,
-        16,
-        0,
-        0,
-        170,
-        "Madrid, Spain",
-        "01-09-1994",
-        R.drawable.driver_carlossainz_1,
-        R.drawable.driver_carlossainz_2,
-        55, R.drawable.flag_spain, false, 290
-    ),
-    Driver(
-        3,
-        "Charles",
-        "Leclerc",
-        2,
-        "Monaco",
-        1040,
-        25,
-        18,
-        0,
-        110,
-        "Monte Carlo, Monaco",
-        "16-10-1997",
-        R.drawable.driver_charlesleclerc_1,
-        R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco, false, 356
-    ),
-    Driver(
-        4,
-        "Esteban",
-        "Ocon",
-        4,
-        "France",
-        372,
-        2,
-        0,
-        0,
-        134,
-        "Évreux, France",
-        "17-09-1996",
-        R.drawable.driver_estebanocon_1,
-        R.drawable.driver_estebanocon_2, 31, R.drawable.flag_france, false, 23
-    ),
-    Driver(
-        5,
-        "Fernando",
-        "Alonso",
-        6,
-        "Spain",
-        2100,
-        105,
-        22,
-        2,
-        370,
-        "Oviedo, Spain",
-        "29-07-1981",
-        R.drawable.driver_fernandoalonso_1,
-        R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain, false, 70
-    ),
-    Driver(
-        6,
-        "Franco",
-        "Colapinto",
-        8,
-        "Argentina",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Pilar, Argentina",
-        "27-05-2003",
-        R.drawable.driver_francocolapinto_1,
-        R.drawable.driver_francocolapinto_2, 43, R.drawable.flag_argentina, false, 5
-    ),
-    Driver(
-        7,
-        "George",
-        "Russell",
-        3,
-        "United Kingdom",
-        539,
-        10,
-        1,
-        0,
-        95,
-        "King's Lynn, England",
-        "15-02-1998",
-        R.drawable.driver_georgerussell_1,
-        R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk, false, 245
-    ),
-    Driver(
-        8,
-        "Kevin",
-        "Magnussen",
-        7,
-        "Denmark",
-        183,
-        1,
-        0,
-        0,
-        160,
-        "Roskilde, Denmark",
-        "05-10-1992",
-        R.drawable.driver_kevinmagnussen_1,
-        R.drawable.driver_kevinmagnussen_2, 20, R.drawable.flag_denmark, false, 16
-    ),
-    Driver(
-        9,
-        "Lance",
-        "Stroll",
-        6,
-        "Canada",
-        232,
-        3,
-        1,
-        0,
-        143,
-        "Montreal, Canada",
-        "29-10-1998",
-        R.drawable.driver_lancestroll_1,
-        R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada, false, 24
-    ),
-    Driver(
-        10,
-        "Lando",
-        "Norris",
-        5,
-        "United Kingdom",
-        532,
-        11,
-        1,
-        0,
-        100,
-        "Bristol, England",
-        "13-11-1999",
-        R.drawable.driver_landonorris_1,
-        R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk, false, 374
-    ),
-    Driver(
-        11,
-        "Lewis",
-        "Hamilton",
-        3,
-        "United Kingdom",
-        4400,
-        195,
-        104,
-        7,
-        320,
-        "Stevenage, England",
-        "07-01-1985",
-        R.drawable.driver_lewishamilton_1,
-        R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk, false, 223
-    ),
-    Driver(
-        12,
-        "Liam",
-        "Lawson",
-        10,
-        "New Zealand",
-        2,
-        0,
-        0,
-        0,
-        5,
-        "Hastings, New Zealand",
-        "11-02-2002",
-        R.drawable.driver_liamlawson_1,
-        R.drawable.driver_liamlawson_2, 30, R.drawable.flag_newzealand, false, 4
-    ),
-    Driver(
-        13,
-        "Max",
-        "Verstappen",
-        1,
-        "Netherlands",
-        2500,
-        100,
-        30,
-        3,
-        180,
-        "Hasselt, Belgium",
-        "30-09-1997",
-        R.drawable.driver_maxverstappen_1,
-        R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands, false, 437
-    ),
-    Driver(
-        14,
-        "Nico",
-        "Hülkenberg",
-        7,
-        "Germany",
-        523,
-        0,
-        1,
-        0,
-        195,
-        "Emmerich am Rhein, Germany",
-        "19-08-1987",
-        R.drawable.driver_nicohulkenberg_1,
-        R.drawable.driver_nicohulkenberg_2, 27, R.drawable.flag_germany, false, 41
-    ),
-    Driver(
-        15,
-        "Oscar",
-        "Piastri",
-        5,
-        "Australia",
-        97,
-        1,
-        0,
-        0,
-        23,
-        "Melbourne, Australia",
-        "06-04-2001",
-        R.drawable.driver_oscarpiastri_1,
-        R.drawable.driver_oscarpiastri_2, 81, R.drawable.flag_australia, false, 292
-    ),
-    Driver(
-        16,
-        "Pierre",
-        "Gasly",
-        4,
-        "France",
-        342,
-        3,
-        1,
-        0,
-        123,
-        "Rouen, France",
-        "07-02-1996",
-        R.drawable.driver_pierregasly_1,
-        R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france, false, 42
-    ),
-    Driver(
-        17,
-        "Sergio",
-        "Perez",
-        1,
-        "Mexico",
-        1500,
-        35,
-        2,
-        0,
-        245,
-        "Guadalajara, Mexico",
-        "26-01-1990",
-        R.drawable.driver_sergioperez_1,
-        R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico, false, 152
-    ),
-    Driver(
-        18,
-        "Valtteri",
-        "Bottas",
-        9,
-        "Finland",
-        1800,
-        67,
-        20,
-        0,
-        200,
-        "Nastola, Finland",
-        "28-08-1989",
-        R.drawable.driver_valtteribottas_1,
-        R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland, false, 0
-    ),
-    Driver(
-        19,
-        "Yuki",
-        "Tsunoda",
-        10,
-        "Japan",
-        53,
-        0,
-        0,
-        0,
-        65,
-        "Sagamihara, Japan",
-        "11-05-2000",
-        R.drawable.driver_yukitsunoda_1,
-        R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan, false, 30
-    ),
-    Driver(
-        20,
-        "Guanyu",
-        "Zhou",
-        9,
-        "China",
-        20,
-        0,
-        0,
-        0,
-        45,
-        "Shanghai, China",
-        "30-05-1999",
-        R.drawable.driver_zhouguanyu_1,
-        R.drawable.driver_zhouguanyu_2, 24, R.drawable.flag_china, false, 4
-    ),
-    Driver(
-        21,
-        "Daniel",
-        "Riccardo",
-        10,
-        "Australian",
-        256,
-        32,
-        17,
-        0,
-        257,
-        "Australia, Perth",
-        "1-7-1989",
-        R.drawable.driver_danielriccardo_1,
-        R.drawable.f1_logo,
-        3,
-        R.drawable.flag_australia,
-        true, 12
-    ),
-    Driver(
-        22,
-        "Logan",
-        "Sargeant",
-        8,
-        "",
-        0,
-        0,
-        0,
-        0,
-        36,
-        " USA, Fort Lauderdale ",
-        "31-12-2000",
-        R.drawable.driver_logansargeant_1,
-        R.drawable.f1_logo,
-        2,
-        0,
-        true, 0
-    ),
-    Driver(
-        23,
-        "Jack",
-        "Doohan",
-        4,
-        "",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "",
-        "",
-        R.drawable.driver_jackdoohan_1,
-        R.drawable.f1_logo,
-        61,
-        0,
-        true, 0
-    ),
-    Driver(
-        24,
-        "Oliver",
-        "Bearman",
-        7,
-        "United Kingdom",
-        7,
-        0,
-        0,
-        0,
-        0,
-        "Chelmsford, England",
-        "08-05-2005",
-        R.drawable.driver_oliverbearman_1,
-        R.drawable.f1_logo,
-        55,
-        R.drawable.flag_uk,
-        true, 7
-    ),
-)
+        Driver(
+            1,
+            "Alexander",
+            "Albon",
+            8,
+            "Thailand",
+            24,
+            0,
+            0,
+            0,
+            240,
+            "London, England",
+            "23-03-1996",
+            R.drawable.driver_alexanderalbon_1,
+            R.drawable.driver_alexanderalbon_2,
+            23, R.drawable.flag_thailand,
+            false,
+            12
+        ),
+        Driver(
+            2,
+            "Carlos",
+            "Sainz",
+            2,
+            "Spain",
+            818,
+            16,
+            0,
+            0,
+            170,
+            "Madrid, Spain",
+            "01-09-1994",
+            R.drawable.driver_carlossainz_1,
+            R.drawable.driver_carlossainz_2,
+            55, R.drawable.flag_spain, false, 290
+        ),
+        Driver(
+            3,
+            "Charles",
+            "Leclerc",
+            2,
+            "Monaco",
+            1040,
+            25,
+            18,
+            0,
+            110,
+            "Monte Carlo, Monaco",
+            "16-10-1997",
+            R.drawable.driver_charlesleclerc_1,
+            R.drawable.driver_charlesleclerc_2, 16, R.drawable.flag_monaco, false, 356
+        ),
+        Driver(
+            4,
+            "Esteban",
+            "Ocon",
+            4,
+            "France",
+            372,
+            2,
+            0,
+            0,
+            134,
+            "Évreux, France",
+            "17-09-1996",
+            R.drawable.driver_estebanocon_1,
+            R.drawable.driver_estebanocon_2, 31, R.drawable.flag_france, false, 23
+        ),
+        Driver(
+            5,
+            "Fernando",
+            "Alonso",
+            6,
+            "Spain",
+            2100,
+            105,
+            22,
+            2,
+            370,
+            "Oviedo, Spain",
+            "29-07-1981",
+            R.drawable.driver_fernandoalonso_1,
+            R.drawable.driver_fernandoalonso_2, 14, R.drawable.flag_spain, false, 70
+        ),
+        Driver(
+            6,
+            "Franco",
+            "Colapinto",
+            8,
+            "Argentina",
+            0,
+            0,
+            0,
+            0,
+            0,
+            "Pilar, Argentina",
+            "27-05-2003",
+            R.drawable.driver_francocolapinto_1,
+            R.drawable.driver_francocolapinto_2, 43, R.drawable.flag_argentina, false, 5
+        ),
+        Driver(
+            7,
+            "George",
+            "Russell",
+            3,
+            "United Kingdom",
+            539,
+            10,
+            1,
+            0,
+            95,
+            "King's Lynn, England",
+            "15-02-1998",
+            R.drawable.driver_georgerussell_1,
+            R.drawable.driver_georgerussell_2, 63, R.drawable.flag_uk, false, 245
+        ),
+        Driver(
+            8,
+            "Kevin",
+            "Magnussen",
+            7,
+            "Denmark",
+            183,
+            1,
+            0,
+            0,
+            160,
+            "Roskilde, Denmark",
+            "05-10-1992",
+            R.drawable.driver_kevinmagnussen_1,
+            R.drawable.driver_kevinmagnussen_2, 20, R.drawable.flag_denmark, false, 16
+        ),
+        Driver(
+            9,
+            "Lance",
+            "Stroll",
+            6,
+            "Canada",
+            232,
+            3,
+            1,
+            0,
+            143,
+            "Montreal, Canada",
+            "29-10-1998",
+            R.drawable.driver_lancestroll_1,
+            R.drawable.driver_lancestroll_2, 18, R.drawable.flag_canada, false, 24
+        ),
+        Driver(
+            10,
+            "Lando",
+            "Norris",
+            5,
+            "United Kingdom",
+            532,
+            11,
+            1,
+            0,
+            100,
+            "Bristol, England",
+            "13-11-1999",
+            R.drawable.driver_landonorris_1,
+            R.drawable.driver_landonorris_2, 4, R.drawable.flag_uk, false, 374
+        ),
+        Driver(
+            11,
+            "Lewis",
+            "Hamilton",
+            3,
+            "United Kingdom",
+            4400,
+            195,
+            104,
+            7,
+            320,
+            "Stevenage, England",
+            "07-01-1985",
+            R.drawable.driver_lewishamilton_1,
+            R.drawable.driver_lewishamilton_2, 44, R.drawable.flag_uk, false, 223
+        ),
+        Driver(
+            12,
+            "Liam",
+            "Lawson",
+            10,
+            "New Zealand",
+            2,
+            0,
+            0,
+            0,
+            5,
+            "Hastings, New Zealand",
+            "11-02-2002",
+            R.drawable.driver_liamlawson_1,
+            R.drawable.driver_liamlawson_2, 30, R.drawable.flag_newzealand, false,4
+        ),
+        Driver(
+            13,
+            "Max",
+            "Verstappen",
+            1,
+            "Netherlands",
+            2500,
+            100,
+            30,
+            3,
+            180,
+            "Hasselt, Belgium",
+            "30-09-1997",
+            R.drawable.driver_maxverstappen_1,
+            R.drawable.driver_maxverstappen_2, 1, R.drawable.flag_netherlands, false,437
+        ),
+        Driver(
+            14,
+            "Nico",
+            "Hülkenberg",
+            7,
+            "Germany",
+            523,
+            0,
+            1,
+            0,
+            195,
+            "Emmerich am Rhein, Germany",
+            "19-08-1987",
+            R.drawable.driver_nicohulkenberg_1,
+            R.drawable.driver_nicohulkenberg_2, 27, R.drawable.flag_germany, false, 41
+        ),
+        Driver(
+            15,
+            "Oscar",
+            "Piastri",
+            5,
+            "Australia",
+            97,
+            1,
+            0,
+            0,
+            23,
+            "Melbourne, Australia",
+            "06-04-2001",
+            R.drawable.driver_oscarpiastri_1,
+            R.drawable.driver_oscarpiastri_2, 81, R.drawable.flag_australia, false, 292
+        ),
+        Driver(
+            16,
+            "Pierre",
+            "Gasly",
+            4,
+            "France",
+            342,
+            3,
+            1,
+            0,
+            123,
+            "Rouen, France",
+            "07-02-1996",
+            R.drawable.driver_pierregasly_1,
+            R.drawable.driver_pierregasly_2, 10, R.drawable.flag_france, false, 42
+        ),
+        Driver(
+            17,
+            "Sergio",
+            "Perez",
+            1,
+            "Mexico",
+            1500,
+            35,
+            2,
+            0,
+            245,
+            "Guadalajara, Mexico",
+            "26-01-1990",
+            R.drawable.driver_sergioperez_1,
+            R.drawable.driver_sergioperez_2, 11, R.drawable.flag_mexico, false, 152
+        ),
+        Driver(
+            18,
+            "Valtteri",
+            "Bottas",
+            9,
+            "Finland",
+            1800,
+            67,
+            20,
+            0,
+            200,
+            "Nastola, Finland",
+            "28-08-1989",
+            R.drawable.driver_valtteribottas_1,
+            R.drawable.driver_valtteribottas_2, 77, R.drawable.flag_finland, false, 0
+        ),
+        Driver(
+            19,
+            "Yuki",
+            "Tsunoda",
+            10,
+            "Japan",
+            53,
+            0,
+            0,
+            0,
+            65,
+            "Sagamihara, Japan",
+            "11-05-2000",
+            R.drawable.driver_yukitsunoda_1,
+            R.drawable.driver_yukitsunoda_2, 22, R.drawable.flag_japan, false, 30
+        ),
+        Driver(
+            20,
+            "Guanyu",
+            "Zhou",
+            9,
+            "China",
+            20,
+            0,
+            0,
+            0,
+            45,
+            "Shanghai, China",
+            "30-05-1999",
+            R.drawable.driver_zhouguanyu_1,
+            R.drawable.driver_zhouguanyu_2, 24, R.drawable.flag_china, false, 4
+        ),
+        Driver(
+            21,
+            "Daniel",
+            "Riccardo",
+            10,
+            "",
+            0,
+            0,
+            0,
+            0,
+            0,
+            "",
+            "",
+            R.drawable.driver_danielriccardo_1,
+            R.drawable.f1_logo,
+            3,
+            0,
+            true, 12
+        ),
+        Driver(
+            22,
+            "Logan",
+            "Sargeant",
+            8,
+            "",
+            0,
+            0,
+            0,
+            0,
+            0,
+            "",
+            "",
+            R.drawable.driver_logansargeant_1,
+            R.drawable.f1_logo,
+            2,
+            0,
+            true, 0
+        ),
+        Driver(
+            23,
+            "Jack",
+            "Doohan",
+            4,
+            "",
+            0,
+            0,
+            0,
+            0,
+            0,
+            "",
+            "",
+            R.drawable.driver_jackdoohan_1,
+            R.drawable.f1_logo,
+            61,
+            0,
+            true, 0
+        ),
+        Driver(
+            24,
+            "Oliver",
+            "Bearman",
+            7,
+            "",
+            0,
+            0,
+            0,
+            0,
+            0,
+            "",
+            "",
+            R.drawable.driver_oliverbearman_1,
+            R.drawable.f1_logo,
+            55,
+            0,
+            true, 7
+        ),
+    )
 
 val constructors = listOf(
-    Constructor(
-        1,
-        "Red Bull Racing",
-        R.drawable.constructor_redbullrecing,
-        2005,
-        "RB19",
-        "Honda RBPT",
-        "Christian Horner",
-        "Austria",
-        700,
-        R.color.redbullracingColor,
-        listOf(drivers[12], drivers[16]),
-        R.drawable.car_redbullracing, 103, 6, "1 (x122)"
-    ),
-    Constructor(
-        2, "Ferrari", R.drawable.constructor_ferrari, 1950, "SF-24", "Ferrari",
-        "Fred Vasseur", "Italy", 600, R.color.ferrariColor,
-        listOf(drivers[1], drivers[2]), R.drawable.car_ferrari, 253, 16, "1 (x249)"
-    ),
-    Constructor(
-        3, "Mercedes", R.drawable.constructor_mercedes, 1954, "W15", "Mercedes",
-        "Toto Wolff", "Germany", 550, R.color.mercedesColor,
-        listOf(drivers[10], drivers[6]), R.drawable.car_mercedes, 133, 8, "1 (x120)"
-    ),
-    Constructor(
-        4, "Alpine", R.drawable.constructor_alpine, 2021, "A524", "Renault",
-        "Bruno Famin", "France", 180, R.color.alpineColor,
-        listOf(drivers[3], drivers[15]), R.drawable.car_alpine, 20, 2, "1 (x21)"
-    ),
-    Constructor(
-        5, "McLaren", R.drawable.constructor_mclaren, 1966, "MCL61", "Mercedes",
-        "Andrea Stella", "United Kingdom", 250, R.color.mclarenColor,
-        listOf(drivers[9], drivers[14]), R.drawable.car_mclaren, 164, 9, "1 (x189)"
-    ),
-    Constructor(
-        6, "Aston Martin", R.drawable.constructor_astonmartin, 2021, "AMR24", "Mercedes",
-        "Mike Krack", "United Kingdom", 200, R.color.astonmartinColor,
-        listOf(drivers[4], drivers[8]), R.drawable.car_astonmartin, 1, 0, "1 (x1)"
-    ),
-    Constructor(
-        7, "Haas", R.drawable.constuctor_haas, 2016, "VF-24", "Ferrari",
-        "Guenther Steiner", "United States", 80, R.color.haasColor,
-        listOf(drivers[7], drivers[13]), R.drawable.car_haas, 1, 0, "4 (x1)"
-    ),
-    Constructor(
-        8, "Williams", R.drawable.constuctor_williams, 1977, "FW46", "Mercedes",
-        "James Vowles", "United Kingdom", 60, R.color.williamsColor,
-        listOf(drivers[0], drivers[5]), R.drawable.car_williams, 128, 9, "1 (x114)"
-    ),
-    Constructor(
-        9, "Kick Sauber", R.drawable.constuctor_kicksauber, 1993, "C44", "Ferrari",
-        "Alessandro Alunni Bravi", "Switzerland", 45, R.color.kicksauberColor,
-        listOf(drivers[19], drivers[17]), R.drawable.car_kicksauber, 1, 0, "1 (x1)"
-    ),
-    Constructor(
-        10, "RB", R.drawable.constuctor_rb, 1985, "VCARB 02", "Honda RBPT",
-        "Laurent Mekies", "Italy", 35, R.color.rbColor,
-        listOf(drivers[11], drivers[18]), R.drawable.car_rb, 1, 0, "1 (x2)"
-    )
-)
-
+            Constructor(
+                1,
+                "Red Bull Racing",
+                R.drawable.constructor_redbullrecing,
+                2005,
+                "RB19",
+                "Honda RBPT",
+                "Christian Horner",
+                "Austria",
+                700,
+                R.color.redbullracingColor,
+                listOf(drivers[12], drivers[16]),
+                R.drawable.car_redbullracing, 103,6
+            ),
+            Constructor(
+                2, "Ferrari", R.drawable.constructor_ferrari, 1950, "SF-24", "Ferrari",
+                "Fred Vasseur", "Italy", 600, R.color.ferrariColor,
+                listOf(drivers[1], drivers[2]), R.drawable.car_ferrari, 253, 16
+            ),
+            Constructor(
+                3, "Mercedes", R.drawable.constructor_mercedes, 1954, "W15", "Mercedes",
+                "Toto Wolff", "Germany", 550, R.color.mercedesColor,
+                listOf(drivers[10], drivers[6]), R.drawable.car_mercedes, 133,8
+            ),
+            Constructor(
+                4, "Alpine", R.drawable.constructor_alpine, 2021, "A524", "Renault",
+                "Bruno Famin", "France", 180, R.color.alpineColor,
+                listOf(drivers[3], drivers[15]), R.drawable.car_alpine,20, 2
+            ),
+            Constructor(
+                5, "McLaren", R.drawable.constructor_mclaren, 1966, "MCL61", "Mercedes",
+                "Andrea Stella", "United Kingdom", 250, R.color.mclarenColor,
+                listOf(drivers[9], drivers[14]), R.drawable.car_mclaren, 164,9
+            ),
+            Constructor(
+                6, "Aston Martin", R.drawable.constructor_astonmartin, 2021, "AMR24", "Mercedes",
+                "Mike Krack", "United Kingdom", 200, R.color.astonmartinColor,
+                listOf(drivers[4], drivers[8]), R.drawable.car_astonmartin, 1 ,0
+            ),
+            Constructor(
+                7, "Haas", R.drawable.constuctor_haas, 2016, "VF-24", "Ferrari",
+                "Guenther Steiner", "United States", 80, R.color.haasColor,
+                listOf(drivers[7], drivers[13]), R.drawable.car_haas,1,0
+            ),
+            Constructor(
+                8, "Williams", R.drawable.constuctor_williams, 1977, "FW46", "Mercedes",
+                "James Vowles", "United Kingdom", 60, R.color.williamsColor,
+                listOf(drivers[0], drivers[5]), R.drawable.car_williams, 128, 9
+            ),
+            Constructor(
+                9, "Kick Sauber", R.drawable.constuctor_kicksauber, 1993, "C44", "Ferrari",
+                "Alessandro Alunni Bravi", "Switzerland", 45, R.color.kicksauberColor,
+                listOf(drivers[19], drivers[17]), R.drawable.car_kicksauber,1 ,0
+            ),
+            Constructor(
+                10, "RB", R.drawable.constuctor_rb, 1985, "VCARB 02", "Honda RBPT",
+                "Laurent Mekies", "Italy", 35, R.color.rbColor,
+                listOf(drivers[11], drivers[18]), R.drawable.car_rb,1 ,0
+            )
+        )
 
 val Bio = mapOf<Int, String>(
     1 to "Born in London but racing under the flag of Thailand, Alexander Albon’s first word was in fact Italian. That word was Ferrari – though it was with another Italian team that he got his big F1 break.\n" +
@@ -1094,34 +949,9 @@ val Bio = mapOf<Int, String>(
             "\n" +
             "A move to Renault’s academy for 2019 coincided with his debut in Formula 2, with Zhou building his confidence in the series via multiple wins and pole positions across three seasons, leading to him challenging for the drivers’ title in 2021.\n" +
             "\n" +
-            "That was enough to convince Team Principal Fred Vasseur to put his faith in Zhou for 2022 and field him alongside ex-Mercedes racer Valtteri Bottas – allowing Zhou to achieve his dream of racing in F1, and even to see how he fares against his own childhood hero, Fernando Alonso.",
-    21 to "Daniel Ricciardo est un pilote de Formule 1 australien né le 1er juillet 1989 à Perth, en Australie. Connu pour son grand sourire, son charisme et son style de conduite agressif mais maîtrisé, il est l'une des figures les plus populaires du paddock. \nPoints clés de sa carrière :\n- Débuts en Formule 1 : Daniel a fait ses débuts en F1 en 2011 avec HRT avant de rejoindre Toro Rosso en 2012. \n- Équipe Red Bull : Il a intégré l'équipe principale Red Bull Racing en 2014, où il a remporté sept victoires jusqu'en 2018. \n- Autres équipes : Après son départ de Red Bull, il a couru pour Renault (2019-2020) et McLaren (2021-2022), remportant une victoire mémorable au Grand Prix d'Italie 2021 avec McLaren. \n- Retour chez Red Bull : En 2023, après une pause, il revient en F1 avec AlphaTauri (équipe sœur de Red Bull). \nStyle de conduite :\nRicciardo est connu pour ses dépassements audacieux et son habileté à freiner tard, ce qui lui a valu le surnom de \"The Honey Badger\", en référence à un animal féroce malgré sa petite taille. \n Personnalité :\nEn dehors des circuits, Daniel est apprécié pour son attitude positive, son humour et son approche détendue de la vie. Il aime la musique, les voyages, et est aussi passionné par le vin et les motos. \n Palmarès notable :\n 8 victoires en Grand Prix (au 2024). \\n- Meilleur classement au championnat : 3e en 2014 et 2016. \nnRicciardo reste une figure inspirante et un favori des fans dans le monde du sport automobile.",
-    22 to "Logan Sargeant est un pilote de Formule 1 américain né le 31 décembre 2000 à Fort Lauderdale, en Floride. Il est le premier Américain à participer à un championnat de F1 depuis 2015. \n Carrière :\nLogan a commencé sa carrière en karting avant de rejoindre les séries de monoplaces, notamment la F3 européenne et la F2, où il a obtenu de bons résultats. \nF1 :\nIl a fait ses débuts en Formule 1 en 2023 avec l’équipe Williams, après avoir été choisi comme pilote de réserve en 2022. \nPersonnalité :\nSargeant est apprécié pour sa détermination et son calme sous pression, représentant l'émergence de nouveaux talents américains en F1.",
-    23 to "Alpine’s F1 reserve since 2023, Jack Doohan steps up to full-time racer for 2025, having been handed an early Grand Prix debut for the team at 2024’s season finale.\n" +
-            "\n" +
-            "Doohan is the latest Aussie to join the F1 grid, and the young Queenslander is not short of racing pedigree – he already has plenty of F3 and F2 wins to his name, and that’s before we mention his father, five-time motorcycle world champion, Mick.\n" +
-            "\n" +
-            "After his single-seater debut in British Formula 4, followed by stints in Italian F4, ADAC F4 and Asian F3, Doohan stepped up to FIA Formula 3 in 2020, finishing championship runner-up the following year.\n" +
-            "\n" +
-            "The 2022 season saw him join Alpine’s driver development programme and finish sixth overall in his rookie FIA Formula 2 campaign. The following year he was up to third, thanks to three race wins, including impressive back-to-back feature race victories in Hungary and Belgium.\n" +
-            "\n" +
-            "Formula 1 experience came via Alpine, with free practice outings at Grands Prix in 2022, 2023 and 2024. And having served his apprenticeship with the French squad, Doohan’s reward is a shot at the big time as team mate to F1 race winner Pierre Gasly.",
-    24 to "He's an official Ferrari reserve and he made his F1 race debut in Saudi Arabia in place of the ill Carlos Sainz.\n" +
-            "\n" +
-            "Bearman, 18, got his first taste of F1 machinery with the Scuderia towards the end of last year, in preparation for a pair of FP1 outings for Haas at the Mexican and Abu Dhabi Grands Prix.\n" +
-            "\n" +
-            "He has since completed several more F1 test runs with and is currently competing in F2 with the Prema Racing team, having won four races and placed sixth in the feeder series standings last year.\n" +
-            "\n" +
-            "After a tough start to the 2024 campaign for Prema in Bahrain, Bearman struck back to claim pole position at the high-speed Jeddah track but, with Sainz-subbing duties calling, he was required to temporarily drop his F2 commitments.\n" +
-            "\n" +
-            "Not that he was complaining - a stunning performance saw the young Englishman score six points for seventh place in his first Grand Prix, enhancing his future F1 prospects no end.\n" +
-            "\n" +
-            "Indeed, that drive helped him secure a full-time F1 seat with the Ferrari-powered Haas squad for 2025 – as well as an early Grand Prix debut with them in Azerbaijan ’24, as team regular Kevin Magnussen served out a one-race ban.\n" +
-            "\n" +
-            "Bearman was called into action again at the start of the Sao Paulo Grand Prix weekend, after Magnussen was taken ill ahead of Friday's running."
+            "That was enough to convince Team Principal Fred Vasseur to put his faith in Zhou for 2022 and field him alongside ex-Mercedes racer Valtteri Bottas – allowing Zhou to achieve his dream of racing in F1, and even to see how he fares against his own childhood hero, Fernando Alonso."
 )
 
-/*
 val resultats = listOf(
     listOf(
         Resultat(1, drivers[12], "1:31:44.742", 26),
@@ -1188,4 +1018,248 @@ val resultats = listOf(
         Resultat("NC", drivers[10], "DNF", 0),
         Resultat("NC", drivers[12], "DNF", 0)
     )
-)*/
+)
+
+val races = listOf(
+    Race(
+        1,
+        "GULF AIR BAHRAIN GRAND PRIX 2024",
+        "29-02/FEV.-MARS",
+        2024,
+        "14:00",
+        "Bahrain",
+        resultats[0],
+        circuits[0],
+        R.drawable.track_bahrain
+    ), Race(
+        2,
+        "STC SAUDI ARABIA GRAND PRIX 2024",
+        "07-09/MARS",
+        2024,
+        "14:00",
+        "Saudi Arabia",
+        resultats[1],
+        circuits[1],
+        R.drawable.track_saudi
+    ), Race(
+        3,
+        "ROLEX AUSTRALIAN GRAND PRIX 2024",
+        "22-24/MARS",
+        2024,
+        "14:00",
+        "Australia",
+        resultats[2],
+        circuits[2],
+        R.drawable.track_australia
+    ), Race(
+        4,
+        "MSC CRUISES JAPANESE GRAND PRIX 2024",
+        "05-07/AVR.",
+        2024,
+        "14:00",
+        "Japan",
+        null,
+        circuits[3],
+        R.drawable.track_japan
+    ), Race(
+        5,
+        "LENOVO CHINESE GRAND PRIX 2024",
+        "19-21/AVR.",
+        2024,
+        "14:00",
+        "China",
+        null,
+        circuits[4],
+        R.drawable.track_china
+    ), Race(
+        6,
+        "CRYPTO.COM MIAMI GRAND PRIX 2024",
+        "03-05/MAI",
+        2024,
+        "14:00",
+        "Miami",
+        null,
+        circuits[5],
+        R.drawable.track_miami
+    ), Race(
+        7,
+        "MSC CRUISES GRAN PREMIO DEL MADE IN ITALY EDELL'EMILIA-ROMAGNA 2024",
+        "17-19/MAI",
+        2024,
+        "14:00",
+        "Emilia-Romagna",
+        null,
+        circuits[6],
+        R.drawable.track_emiliaromagna
+    ), Race(
+        8,
+        "GRAND PRIX DE MONACO 2024",
+        "24-26/MAI",
+        2024,
+        "14:00",
+        "Monaco",
+        null,
+        circuits[7],
+        R.drawable.track_monaco
+    ), Race(
+        9,
+        "AWS GRAND PRIX DE CANADA 2024",
+        "07-09/JUIN",
+        2024,
+        "14:00",
+        "Canada",
+        null,
+        circuits[8],
+        R.drawable.track_canada
+    ), Race(
+        10,
+        "ARAMCO GRAN PREMIO DE ESPAÑA 2024",
+        "21-23/JUIN",
+        2024,
+        "14:00",
+        "Spain",
+        null,
+        circuits[9],
+        R.drawable.track_spain
+    ), Race(
+        11,
+        "QATAR AIRWAYS AUSTRIAN GRAND PRIX 2024",
+        "28-30/JUIN",
+        2024,
+        "14:00",
+        "Austria",
+        null,
+        circuits[10],
+        R.drawable.track_austria
+    ), Race(
+        12,
+        "QATAR AIRWAYS BRITISH GRAND PRIX 2024",
+        "05-07/JUIL.",
+        2024,
+        "14:00",
+        "Great Britain",
+        null,
+        circuits[11],
+        R.drawable.track_uk
+    ), Race(
+        13,
+        "HUNGARIAN GRAND PRIX 2024",
+        "19-21/JUIL.",
+        2024,
+        "14:00",
+        "Hungary",
+        null,
+        circuits[12],
+        R.drawable.track_hungary
+    ), Race(
+        14,
+        "ROLEX BELGIUM GRAND PRIX 2024",
+        "26-28/JUIL.",
+        2024,
+        "14:00",
+        "Belgium",
+        null,
+        circuits[13],
+        R.drawable.track_belgium
+    ), Race(
+        15,
+        "HEIKEKEN DUTCH GRAND PRIX 2024",
+        "23-25/AOUT",
+        2024,
+        "14:00",
+        "Netherlands",
+        null,
+        circuits[14],
+        R.drawable.track_netherlands
+    ), Race(
+        16,
+        "PIRELLI GRAN PREMIO D'ITALIA 2024",
+        "30-01/AOUT-SEPT.",
+        2024,
+        "14:00",
+        "Italy",
+        null,
+        circuits[15],
+        R.drawable.track_italy
+    ), Race(
+        17,
+        "QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2024",
+        "13-15/SEPT.",
+        2024,
+        "14:00",
+        "Azerbaijan",
+        null,
+        circuits[16],
+        R.drawable.track_azerbijan
+    ), Race(
+        18,
+        "SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2024",
+        "20-22/SEPT.",
+        2024,
+        "14:00",
+        "Singapore",
+        null,
+        circuits[17],
+        R.drawable.track_singapour
+    ), Race(
+        19,
+        "PIRELLI UNITED STATES GRAND PRIX 2024",
+        "18-20/OCT.",
+        2024,
+        "14:00",
+        "United States",
+        null,
+        circuits[18],
+        R.drawable.track_us
+    ), Race(
+        20,
+        "GRAN PREMIO DE LA CIUDAD DE MEXICO 2024",
+        "25-27/OCT.",
+        2024,
+        "14:00",
+        "Mexico",
+        null,
+        circuits[19],
+        R.drawable.track_mexico
+    ), Race(
+        21,
+        "LENOVO GRANDE PREMIO DE SAO PAULO 2024",
+        "01-03/NOV.",
+        2024,
+        "14:00",
+        "Brazil",
+        null,
+        circuits[20],
+        R.drawable.track_brazil
+    ), Race(
+        22,
+        "HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024",
+        "21-23/NOV.",
+        2024,
+        "14:00",
+        "Las Vegas",
+        null,
+        circuits[21],
+        R.drawable.track_lasvegas
+    ), Race(
+        23,
+        "QATAR AIRWAYS QATAR GRAND PRIX 2024",
+        "29-01/NOV.-DEC.",
+        2024,
+        "14:00",
+        "Qatar",
+        null,
+        circuits[22],
+        R.drawable.track_qatar
+    ), Race(
+        24,
+        "ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2024",
+        "06-08/DEC.",
+        2024,
+        "14:00",
+        "Abu Dhabi",
+        null,
+        circuits[23],
+        R.drawable.track_abudhabi
+    )
+)
