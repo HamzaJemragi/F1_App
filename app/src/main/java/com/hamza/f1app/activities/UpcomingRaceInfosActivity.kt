@@ -30,7 +30,7 @@ class UpcomingRaceInfosActivity: AppCompatActivity() {
             insets
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
-        val racePosition = intent?.extras?.getInt("racingPosition")!!.toInt()
+        val racePosition = intent?.extras?.getInt("racePosition")!!.toInt()
 
         val racingTextView = findViewById<TextView>(R.id.racingTextView)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
