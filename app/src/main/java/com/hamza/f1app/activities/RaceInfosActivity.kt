@@ -30,7 +30,7 @@ class RaceInfosActivity: AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager2 = findViewById<ViewPager2>(R.id.viewPager)
-        val adapter = ViewPagerAdapter(this)
+        val adapter = ViewPagerAdapter2(this)
         viewPager2.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager2) { tab, position ->

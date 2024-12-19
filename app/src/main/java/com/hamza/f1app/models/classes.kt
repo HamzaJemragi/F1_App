@@ -76,6 +76,7 @@ data class Constructor(
     var highestFinish:String
 )
 
+data class Latest(var id: Int, var type:Int, var title:Int, var date:String, var newsImage:Int, var content:Int)
 
 
 

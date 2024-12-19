@@ -16,7 +16,7 @@ import com.hamza.f1app.activities.DriverinfoActivity
 import com.hamza.f1app.adapters.RecyclerViewDriverAdapter
 import com.hamza.f1app.data.drivers
 
-class DriversFragment : Fragment(R.layout.fragment_constructors) {
+class DriversFragment : Fragment(R.layout.fragment_drivers) {
     private lateinit var driverRecyclerView: RecyclerView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -24,21 +24,21 @@ class DriversFragment : Fragment(R.layout.fragment_constructors) {
 
         driverRecyclerView = view.findViewById(R.id.driverRecyclerView)
         driverRecyclerView.layoutManager = LinearLayoutManager(context)
-        val adapter= RecyclerViewDriverAdapter(drivers.toList(),object : RecyclerViewDriverAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int) {
-                Toast.makeText(requireContext(), "retiredOrNot: ${drivers[position].retiredOrNot}", Toast.LENGTH_SHORT).show()
+        val adapter = RecyclerViewDriverAdapter(drivers.toList(),
+            object : RecyclerViewDriverAdapter.OnItemClickListener {
+                override fun onItemClick(position: Int) {
                     val intent = Intent(context, DriverinfoActivity::class.java)
                     intent.putExtra("driverPosition", position)
-                val options = android.app.ActivityOptions.makeCustomAnimation(
-                    requireContext(),
-                    R.anim.slide_in_right,
-                    R.anim.slide_out_left
-                )
-                startActivity(intent, options.toBundle())
+                    val options = android.app.ActivityOptions.makeCustomAnimation(
+                        requireContext(),
+                        R.anim.slide_in_right,
+                        R.anim.slide_out_left
+                    )
+                    startActivity(intent, options.toBundle())
 
 
-            }
-        })
+                }
+            })
         driverRecyclerView.adapter = adapter
     }
 }

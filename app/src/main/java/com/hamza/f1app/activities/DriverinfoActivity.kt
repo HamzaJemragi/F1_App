@@ -1,5 +1,6 @@
 package com.hamza.f1app.activities
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -23,8 +24,8 @@ import com.hamza.f1app.fragments.DriverStatsFragment
 
 class DriverinfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         enableEdgeToEdge()
         setContentView(R.layout.activity_driverinfo)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.driverInfoActivity)) { v, insets ->

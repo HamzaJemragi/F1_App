@@ -4,6 +4,7 @@
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/f1red</item>
         <item name="android:fontFamily">@font/formula1_regular_1</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
     <style name="Theme.F1App" parent="Base.Theme.F1App" />

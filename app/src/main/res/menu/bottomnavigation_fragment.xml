@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home"
-        android:title="Home"
-        android:icon="@drawable/icon_greyhome" />
+        android:id="@+id/latest"
+        android:title="@string/main_latest"
+        android:icon="@drawable/icon_newspaper" />
 
     <item
         android:id="@+id/racing"
-        android:title="Racing"
+        android:title="@string/main_racing"
         android:icon="@drawable/icon_redflag" />
 
     <item
         android:id="@+id/drivers"
-        android:title="Drivers"
+        android:title="@string/main_drivers"
         android:icon="@drawable/icon_greyhelmet" />
 
     <item
         android:id="@+id/constructors"
-        android:title="Constructors"
+        android:title="@string/main_constructors"
         android:icon="@drawable/icon_greycar" />
 
     <item
         android:id="@+id/standings"
-        android:title="Standings"
+        android:title="@string/main_standing"
         android:icon="@drawable/icon_greyranking" />
 </menu>
