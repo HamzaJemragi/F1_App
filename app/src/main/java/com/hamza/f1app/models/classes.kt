@@ -1,21 +1,15 @@
 package com.hamza.f1app.Models
 
-
-data class Country(
-    val nom: String,
-    val flag: Int
-)
+import java.util.Date
 
 data class Race(
     val id: Int,
     val nom: String,
-    val date: String,
-    val annee: Int,
-    val time: String,
+    val date: Date,
     val lieu: String,
     val resultats: List<Resultat>?,
     val circuit: Circuit,
-    val track: Int,
+    val info: Map<String, Any>,
 )
 
 data class Circuit(
@@ -23,69 +17,32 @@ data class Circuit(
     val length: Double,
     val distance: Double,
     val laps: Int,
-    val LapRecord: Map<String, Any>,
+    val LapRecord: String,
     val firstGP: Int,
-    val Image: Int,
-    val country: Country,
-    val race: Int
 )
 
 data class Resultat(
-    val position: Any,
     val pilote: Driver,
+    val position: Int,
     val temps: String,
-    val points: Int,
+    val details: String,
 )
 
 data class Driver(
     val id: Int,
-    val firsName: String,
-    val lastName: String,
-    var equipe: Int,
+    val nom: String,
+    val equipe: Constructor,
     val nationalite: String,
-    var points: Int,
-    var podiums: Int,
-    var fastestLap: Int,
-    var worldChampionships: Long,
-    var GPsEntered: Int,
-    val birthPlace: String,
-    val birthDate: String,
-    var driverImage1: Int,
-    var driverImage2: Int,
-    var driverNumber: Int,
-    var flag: Int,
-    var retiredOrNot: Boolean,
-    var seasonPoint: Int,
-    )
+    val points: Int,
+    val statistiques: List<Map<String, Int>>,
+)
 
 data class Constructor(
     val id: Int,
-    var nom: String,
-    var logo: Int,
-    val firstEntry: Int,
-    var chassis: String,
-    var powerUnit: String,
-    var teamChief: String,
+    val nom: String,
+    val logo: Int,
     val nationalite: String,
-    var points: Int,
-    var construcorColor: Int,
-    var pilotes: List<Driver>,
-    var carImage:Int,
-    var polePositions:Int,
-    var constructorChampionships:Int,
-    var highestFinish:String
+    val points: Int,
+    val historique: String,
+    val pilotes: Driver,
 )
-
-data class Latest(var id: Int, var type:Int, var title:Int, var date:String, var newsImage:Int, var content:Int)
-
-
-
-
-
-
-
-
-
-
-
-
