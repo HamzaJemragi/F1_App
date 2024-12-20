@@ -55,6 +55,54 @@
     <string name="Circuit">Circuit</string>
     <string name="race_weekend">RACE WEEKEND</string>
     <string name="next">next</string>
-    <string name="dialogNoStatsDriverText">There is no performance data available for this driver yet!</string>
-    <string name="dialogNoStatsDriverButton">Understood</string>
+
+
+
+    <string name="dialogExit">Do you want to exit ?</string>
+    <string name="dialogAlert">Alert !</string>
+    <string name="dialogYes">Yes</string>
+    <string name="dialogNo">No</string>
+
+
+
+    <!-- NEWS -->
+    <string name="main_latest">Latest</string>
+    <string name="news">News</string>
+    <string name="feature">Feature</string>
+
+    <!-- NEWS TITELS-->
+    <string name="news_lawsonTitle">Why Red Bull chose Lawson instead of Tsunoda as Perez\'s replacement</string>
+    <string name="news_bottasTitle">Bottas to re-join Mercedes as reserve driver in 2025</string>
+    <string name="news_perezTitle">Perez and Red Bull agree to part ways following conclusion of 2024 season</string>
+
+    <!-- NEWS CONTENT-->
+    <string name="news_lawsonContent">Liam Lawson will become the latest Red Bull junior to get a shot at the big time and partner four-time world champion Max Verstappen at the energy drinks firm’s works outfit. Why did he get the nod over RB team mate Yuki Tsunoda? F1 Correspondent Lawrence Barretto explains…\n\n
+
+As the pressure piled up on Sergio Perez’s shoulders approaching the summer break, it was Daniel Ricciardo’s name that was most heavily linked to being his replacement when Red Bull eventually wielded the axe.\n\n
+
+
+Sources say Red Bull were looking to put the Australian in the car when the season resumed – only to change their mind and keep faith in Perez – whom they had given a new contract earlier in the year.\n\n
+
+Ricciardo’s star then quickly faded and it was Lawson – Ricciardo’s permanent replacement from the United States Grand Prix onwards – who became the frontrunner rather than his team mate Tsunoda.\n\n
+
+This was despite Tsunoda enjoying his most impressive season to date, albeit in his fourth campaign with Red Bull’s sister team RB.</string>
+    <string name="news_bottasContent">Mercedes have announced that Valtteri Bottas will return to the team as a reserve driver for the 2025 season, after the Finn and Kick Sauber parted company following the 2024 Abu Dhabi Grand Prix.\n\n
+
+Bottas drove for Mercedes for five seasons alongside Lewis Hamilton from 2017-2021, securing all 10 of his career wins with the Silver Arrows, as well as his 20 pole positions in Formula 1.\n\n
+
+
+He would then join Sauber, known as Alfa Romeo at the time, for the 2022 season after Mercedes chose to promote George Russell in his place, the Finn enduring mixed fortunes with the Swiss team ranging from finishing a strong 10th in 2022 to failing to score at all in 2024.\n\n
+
+When Kick Sauber opted not to re-sign Bottas for 2025 – instead choosing a combination of Nico Hulkenberg and Brazilian rookie Gabriel Bortoleto – the Finn began talks with Mercedes about a reserve role in a bid to stay in the conversation as he pursues a racing return in 2026.</string>
+    <string name="news_perezContent">Sergio Perez and Red Bull have reached an agreement to part ways with immediate effect.\n\n
+
+Earlier this year, Perez signed a new deal to race for the team until the end of 2026 – on the back of his strongest season ever in 2023, when he finished second to team mate and champion Max Verstappen.\n\n
+
+However, his form tailed off after signing that deal, and the Mexican scored just nine points in the last eight Grand Prix weekends of the 2024 season.\n\n
+
+He ended up down in eighth in the drivers’ championship, with Red Bull failing to defend their constructors’ championship and seeing out the season in P3 behind champions McLaren and runners-up Ferrari.\n\n
+
+Throughout the difficult period, Perez remained resolute that he would race for the team next year, but following discussions with Red Bull, they’ve agreed to split after four years together.</string>
+
+
 </resources>

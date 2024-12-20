@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.hamza.f1app.Models.Driver
+import Driver
 import com.hamza.f1app.R
 import com.hamza.f1app.data.constructors
 
@@ -44,15 +44,15 @@ class RecyclerViewDriverAdapter(
         position: Int,
     ) {
         val driver = listDriver[position]
-            holder.driverNumber.text = "#${driver.driverNumber}"
-            holder.line.setBackgroundResource(constructors.find { it.id == driver.equipe }!!.construcorColor)
-            holder.driverFirsName.text = driver.firsName
-            holder.driverLastName.text = driver.lastName
-            holder.driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
-            holder.driverPhoto.setImageResource(driver.driverImage1)
-            holder.itemView.setOnClickListener {
-                listener.onItemClick(position)
-            }
+        holder.driverNumber.text = "#${driver.driverNumber}"
+        holder.line.setBackgroundResource(constructors.find { it.id == driver.equipe }!!.construcorColor)
+        holder.driverFirsName.text = driver.firsName
+        holder.driverLastName.text = driver.lastName
+        holder.driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
+        holder.driverPhoto.setImageResource(driver.driverImage1)
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(position)
+        }
 
     }
 

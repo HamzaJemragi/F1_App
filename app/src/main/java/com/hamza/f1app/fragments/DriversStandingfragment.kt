@@ -29,7 +29,12 @@ class DriversStandingFragment: Fragment() {
             override fun onItemClick(position: Int) {
                 val intent = Intent(requireContext(), DriverinfoActivity::class.java)
                 intent.putExtra("driverPosition", position )
-                startActivity(intent)
+                val options = android.app.ActivityOptions.makeCustomAnimation(
+                    requireContext(),
+                    R.anim.slide_in_right,
+                    R.anim.slide_out_left
+                )
+                startActivity(intent, options.toBundle())
             }
         } )
 

@@ -1,11 +1,14 @@
 package com.hamza.f1app.data
 
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat.getString
 import com.hamza.f1app.Models.Circuit
 import com.hamza.f1app.Models.Constructor
 import com.hamza.f1app.Models.Driver
 import com.hamza.f1app.Models.Race
 import com.hamza.f1app.Models.Resultat
 import com.hamza.f1app.Models.Country
+import com.hamza.f1app.Models.Latest
 import com.hamza.f1app.R
 
 val countries = listOf(
@@ -696,57 +699,54 @@ val constructors = listOf(
                 700,
                 R.color.redbullracingColor,
                 listOf(drivers[12], drivers[16]),
-                R.drawable.car_redbullracing, 103,6, "1 x122"
+                R.drawable.car_redbullracing, 103,6
             ),
             Constructor(
                 2, "Ferrari", R.drawable.constructor_ferrari, 1950, "SF-24", "Ferrari",
                 "Fred Vasseur", "Italy", 600, R.color.ferrariColor,
-                listOf(drivers[1], drivers[2]), R.drawable.car_ferrari, 253, 16, "1 x249"
+                listOf(drivers[1], drivers[2]), R.drawable.car_ferrari, 253, 16
             ),
             Constructor(
                 3, "Mercedes", R.drawable.constructor_mercedes, 1954, "W15", "Mercedes",
                 "Toto Wolff", "Germany", 550, R.color.mercedesColor,
-                listOf(drivers[10], drivers[6]), R.drawable.car_mercedes, 133,8, "1 x120"
+                listOf(drivers[10], drivers[6]), R.drawable.car_mercedes, 133,8
             ),
             Constructor(
                 4, "Alpine", R.drawable.constructor_alpine, 2021, "A524", "Renault",
                 "Bruno Famin", "France", 180, R.color.alpineColor,
-                listOf(drivers[3], drivers[15]), R.drawable.car_alpine,20, 2, "1 x21"
+                listOf(drivers[3], drivers[15]), R.drawable.car_alpine,20, 2
             ),
             Constructor(
                 5, "McLaren", R.drawable.constructor_mclaren, 1966, "MCL61", "Mercedes",
                 "Andrea Stella", "United Kingdom", 250, R.color.mclarenColor,
-                listOf(drivers[9], drivers[14]), R.drawable.car_mclaren, 164,9, "1 x189"
+                listOf(drivers[9], drivers[14]), R.drawable.car_mclaren, 164,9
             ),
             Constructor(
                 6, "Aston Martin", R.drawable.constructor_astonmartin, 2021, "AMR24", "Mercedes",
                 "Mike Krack", "United Kingdom", 200, R.color.astonmartinColor,
-                listOf(drivers[4], drivers[8]), R.drawable.car_astonmartin, 1 ,0, "1 x1"
+                listOf(drivers[4], drivers[8]), R.drawable.car_astonmartin, 1 ,0
             ),
             Constructor(
                 7, "Haas", R.drawable.constuctor_haas, 2016, "VF-24", "Ferrari",
                 "Guenther Steiner", "United States", 80, R.color.haasColor,
-                listOf(drivers[7], drivers[13]), R.drawable.car_haas,1,0, "4 x1"
+                listOf(drivers[7], drivers[13]), R.drawable.car_haas,1,0
             ),
             Constructor(
                 8, "Williams", R.drawable.constuctor_williams, 1977, "FW46", "Mercedes",
                 "James Vowles", "United Kingdom", 60, R.color.williamsColor,
-                listOf(drivers[0], drivers[5]), R.drawable.car_williams, 128, 9, "1 x114"
+                listOf(drivers[0], drivers[5]), R.drawable.car_williams, 128, 9
             ),
             Constructor(
                 9, "Kick Sauber", R.drawable.constuctor_kicksauber, 1993, "C44", "Ferrari",
                 "Alessandro Alunni Bravi", "Switzerland", 45, R.color.kicksauberColor,
-                listOf(drivers[19], drivers[17]), R.drawable.car_kicksauber,1 ,0, "1 x1"
+                listOf(drivers[19], drivers[17]), R.drawable.car_kicksauber,1 ,0
             ),
             Constructor(
                 10, "RB", R.drawable.constuctor_rb, 1985, "VCARB 02", "Honda RBPT",
                 "Laurent Mekies", "Italy", 35, R.color.rbColor,
-                listOf(drivers[11], drivers[18]), R.drawable.car_rb,1 ,0, "1 x2"
+                listOf(drivers[11], drivers[18]), R.drawable.car_rb,1 ,0
             )
         )
-
-
-
 
 val Bio = mapOf<Int, String>(
     1 to "Born in London but racing under the flag of Thailand, Alexander Albon’s first word was in fact Italian. That word was Ferrari – though it was with another Italian team that he got his big F1 break.\n" +
@@ -1289,4 +1289,11 @@ val races = listOf(
         circuits[23],
         R.drawable.track_abudhabi
     )
+)
+
+
+var latest = listOf(
+    Latest(1, R.string.feature,R.string.news_lawsonTitle,"19-04-2024",R.drawable.news_lawson,R.string.news_lawsonContent),
+    Latest(2, R.string.news,R.string.news_bottasTitle,"19-04-2024",R.drawable.news_bottas,R.string.news_bottasContent),
+    Latest(3, R.string.news,R.string.news_perezTitle,"19-04-2024",R.drawable.news_perez,R.string.news_perezContent)
 )

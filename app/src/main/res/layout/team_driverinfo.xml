@@ -36,7 +36,7 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/formula1_bold_4"
-        android:text="Team"
+        android:text="@string/team"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"

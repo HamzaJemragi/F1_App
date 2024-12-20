@@ -1,6 +1,7 @@
 package com.hamza.f1app.activities
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
@@ -11,6 +12,7 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -21,6 +23,7 @@ import com.hamza.f1app.data.drivers
 class ConstructorinfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         enableEdgeToEdge()
         setContentView(R.layout.activity_constructorinfo)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.constructorInfoActivity)) { v, insets ->
@@ -30,7 +33,6 @@ class ConstructorinfoActivity : AppCompatActivity() {
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.darkGray)
         val constructorPosition = intent?.extras?.getInt("constructorPosition")!!.toInt()
-//        val constructorPosition =0
 
         val line = findViewById<View>(R.id.line)
         val constructorName = findViewById<TextView>(R.id.constructorName)
@@ -87,7 +89,7 @@ class ConstructorinfoActivity : AppCompatActivity() {
         constructorCountry.text = constructors[constructorPosition].nationalite
         constructorsLogo.setImageResource(constructors[constructorPosition].logo)
 
-        borderDrawable.setStroke(25, constructors[constructorPosition].construcorColor)
+        borderDrawable.setStroke(25,getColor(constructors[constructorPosition].construcorColor))
         totalPts.text =
             constructors[constructorPosition].pilotes.sumOf { it.seasonPoint }.toString()
         val orderdConstructors =
@@ -130,7 +132,12 @@ class ConstructorinfoActivity : AppCompatActivity() {
                 "driverPosition",
                 drivers.indexOf(constructors[constructorPosition].pilotes[0])
             )
-            startActivity(intent)
+            val options = android.app.ActivityOptions.makeCustomAnimation(
+                this,
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
+            startActivity(intent, options.toBundle())
         }
 
         driver2.setOnClickListener {
@@ -139,13 +146,16 @@ class ConstructorinfoActivity : AppCompatActivity() {
                 "driverPosition",
                 drivers.indexOf(constructors[constructorPosition].pilotes[1])
             )
-            startActivity(intent)
+            val options = android.app.ActivityOptions.makeCustomAnimation(
+                this,
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
+            startActivity(intent, options.toBundle())
         }
     }
     override fun finish() {
         super.finish()
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
-
     }
-
 }

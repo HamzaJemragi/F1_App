@@ -1,5 +1,6 @@
 package com.hamza.f1app.activities
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +17,7 @@ class PastRaceResultActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         enableEdgeToEdge()
         setContentView(R.layout.past_race_result_activity)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.resultActivity)) { v, insets ->

@@ -35,26 +35,24 @@
             style="@style/teamname_constructorInfo"
             android:layout_width="0dp"
             android:layout_height="65dp"
-            android:layout_marginStart="12dp"
             android:text="Merceds-AMG PETRONAS F1 Team"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/line"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.45"
             app:layout_constraintWidth_percent="0.45" />
 
         <TextView
             android:id="@+id/constructorCountry"
             android:layout_width="wrap_content"
             android:layout_height="18dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="4dp"
             android:text="Germany"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/line"
             app:layout_constraintTop_toBottomOf="@+id/constructorName"
-            app:layout_constraintVertical_bias="0.642" />
+            app:layout_constraintVertical_bias="0.6" />
 
         <ImageView
             android:id="@+id/constructorsLogo"
@@ -76,11 +74,10 @@
     <TextView
         android:id="@+id/stats"
         style="@style/toolbar_text"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
-        android:text="Stats"
+        android:text="@string/Stats"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
@@ -110,6 +107,7 @@
             <LinearLayout
                 android:layout_marginHorizontal="16dp"
                 android:id="@+id/rowInfos1"
+                android:layout_marginHorizontal="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -124,7 +122,7 @@
                     layout="@layout/infos_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="35dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="5dp"
                     app:layout_constraintEnd_toStartOf="@id/highestFinish"
                     app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +157,7 @@
                     layout="@layout/infos_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="35dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="5dp"
                     app:layout_constraintEnd_toStartOf="@id/polePositions"
                     app:layout_constraintStart_toStartOf="parent"

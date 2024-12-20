@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.hamza.f1app.Models.Constructor
+import Constructor
 import com.hamza.f1app.R
 
 class StandingConstructorAdapter(

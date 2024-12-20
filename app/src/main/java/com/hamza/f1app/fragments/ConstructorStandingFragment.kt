@@ -29,7 +29,12 @@ class ConstructorStandingFragment(): Fragment() {
             override fun onItemClick(position: Int) {
                 val intent = Intent(requireContext(), ConstructorinfoActivity::class.java)
                 intent.putExtra("constructorPosition", constructors.indexOf(constructors.find { it.id == constructors[position].id }) )
-                startActivity(intent)
+                val options = android.app.ActivityOptions.makeCustomAnimation(
+                    requireContext(),
+                    R.anim.slide_in_right,
+                    R.anim.slide_out_left
+                )
+                startActivity(intent, options.toBundle())
             }
         } )
 

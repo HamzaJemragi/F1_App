@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application F1</string>
+    <string name="main_racing">COURSE</string>
+    <string name="main_drivers">PILOTES</string>
+    <string name="main_constructors">CONSTRUCTEURS</string>
+    <string name="main_standing">CLASSEMENTS</string>
+
+    <!-- Strings titles for constructor info activity -->
+    <string name="first_team_entry">Première Entrée</string>
+    <string name="chassis">Châssis</string>
+    <string name="powerUnit">Unité de Puissance</string>
+    <string name="teamChief">Chef d\'Équipe</string>
+    <string name="constructorChampionships">Championnats Constructeurs</string>
+    <string name="polePositions">Pole Positions</string>
+    <string name="highestFinish">Meilleure Position</string>
+
+    <!--strings titles for driver info activity -->
+    <string name="podiums">Podiums</string>
+    <string name="fastestLap">Tour le Plus Rapide</string>
+    <string name="worldChampoionships">Championnats du Monde</string>
+    <string name="GPsEntered">GPs Disputés</string>
+    <string name="team">Équipe</string>
+    <string name="country">Pays</string>
+    <string name="placeBirth">Lieu de Naissance</string>
+    <string name="dateBirth">Date de Naissance</string>
+    <string name="Stats">Statistiques</string>
+    <string name="Bio">Biographie</string>
+
+    <!--strings titles for standing activity -->
+    <string name="Drivers">Pilotes</string>
+    <string name="Constructors">Constructeurs</string>
+
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="circuit_length_title">Longueur du Circuit</string>
+    <string name="distance_unit_km">KM</string>
+    <string name="lap_record_title">Record au Tour</string>
+    <string name="view_results_button">VOIR LES RÉSULTATS</string>
+    <string name="relive_the_action">REVIVEZ L\'ACTION</string>
+    <string name="race">Course</string>
+    <string name="see_highlights_and_standing">Voir les moments forts et les classements</string>
+    <string name="race_result_title">RÉSULTAT DE LA COURSE</string>
+    <string name="recycler_view_header_pos">POS</string>
+    <string name="recycler_view_header_driver">PILOTE</string>
+    <string name="recycler_view_header_time_ret">TEMPS/ABANDON</string>
+    <string name="recycler_view_header_pts">PTS</string>
+    <string name="race_distance_title">Distance de la Course</string>
+    <string name="grand_prix_weekend">WEEK-END DU GRAND PRIX</string>
+    <string name="days">JOURS</string>
+    <string name="hrs">HEURES</string>
+    <string name="mins">MINUTES</string>
+    <string name="rolex_logo">logo Rolex</string>
+    <string name="Upcoming">À Venir</string>
+    <string name="Past">Passé</string>
+    <string name="Schedule">Programme</string>
+    <string name="Circuit">Circuit</string>
+    <string name="race_weekend">WEEK-END DE COURSE</string>
+    <string name="next">suivant</string>
+
+
+    <string name="dialogExit">Voulez-vous quitter ?</string>
+    <string name="dialogAlert">Alerte !</string>
+    <string name="dialogYes">Oui</string>
+    <string name="dialogNo">Non</string>
+
+    <!-- NEWS -->
+    <string name="main_latest">À la une</string>
+    <string name="news">Actualités</string>
+    <string name="feature">Spéciaux</string>
+
+
+    <string name="news_lawsonTitle">Pourquoi Red Bull a choisi Lawson au lieu de Tsunoda comme remplaçant de Perez</string>
+    <string name="news_bottasTitle">Bottas va rejoindre Mercedes comme pilote de réserve en 2025</string>
+    <string name="news_perezTitle">Perez et Red Bull se séparent à l’issue de la saison 2024</string>
+
+    <!-- CONTENU DES ACTUALITÉS -->
+    <string name="news_lawsonContent">Liam Lawson deviendra le dernier junior de Red Bull à avoir une chance au plus haut niveau et à faire équipe avec le quadruple champion du monde Max Verstappen dans l’équipe d’usine de la marque de boissons énergétiques. Pourquoi a-t-il été préféré à son coéquipier Yuki Tsunoda ? Le correspondant F1 Lawrence Barretto explique…\n\n
+
+Alors que la pression montait sur les épaules de Sergio Perez à l’approche de la pause estivale, c’est le nom de Daniel Ricciardo qui était le plus souvent évoqué comme son remplaçant lorsque Red Bull déciderait finalement de passer à l’action.\n\n
+
+Des sources affirment que Red Bull envisageait de mettre l’Australien dans la voiture à la reprise de la saison – avant de changer d’avis et de maintenir leur confiance en Perez, à qui ils avaient accordé un nouveau contrat plus tôt dans l’année.\n\n
+
+La cote de Ricciardo a ensuite rapidement baissé, et c’est Lawson – remplaçant permanent de Ricciardo à partir du Grand Prix des États-Unis – qui est devenu le favori, plutôt que son coéquipier Tsunoda.\n\n
+
+Cela malgré le fait que Tsunoda réalisait sa saison la plus impressionnante à ce jour, bien que ce soit sa quatrième campagne avec l’équipe sœur de Red Bull, RB.</string>
+
+    <string name="news_bottasContent">Mercedes a annoncé que Valtteri Bottas reviendrait dans l’équipe en tant que pilote de réserve pour la saison 2025, après que le Finlandais et Kick Sauber se soient séparés à l’issue du Grand Prix d’Abu Dhabi 2024.\n\n
+
+Bottas a piloté pour Mercedes pendant cinq saisons aux côtés de Lewis Hamilton de 2017 à 2021, remportant les 10 victoires de sa carrière avec les Flèches d’Argent, ainsi que ses 20 pole positions en Formule 1.\n\n
+
+Il a ensuite rejoint Sauber, alors connue sous le nom d’Alfa Romeo, pour la saison 2022 après que Mercedes ait choisi de promouvoir George Russell à sa place, le Finlandais ayant connu des fortunes diverses avec l’équipe suisse, allant d’une solide 10e place en 2022 à une saison sans aucun point en 2024.\n\n
+
+Lorsque Kick Sauber a décidé de ne pas prolonger Bottas pour 2025 – préférant une combinaison de Nico Hulkenberg et du rookie brésilien Gabriel Bortoleto – le Finlandais a entamé des discussions avec Mercedes pour un rôle de pilote de réserve afin de rester dans la course pour un retour en 2026.</string>
+
+    <string name="news_perezContent">Sergio Perez et Red Bull ont convenu de se séparer avec effet immédiat.\n\n
+
+Plus tôt cette année, Perez avait signé un nouveau contrat pour courir avec l’équipe jusqu’à la fin de 2026 – sur la base de sa meilleure saison jamais réalisée en 2023, lorsqu’il avait terminé deuxième derrière son coéquipier et champion Max Verstappen.\n\n
+
+Cependant, sa forme s’est dégradée après la signature de ce contrat, et le Mexicain n’a marqué que neuf points lors des huit derniers Grands Prix de la saison 2024.\n\n
+
+Il a terminé à la huitième place du championnat des pilotes, Red Bull n’ayant pas réussi à défendre son titre de champion des constructeurs, terminant la saison à la troisième place derrière McLaren (champion) et Ferrari (vice-champion).\n\n
+
+Malgré cette période difficile, Perez a maintenu qu’il courrait pour l’équipe l’année prochaine, mais après des discussions avec Red Bull, ils ont convenu de se séparer après quatre années ensemble.</string>
+
+
+
+</resources>

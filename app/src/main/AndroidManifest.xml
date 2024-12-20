@@ -13,7 +13,7 @@
         android:theme="@style/Theme.F1App"
         tools:targetApi="31">
         <activity
-            android:name=".activities.SecondActivity"
+            android:name=".activities.SplachActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,14 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.SecondActivity" />
         <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.SplachActivity" />
         <activity android:name=".activities.DriverinfoActivity" />
         <activity android:name=".activities.ConstructorinfoActivity" />
         <activity android:name=".activities.PastRaceInfosActivity"/>
         <activity android:name=".activities.UpcomingRaceInfosActivity"/>
         <activity android:name=".activities.PastRaceResultActivity"/>
         <activity android:name=".activities.UpcomingRaceResultActivity"/>
+        <activity android:name=".activities.LatestinfoActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"

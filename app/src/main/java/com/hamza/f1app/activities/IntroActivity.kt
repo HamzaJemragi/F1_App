@@ -1,6 +1,7 @@
 package com.hamza.f1app.activities
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.net.Uri
 import android.os.Bundle
 import android.widget.VideoView
@@ -14,6 +15,7 @@ import com.hamza.f1app.R
 class IntroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         enableEdgeToEdge()
         setContentView(R.layout.activity_intro)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.intro)) { v, insets ->

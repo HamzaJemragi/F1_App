@@ -1,9 +1,6 @@
-package com.hamza.f1app.Models
-
-
 data class Country(
     val nom: String,
-    val flag: Int
+    val flag: Int,
 )
 
 data class Race(
@@ -27,7 +24,7 @@ data class Circuit(
     val firstGP: Int,
     val Image: Int,
     val country: Country,
-    val race: Int
+    val race: Int,
 )
 
 data class Resultat(
@@ -56,7 +53,9 @@ data class Driver(
     var flag: Int,
     var retiredOrNot: Boolean,
     var seasonPoint: Int,
-    )
+)
+
+
 
 data class Constructor(
     val id: Int,
@@ -70,21 +69,17 @@ data class Constructor(
     var points: Int,
     var construcorColor: Int,
     var pilotes: List<Driver>,
-    var carImage:Int,
-    var polePositions:Int,
-    var constructorChampionships:Int,
-    var highestFinish:String
+    var carImage: Int,
+    var polePositions: Int,
+    var constructorChampionships: Int,
+    var highestFinish: String,
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
+data class Latest(
+    var id: Int,
+    var type: Int,
+    var title: Int,
+    var date: String,
+    var newsImage: Int,
+    var content: Int,
+)
