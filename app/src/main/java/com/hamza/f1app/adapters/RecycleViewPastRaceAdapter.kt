@@ -5,13 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Resultat
 import com.hamza.f1app.R
 import com.hamza.f1app.data.constructors
-import com.hamza.f1app.data.drivers
 
 class RecycleViewPastRaceAdapter(private val results: List<Resultat>, private val context: Context): RecyclerView.Adapter<RecycleViewPastRaceAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

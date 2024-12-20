@@ -18,9 +18,7 @@ import com.hamza.f1app.R
 import com.hamza.f1app.activities.PastRaceResultActivity
 import com.hamza.f1app.adapters.RecycleViewPastRaceAdapter
 import com.hamza.f1app.data.*
-import java.time.LocalDateTime
 import java.time.Month
-import java.time.temporal.ChronoUnit
 
 class PastRaceScheduleFragment(val raceId: Int): Fragment() {
     override fun onCreateView(

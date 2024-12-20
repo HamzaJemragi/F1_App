@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Resultat
 import com.hamza.f1app.R
 import com.hamza.f1app.data.constructors
-import com.hamza.f1app.data.drivers
-import com.hamza.f1app.data.races
 
 class RecyclerViewPastRaceResultAdapter(private val resultats: List<Resultat>, private val context: Context) :
     RecyclerView.Adapter<RecyclerViewPastRaceResultAdapter.ViewHolder>() {

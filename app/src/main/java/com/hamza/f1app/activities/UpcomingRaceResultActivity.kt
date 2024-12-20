@@ -11,12 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
-import com.hamza.f1app.adapters.RecyclerViewPastRaceResultAdapter
 import com.hamza.f1app.data.races
-import com.hamza.f1app.data.resultats
 import java.time.LocalDateTime
 import java.time.Month
 import java.time.temporal.ChronoUnit

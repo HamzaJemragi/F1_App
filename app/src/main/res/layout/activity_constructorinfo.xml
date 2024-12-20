@@ -105,7 +105,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:layout_marginHorizontal="16dp"
                 android:id="@+id/rowInfos1"
                 android:layout_marginHorizontal="16dp"
                 android:layout_width="match_parent"

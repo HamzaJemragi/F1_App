@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import Driver
+import com.hamza.f1app.Models.Driver
 import com.hamza.f1app.R
 import com.hamza.f1app.data.constructors
 

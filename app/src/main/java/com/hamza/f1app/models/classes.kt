@@ -1,3 +1,5 @@
+package com.hamza.f1app.Models
+
 data class Country(
     val nom: String,
     val flag: Int,
