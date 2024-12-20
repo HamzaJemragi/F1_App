@@ -67,12 +67,13 @@ class SecondActivity: AppCompatActivity() {
 
     override fun finish() {
         val titleView = TextView(this).apply {
-            text = getString(R.string.dialogAlert)  // Title text
-            setTextColor(Color.BLACK)  // Set title color to black
-            textSize = 20f  // Optional: Set text size
+            text = getString(R.string.dialogAlert)
+            setTextColor(Color.BLACK)
+            textSize = 20f
             textAlignment = TextView.TEXT_ALIGNMENT_CENTER
-            setPadding(0, 50, 0, 0)  // Optional: Set padding
+            setPadding(0, 50, 0, 0)
         }
+
 
         val builder = AlertDialog.Builder(this)
 

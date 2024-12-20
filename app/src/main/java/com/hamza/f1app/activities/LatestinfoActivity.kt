@@ -30,11 +30,13 @@ class LatestinfoActivity: AppCompatActivity(){
         val latestImage=findViewById<ImageView>(R.id.latestImage)
         val latestType=findViewById<TextView>(R.id.latestType)
         val latestDate=findViewById<TextView>(R.id.latestDate)
+        val latestTitle=findViewById<TextView>(R.id.latestTitle)
         val latestContent=findViewById<TextView>(R.id.latestContent)
 
         latestImage.setImageResource(latest[latestPosition].newsImage)
         latestType.text=getString(latest[latestPosition].type)
         latestDate.text=latest[latestPosition].date
+        latestTitle.text=getString(latest[latestPosition].title)
         latestContent.text=getString(latest[latestPosition].content)
         }
     override fun finish() {

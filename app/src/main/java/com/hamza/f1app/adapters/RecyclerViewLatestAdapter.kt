@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.getString
 import androidx.recyclerview.widget.RecyclerView
-import com.hamza.f1app.Models.Latest
+import Latest
 import com.hamza.f1app.R
 
 

@@ -29,19 +29,19 @@
 
         <TextView
             android:id="@+id/latestType"
+            style="@style/newsType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="News"
-            style="@style/newsType" />
+            android:text="News" />
 
 
         <TextView
-            android:textColor="@color/black"
             android:id="@+id/latestTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Why Red Bull chose Lawson instead of Tsunoda as Perez's replacement"/>
+            android:text="Why Red Bull chose Lawson instead of Tsunoda as Perez's replacement"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 

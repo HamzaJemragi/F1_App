@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.getColor
 import androidx.recyclerview.widget.RecyclerView
-import com.hamza.f1app.Models.Constructor
+import Constructor
 import com.hamza.f1app.R
 
 
