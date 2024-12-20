@@ -44,15 +44,15 @@ class RecyclerViewDriverAdapter(
         position: Int,
     ) {
         val driver = listDriver[position]
-            holder.driverNumber.text = "#${driver.driverNumber}"
-            holder.line.setBackgroundResource(constructors.find { it.id == driver.equipe }!!.construcorColor)
-            holder.driverFirsName.text = driver.firsName
-            holder.driverLastName.text = driver.lastName
-            holder.driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
-            holder.driverPhoto.setImageResource(driver.driverImage1)
-            holder.itemView.setOnClickListener {
-                listener.onItemClick(position)
-            }
+        holder.driverNumber.text = "#${driver.driverNumber}"
+        holder.line.setBackgroundResource(constructors.find { it.id == driver.equipe }!!.construcorColor)
+        holder.driverFirsName.text = driver.firsName
+        holder.driverLastName.text = driver.lastName
+        holder.driverTeam.text = constructors.find { it.id == driver.equipe }!!.nom
+        holder.driverPhoto.setImageResource(driver.driverImage1)
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(position)
+        }
 
     }
 

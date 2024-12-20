@@ -1,10 +1,12 @@
 package com.hamza.f1app.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.getColor
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Constructor
 import com.hamza.f1app.R
@@ -12,6 +14,7 @@ import com.hamza.f1app.R
 
 class RecyclerViewConstructorAdabter(
     private val listConstructor: List<Constructor>,
+    private val context: Context,
     private val listener: OnItemClickListener,
 ) :
     RecyclerView.Adapter<RecyclerViewConstructorAdabter.ViewHolderConstructor>() {
@@ -47,7 +50,7 @@ class RecyclerViewConstructorAdabter(
     ) {
         val constructor = listConstructor[position]
         holder.constructorLogo.setImageResource(constructor.logo)
-        holder.line.setBackgroundColor(constructor.construcorColor)
+        holder.line.setBackgroundColor(getColor(context,constructor.construcorColor))
         holder.constructorName.text = constructor.nom
         holder.flagDriver1.setImageResource(constructor.pilotes[0].flag)
         holder.flagDriver2.setImageResource(constructor.pilotes[1].flag)

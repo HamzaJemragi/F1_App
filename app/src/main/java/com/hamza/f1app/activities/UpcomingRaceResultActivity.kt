@@ -1,5 +1,6 @@
 package com.hamza.f1app.activities
 
+import android.content.pm.ActivityInfo
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -10,12 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
-import com.hamza.f1app.adapters.RecyclerViewPastRaceResultAdapter
 import com.hamza.f1app.data.races
-import com.hamza.f1app.data.resultats
 import java.time.LocalDateTime
 import java.time.Month
 import java.time.temporal.ChronoUnit
@@ -24,6 +22,7 @@ class UpcomingRaceResultActivity: AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         enableEdgeToEdge()
         setContentView(R.layout.upcoming_race_result_activity)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.resultActivity)) { v, insets ->

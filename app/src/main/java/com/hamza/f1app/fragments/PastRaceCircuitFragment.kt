@@ -1,5 +1,6 @@
 package com.hamza.f1app.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +15,7 @@ import com.hamza.f1app.data.circuits
 import com.hamza.f1app.data.races
 
 class PastRaceCircuitFragment(private val circuitPosition: Int) : Fragment() {
+//    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

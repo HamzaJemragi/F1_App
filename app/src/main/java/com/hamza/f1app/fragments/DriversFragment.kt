@@ -22,21 +22,21 @@ class DriversFragment : Fragment(R.layout.fragment_drivers) {
 
         driverRecyclerView = view.findViewById(R.id.driverRecyclerView)
         driverRecyclerView.layoutManager = LinearLayoutManager(context)
-        val adapter= RecyclerViewDriverAdapter(drivers.toList(),object : RecyclerViewDriverAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int) {
-                Toast.makeText(requireContext(), "retiredOrNot: ${drivers[position].retiredOrNot}", Toast.LENGTH_SHORT).show()
+        val adapter = RecyclerViewDriverAdapter(drivers.toList(),
+            object : RecyclerViewDriverAdapter.OnItemClickListener {
+                override fun onItemClick(position: Int) {
                     val intent = Intent(context, DriverinfoActivity::class.java)
                     intent.putExtra("driverPosition", position)
-                val options = android.app.ActivityOptions.makeCustomAnimation(
-                    requireContext(),
-                    R.anim.slide_in_right,
-                    R.anim.slide_out_left
-                )
-                startActivity(intent, options.toBundle())
+                    val options = android.app.ActivityOptions.makeCustomAnimation(
+                        requireContext(),
+                        R.anim.slide_in_right,
+                        R.anim.slide_out_left
+                    )
+                    startActivity(intent, options.toBundle())
 
 
-            }
-        })
+                }
+            })
         driverRecyclerView.adapter = adapter
     }
 }

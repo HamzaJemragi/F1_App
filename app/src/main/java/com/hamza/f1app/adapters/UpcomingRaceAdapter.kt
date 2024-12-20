@@ -8,8 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
-import com.hamza.f1app.adapters.StandingConstructorAdapter.OnItemClickListener
-import com.hamza.f1app.data.races
 
 class UpcomingRaceAdapter(
     private val listUpcomingRaces: List<Race>,

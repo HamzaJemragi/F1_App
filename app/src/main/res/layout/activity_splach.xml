@@ -10,8 +10,10 @@
 
     <ImageView
         android:id="@+id/f1Logo"
-        android:layout_width="292dp"
-        android:layout_height="442dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

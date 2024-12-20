@@ -110,7 +110,12 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
         team.setOnClickListener{
             val intent = Intent(context, ConstructorinfoActivity::class.java)
             intent.putExtra("constructorPosition", (constructors.find { it.id == drivers[driverPosition].equipe }!!.id)-1)
-            startActivity(intent)
+            val options = android.app.ActivityOptions.makeCustomAnimation(
+                requireContext(),
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
+            startActivity(intent, options.toBundle())
         }
 
         return view
