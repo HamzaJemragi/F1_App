@@ -53,6 +53,4 @@ class UpcomingRaceAdapter(
     override fun getItemCount(): Int {
         return listUpcomingRaces.size
     }
-
-
 }

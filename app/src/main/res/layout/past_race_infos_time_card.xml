@@ -88,7 +88,7 @@
                     android:src="@drawable/icon_greyflag" />
 
                 <TextView
-                    android:id="@+id/time"
+                    android:id="@+id/timeFinished"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/see_highlights_and_standing"

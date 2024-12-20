@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginVertical="1.5dp"
+    app:cardCornerRadius="5dp"
     android:background="@color/backgroundGeneral">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,12 +23,11 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <View
-            android:id="@+id/view"
-            android:layout_width="2dp"
+            android:id="@+id/viewStanding"
+            android:layout_width="3dp"
             android:layout_height="35dp"
             android:layout_marginVertical="10dp"
             android:layout_marginHorizontal="20dp"
-            android:background="@color/mercedesColor"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/position" />
@@ -39,11 +40,11 @@
             android:layout_marginHorizontal="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/view" />
+            app:layout_constraintStart_toEndOf="@id/viewStanding" />
 
         <TextView
             style="@style/regular_bold_black"
-            android:id="@+id/driverLastName"
+            android:id="@+id/driverLastNameStanding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
@@ -53,7 +54,7 @@
             app:layout_constraintStart_toEndOf="@id/driverFirstName" />
 
         <TextView
-            android:id="@+id/time"
+            android:id="@+id/timeStanding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"

@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/backgroundGeneral"
+    android:id="@+id/pastRaceScheduleFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/raceTrack"
+        android:id="@+id/pastRaceTrack"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,29 +19,29 @@
 
     <TextView
         style="@style/regular_bold_white"
-        android:id="@+id/raceDate"
+        android:id="@+id/pastRaceDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/raceTrack"
-        app:layout_constraintTop_toTopOf="@+id/raceTrack"
+        app:layout_constraintStart_toStartOf="@+id/pastRaceTrack"
+        app:layout_constraintTop_toTopOf="@+id/pastRaceTrack"
         android:layout_margin="15dp" />
 
     <TextView
         style="@style/regular_bold_white"
-        android:id="@+id/raceYear"
+        android:id="@+id/pastRaceYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/raceTrack"
-        app:layout_constraintBottom_toBottomOf="@+id/raceTrack"
+        app:layout_constraintEnd_toEndOf="@+id/pastRaceTrack"
+        app:layout_constraintBottom_toBottomOf="@+id/pastRaceTrack"
         android:layout_margin="15dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerViewTop3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintWidth_percent="0.95"
         android:layout_marginVertical="7dp"
-        app:layout_constraintTop_toBottomOf="@+id/raceTrack"
+        app:layout_constraintTop_toBottomOf="@+id/pastRaceTrack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -50,9 +52,9 @@
         android:layout_marginVertical="7dp"
         android:background="@drawable/view_results_button"
         android:text="@string/view_results_button"
-        app:layout_constraintWidth_percent="0.9"
-        app:layout_constraintHeight_percent="0.07"
-        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        app:layout_constraintWidth_percent="0.95"
+        app:layout_constraintHeight_percent="0.0649"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewTop3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -68,22 +70,22 @@
         app:layout_constraintStart_toStartOf="@id/viewResultsButton" />
 
     <TextView
-        android:id="@+id/raceTitle"
+        android:id="@+id/pastRaceTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         android:layout_marginStart="20dp"
         app:layout_constraintTop_toBottomOf="@id/reliveTheAction"
-        app:layout_constraintStart_toStartOf="@id/raceTitle" />
+        app:layout_constraintStart_toStartOf="@id/pastRaceTitle" />
 
 
         <include
-            android:id="@+id/timeCard"
+            android:id="@+id/timeCardFinished"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintWidth_percent="0.95"
             android:layout_marginVertical="20dp"
-            app:layout_constraintTop_toBottomOf="@id/raceTitle"
+            app:layout_constraintTop_toBottomOf="@id/pastRaceTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:cardCornerRadius="16dp"

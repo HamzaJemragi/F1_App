@@ -4,25 +4,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
-import com.hamza.f1app.adapters.RecyclerViewDriverAdapter.OnItemClickListener
 
-class RecyclerViewRacingAdapter(
-    private val races: List<Race>,
+class PastRaceAdapter(
+    private val pastRaces: List<Race>,
     private val listener: OnItemClickListener,
 ) :
-    RecyclerView.Adapter<RecyclerViewRacingAdapter.ViewHolder>() {
+    RecyclerView.Adapter<PastRaceAdapter.ViewHolder>() {
+
+        private val desPastList = pastRaces.sortedByDescending { it.id }
 
     interface OnItemClickListener {
         fun onItemClick(position: Int)
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val arrowButton = view.findViewById<ImageView>(R.id.arrowButton)
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val arrowButton = view.findViewById<ImageButton>(R.id.arrowButton)
         val days = view.findViewById<TextView>(R.id.days)
         val month = view.findViewById<TextView>(R.id.month)
         val roundNumber = view.findViewById<TextView>(R.id.roundNumber)
@@ -36,11 +36,11 @@ class RecyclerViewRacingAdapter(
     }
 
     override fun getItemCount(): Int {
-        return races.size
+        return desPastList.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val race = races[position]
+        val race = desPastList[position]
 
         holder.arrowButton
         holder.days.text = race.date.split("/")[0]
@@ -48,5 +48,10 @@ class RecyclerViewRacingAdapter(
         holder.roundNumber.setText("Round ${race.id}")
         holder.location.text = race.lieu
         holder.eventTitle.setText("FORMULA 1 ${race.nom}")
+        holder.itemView.setOnClickListener {
+            val race = desPastList[position]
+            val originalIndex = pastRaces.indexOf(race)
+            listener.onItemClick(originalIndex)
+        }
     }
 }

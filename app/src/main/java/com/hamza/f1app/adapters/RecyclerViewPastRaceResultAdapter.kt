@@ -1,9 +1,11 @@
 package com.hamza.f1app.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Resultat
 import com.hamza.f1app.R
@@ -11,13 +13,13 @@ import com.hamza.f1app.data.constructors
 import com.hamza.f1app.data.drivers
 import com.hamza.f1app.data.races
 
-class RecyclerViewPastRaceResultAdapter(private val resultats: List<Resultat>) :
+class RecyclerViewPastRaceResultAdapter(private val resultats: List<Resultat>, private val context: Context) :
     RecyclerView.Adapter<RecyclerViewPastRaceResultAdapter.ViewHolder>() {
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val position = view.findViewById<TextView>(R.id.position)
-        val view = view.findViewById<View>(R.id.view)
-        val driver = view.findViewById<TextView>(R.id.driverLastName)
-        val time = view.findViewById<TextView>(R.id.time)
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val position = view.findViewById<TextView>(R.id.positionValue)
+        val viewColor = view.findViewById<View>(R.id.viewResult)
+        val driver = view.findViewById<TextView>(R.id.driverLastNameValue)
+        val time = view.findViewById<TextView>(R.id.timeValue)
         val points = view.findViewById<TextView>(R.id.points)
     }
 
@@ -34,11 +36,13 @@ class RecyclerViewPastRaceResultAdapter(private val resultats: List<Resultat>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val resultat = resultats[position]
 
-        val driver = drivers.find { it.lastName == resultat.pilote.lastName }
-        val constructorColor = constructors.find { it.id == driver?.equipe }!!.construcorColor
-
         holder.position.text = resultat.position.toString()
-        holder.view.setBackgroundResource(constructorColor)
+        for (i in constructors) {
+            if (i.id == resultat.pilote.equipe) {
+                holder.viewColor.setBackgroundColor(ContextCompat.getColor(context, i.construcorColor))
+            }
+        }
+
         holder.driver.text = resultat.pilote.lastName
         holder.time.text = resultat.temps
         holder.points.text = resultat.points.toString()

@@ -1,39 +1,40 @@
 package com.hamza.f1app.fragments
 
-import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
-import com.hamza.f1app.activities.DriverinfoActivity
 import com.hamza.f1app.activities.PastRaceInfosActivity
-import com.hamza.f1app.adapters.RecyclerViewDriverAdapter
-import com.hamza.f1app.adapters.RecyclerViewRacingAdapter
-import com.hamza.f1app.data.drivers
+import com.hamza.f1app.adapters.PastRaceAdapter
 import com.hamza.f1app.data.races
 
-class PastRacingFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+class PastRacingFragment : Fragment(R.layout.recyclerview_past_racing_fragment) {
+    override fun onViewCreated(
+        view: View,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.recyclerview_past_racing_fragment, container, false)
+    ) {
+        super.onViewCreated(view, savedInstanceState)
 
         val spinner = view.findViewById<Spinner>(R.id.spinner)
         val recyclerView = view.findViewById<RecyclerView>(R.id.racingRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val pastRaces = mutableListOf<Race>()
+        for (i in (0..< races.size)) {
+            if (races[i].resultats != null) {
+                pastRaces.add(races[i])
+            }
+        }
 
-        val adapter = RecyclerViewRacingAdapter(races, object : RecyclerViewRacingAdapter.OnItemClickListener {
+        val adapter = PastRaceAdapter(pastRaces, object : PastRaceAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(context, PastRaceInfosActivity::class.java)
-                intent.putExtra("racePosition", position)
+                intent.putExtra("raceId", position)
                 startActivity(intent)
             }
         })
@@ -54,7 +55,5 @@ class PastRacingFragment : Fragment() {
 //
 //            override fun onNothingSelected(parent: AdapterView<*>) {}
 //        }
-
-        return view
     }
 }

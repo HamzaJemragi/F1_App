@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.R
 import com.hamza.f1app.adapters.RecyclerViewPastRaceResultAdapter
@@ -23,9 +24,10 @@ class PastRaceResultActivity: AppCompatActivity() {
             insets
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
-        val racePosition = intent?.extras?.getInt("racePosition")!!.toInt()
+        val raceId = intent?.extras?.getInt("raceId")!!.toInt()
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.adapter = RecyclerViewPastRaceResultAdapter(resultats[racePosition-1])
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = RecyclerViewPastRaceResultAdapter(resultats[raceId], this)
     }
 }

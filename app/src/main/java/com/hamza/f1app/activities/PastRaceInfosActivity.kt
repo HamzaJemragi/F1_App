@@ -12,11 +12,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
-import com.hamza.f1app.activities.DriverinfoActivity.ViewPagerDriverAdapter
 import com.hamza.f1app.data.races
-import com.hamza.f1app.fragments.DriverBioFragment
-import com.hamza.f1app.fragments.DriverStatsFragment
 import com.hamza.f1app.fragments.PastRaceCircuitFragment
 import com.hamza.f1app.fragments.PastRaceScheduleFragment
 
@@ -32,15 +30,22 @@ class PastRaceInfosActivity: AppCompatActivity() {
             insets
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
-        val racePosition = intent?.extras?.getInt("racingPosition")!!.toInt()
+        val raceId = intent?.extras?.getInt("raceId")!!.toInt()
 
-        val racingTextView = findViewById<TextView>(R.id.racingTextView)
+        val racingTextView = findViewById<TextView>(R.id.pastRacingTextView)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager2 = findViewById<ViewPager2>(R.id.viewPager)
 
-        racingTextView.text = races[racePosition].nom
+        val pastRaces = mutableListOf<Race>()
+        for (i in (0..< races.size)) {
+            if (races[i].resultats != null) {
+                pastRaces.add(races[i])
+            }
+        }
 
-        val adapter = ViewPagerRaceAdapter(this, racePosition)
+        racingTextView.text = pastRaces[raceId].lieu
+
+        val adapter = ViewPagerRaceAdapter(this, raceId)
         viewPager2.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
@@ -51,12 +56,12 @@ class PastRaceInfosActivity: AppCompatActivity() {
             }
         }.attach()
     }
-    class ViewPagerRaceAdapter(activity: AppCompatActivity, val racePosition: Int) :
+    class ViewPagerRaceAdapter(activity: AppCompatActivity, val raceId: Int) :
         FragmentStateAdapter(activity) {
         override fun getItemCount(): Int = 2
         override fun createFragment(position: Int): Fragment = when (position) {
-            0 -> PastRaceScheduleFragment(racePosition)
-            1 -> PastRaceCircuitFragment(racePosition)
+            0 -> PastRaceScheduleFragment(raceId)
+            1 -> PastRaceCircuitFragment(raceId)
             else -> throw IllegalArgumentException("Invalid position")
         }
     }

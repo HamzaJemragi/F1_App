@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
 import com.hamza.f1app.adapters.RecyclerViewPastRaceResultAdapter
 import com.hamza.f1app.data.races
@@ -31,8 +32,21 @@ class UpcomingRaceResultActivity: AppCompatActivity() {
             insets
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
-        val racePosition = intent?.extras?.getInt("racePosition")!!.toInt()
-        val raceMonth = races[racePosition].date.split("/")[1].split("-")[1]
+        val raceId = intent?.extras?.getInt("raceId")!!.toInt()
+        val upcomingRaces = mutableListOf<Race>()
+        for (i in (0..< races.size)) {
+            if (races[i].resultats == null) {
+                upcomingRaces.add(races[i])
+            }
+        }
+
+        val raceMonths = upcomingRaces[raceId].date.split("/")[1].split("-")
+        val raceMonth: String
+        if (raceMonths.size == 2) {
+            raceMonth = raceMonths[1].split(".")[0]
+        } else {
+            raceMonth = raceMonths[0].split(".")[0]
+        }
 
         val monthMap = mapOf(
             "JAN" to Month.JANUARY,
@@ -50,11 +64,11 @@ class UpcomingRaceResultActivity: AppCompatActivity() {
         )
 
         val month = monthMap[raceMonth] ?: throw IllegalArgumentException("Invalid month race")
-        val targetDate = LocalDateTime.of(LocalDateTime.now().year, month, races[racePosition].date.split("/")[0].split("-")[1].toInt(), 0, 0)
-        val currentDate = LocalDateTime.of(LocalDateTime.now().year, 4, 4, 12, 8, 0)
-        val daysLeft = ChronoUnit.DAYS.between(targetDate, currentDate)
-        val hoursLeft = ChronoUnit.HOURS.between(targetDate, currentDate) % 24
-        val minutesLeft = ChronoUnit.MINUTES.between(targetDate, currentDate) % 60
+        val targetDate = LocalDateTime.of(LocalDateTime.now().year, month, upcomingRaces[raceId].date.split("/")[0].split("-")[1].toInt(), 0, 0)
+        val currentDate = LocalDateTime.of(LocalDateTime.now().year, 4, 4, 20, 46, 0)
+        val daysLeft = ChronoUnit.DAYS.between(currentDate, targetDate)
+        val hoursLeft = ChronoUnit.HOURS.between(currentDate, targetDate) % 24
+        val minutesLeft = ChronoUnit.MINUTES.between(currentDate, targetDate) % 60
         val rolexCard = findViewById<View>(R.id.rolexCardInclude)
         rolexCard.findViewById<TextView>(R.id.daysTV).text = daysLeft.toString()
         rolexCard.findViewById<TextView>(R.id.hoursTV).text = hoursLeft.toString()

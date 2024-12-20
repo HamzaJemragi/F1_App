@@ -14,10 +14,10 @@
 
         <TextView
             style="@style/headerFont"
-            android:id="@+id/position"
+            android:id="@+id/positionHeader"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintWidth_percent="0.18"
+            app:layout_constraintWidth_percent="0.15"
             android:text="@string/recycler_view_header_pos"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -26,26 +26,26 @@
 
         <TextView
             style="@style/headerFont"
-            android:id="@+id/driverLastName"
+            android:id="@+id/driverLastNameHeader"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/recycler_view_header_driver"
-            app:layout_constraintWidth_percent="0.18"
+            app:layout_constraintWidth_percent="0.25"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/position"
+            app:layout_constraintStart_toEndOf="@id/positionHeader"
             android:gravity="center"/>
 
         <TextView
             style="@style/headerFont"
-            android:id="@+id/time"
+            android:id="@+id/timeHeader"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/recycler_view_header_time_ret"
             app:layout_constraintWidth_percent="0.4"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/driverLastName"
+            app:layout_constraintStart_toEndOf="@id/driverLastNameHeader"
             android:gravity="center"/>
 
         <TextView
@@ -57,7 +57,7 @@
             app:layout_constraintWidth_percent="0.24"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/time"
+            app:layout_constraintStart_toEndOf="@id/timeHeader"
             android:gravity="center"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

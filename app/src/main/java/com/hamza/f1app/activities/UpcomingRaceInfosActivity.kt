@@ -12,10 +12,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
 import com.hamza.f1app.data.races
-import com.hamza.f1app.fragments.PastRaceCircuitFragment
-import com.hamza.f1app.fragments.PastRaceScheduleFragment
 import com.hamza.f1app.fragments.UpcomingRaceCircuitFragment
 import com.hamza.f1app.fragments.UpcomingRaceScheduleFragment
 
@@ -30,15 +29,21 @@ class UpcomingRaceInfosActivity: AppCompatActivity() {
             insets
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
-        val racePosition = intent?.extras?.getInt("racePosition")!!.toInt()
+        val raceId = intent?.extras?.getInt("raceId")!!.toInt()
 
         val racingTextView = findViewById<TextView>(R.id.racingTextView)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager2 = findViewById<ViewPager2>(R.id.viewPager)
 
-        racingTextView.text = races[racePosition].nom
+        val upcomingRaces = mutableListOf<Race>()
+        for (i in (0..< races.size)) {
+            if (races[i].resultats == null) {
+                upcomingRaces.add(races[i])
+            }
+        }
+        racingTextView.text = upcomingRaces[raceId].lieu
 
-        val adapter = ViewPagerRaceAdapter(this, racePosition)
+        val adapter = ViewPagerRaceAdapter(this, raceId)
         viewPager2.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
@@ -49,12 +54,12 @@ class UpcomingRaceInfosActivity: AppCompatActivity() {
             }
         }.attach()
     }
-    class ViewPagerRaceAdapter(activity: AppCompatActivity, val racePosition: Int) :
+    class ViewPagerRaceAdapter(activity: AppCompatActivity, val raceId: Int) :
         FragmentStateAdapter(activity) {
         override fun getItemCount(): Int = 2
         override fun createFragment(position: Int): Fragment = when (position) {
-            0 -> UpcomingRaceScheduleFragment(racePosition)
-            1 -> UpcomingRaceCircuitFragment(racePosition)
+            0 -> UpcomingRaceScheduleFragment(raceId)
+            1 -> UpcomingRaceCircuitFragment(raceId)
             else -> throw IllegalArgumentException("Invalid position")
         }
     }
