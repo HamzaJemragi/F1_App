@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkGray">
+
+        <TextView
+            android:id="@+id/standingNumber"
+            style="@style/number"
+            android:textColor="@color/white"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="1"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="15dp"
+            android:background="#055B53"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/standingNumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/constructorName"
+            style="@style/drivers_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mercedes"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.125" />
+
+
+        <ImageView
+            android:id="@+id/flagDriver2"
+            android:layout_width="25dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="28dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_uk"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/line"
+            app:layout_constraintTop_toBottomOf="@+id/flagDriver1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/driver1"
+            style="@style/teamname_driversCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:textColor="@color/white"
+            android:text="Hamilton"
+            app:layout_constraintStart_toEndOf="@+id/flagDriver1"
+            app:layout_constraintTop_toBottomOf="@+id/constructorName" />
+
+        <TextView
+            android:id="@+id/driver2"
+            style="@style/teamname_driversCard"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginTop="4dp"
+            android:text="Russel"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/flagDriver2"
+            app:layout_constraintTop_toBottomOf="@+id/driver1" />
+
+        <ImageView
+            android:id="@+id/flagDriver1"
+            android:layout_width="25dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="56dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_uk"
+            app:layout_constraintStart_toEndOf="@+id/line"
+            app:layout_constraintTop_toBottomOf="@+id/constructorName" />
+
+
+        <ImageView
+            android:id="@+id/carPhoto"
+            android:layout_width="180dp"
+            android:layout_height="116dp"
+            android:layout_marginEnd="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/car_mercedes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/pts"
+            style="@style/pts_style"
+            android:layout_width="79dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/pts_shape"
+            android:text="456pts"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.125" />
+
+        <ImageView
+            android:id="@+id/whiteArrow"
+            android:layout_width="17dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.505"
+            app:srcCompat="@drawable/mix_arrow_forward_white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

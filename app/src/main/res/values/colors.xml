@@ -2,4 +2,27 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="f1red">#FF1E00</color>
+    <color name="ultralightGray">#E6E6E6</color>
+    <color name="gray">#808080</color>
+    <color name="lightgray">#909090</color>
+    <color name="backgroundGeneral">#F2F2F2</color>
+    <color name="darkGray">#626262</color>
+    <color name="rolexGreen">#00603A</color>
+
+<!--    constructors colors-->
+    <color name="mercedesColor">#27F4D2</color>
+    <color name="redbullracingColor">#3671C6</color>
+    <color name="ferrariColor">#E8002D</color>
+    <color name="mclarenColor">#FF8000</color>
+    <color name="alpineColor">#FF87BC</color>
+    <color name="rbColor">#6692FF</color>
+    <color name="astonmartinColor">#229971</color>
+    <color name="williamsColor">#64C4FF</color>
+    <color name="kicksauberColor">#52E252</color>
+    <color name="haasColor">#B6BABD</color>
+
+
+    <color name="alfaromioColor">#972738</color>
+    <color name="alphatauriColor">#20394C</color>
 </resources>

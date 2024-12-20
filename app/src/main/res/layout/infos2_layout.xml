@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginStart="28dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/infos_border"
+    android:orientation="vertical"
+    android:paddingRight="5dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/standingInfo">
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/infoTitleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="info Title" />
+
+    <TextView
+        style="@style/infoText"
+        android:id="@+id/info"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="info" />
+</LinearLayout>

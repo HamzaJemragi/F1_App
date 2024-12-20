@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundGeneral">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="13dp"
+        android:background="@color/darkGray">
+
+        <TextView
+            style="@style/headerFont"
+            android:id="@+id/positionHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.15"
+            android:text="@string/recycler_view_header_pos"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/headerFont"
+            android:id="@+id/driverLastNameHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recycler_view_header_driver"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/positionHeader"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/headerFont"
+            android:id="@+id/timeHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recycler_view_header_time_ret"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/driverLastNameHeader"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/headerFont"
+            android:id="@+id/points"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recycler_view_header_pts"
+            app:layout_constraintWidth_percent="0.24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/timeHeader"
+            android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
