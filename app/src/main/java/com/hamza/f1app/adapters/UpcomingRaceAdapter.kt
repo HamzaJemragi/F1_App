@@ -1,15 +1,19 @@
 package com.hamza.f1app.adapters
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.getString
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
 
 class UpcomingRaceAdapter(
+    private val context: Context,
     private val listUpcomingRaces: List<Race>,
     private val listener: OnItemClickListener,
 ): RecyclerView.Adapter<UpcomingRaceAdapter.ViewHolderRacing>() {
@@ -34,13 +38,14 @@ class UpcomingRaceAdapter(
         return ViewHolderRacing(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: UpcomingRaceAdapter.ViewHolderRacing, position: Int) {
         val race = listUpcomingRaces[position]
 
         holder.arrowButton
         holder.days.text = race.date.split("/")[0]
         holder.month.text = race.date.split("/")[1]
-        holder.roundNumber.setText("Round ${race.id}")
+        holder.roundNumber.text = getString(context, R.string.round) + " ${race.id}"
         holder.location.text = race.lieu
         holder.eventTitle.setText("FORMULA 1 ${race.nom}")
         holder.itemView.setOnClickListener {

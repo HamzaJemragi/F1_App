@@ -31,7 +31,7 @@ class PastRacingFragment : Fragment(R.layout.recyclerview_past_racing_fragment) 
             }
         }
 
-        val adapter = PastRaceAdapter(pastRaces, object : PastRaceAdapter.OnItemClickListener {
+        val adapter = PastRaceAdapter(requireContext(), pastRaces, object : PastRaceAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(context, PastRaceInfosActivity::class.java)
                 intent.putExtra("raceId", position)

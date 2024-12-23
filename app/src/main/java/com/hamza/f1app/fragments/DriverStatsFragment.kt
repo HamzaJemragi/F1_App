@@ -26,7 +26,9 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        val view = inflater.inflate(R.layout.driver_stats, container, false)
+        return inflater.inflate(R.layout.driver_stats, container, false)
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         val standingInfo = view.findViewById<View>(R.id.standingInfo)
         val frame = standingInfo.findViewById<FrameLayout>(R.id.frame)
@@ -36,19 +38,19 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
         val totalPts = standingInfo.findViewById<TextView>(R.id.totalPts)
 
         val podiums = view.findViewById<View>(R.id.podiums)
-        val podiumsTitle = podiums.findViewById<TextView>(R.id.infoTitle)
+        val podiumsTitle = podiums.findViewById<TextView>(R.id.infoTitleMini)
         val podiumsInfo = podiums.findViewById<TextView>(R.id.info)
 
         val fastestLap = view.findViewById<View>(R.id.fastestLap)
-        val fastestLapTitle = fastestLap.findViewById<TextView>(R.id.infoTitle)
+        val fastestLapTitle = fastestLap.findViewById<TextView>(R.id.infoTitleMini)
         val fastestLapInfo = fastestLap.findViewById<TextView>(R.id.info)
 
         val worldChampoionships = view.findViewById<View>(R.id.worldChampoionships)
-        val worldChampoionshipsTitle = worldChampoionships.findViewById<TextView>(R.id.infoTitle)
+        val worldChampoionshipsTitle = worldChampoionships.findViewById<TextView>(R.id.infoTitleMini)
         val worldChampoionshipsInfo = worldChampoionships.findViewById<TextView>(R.id.info)
 
         val GPsEntered = view.findViewById<View>(R.id.GPsEntered)
-        val GPsEnteredTitle = GPsEntered.findViewById<TextView>(R.id.infoTitle)
+        val GPsEnteredTitle = GPsEntered.findViewById<TextView>(R.id.infoTitleMini)
         val GPsEnteredInfo = GPsEntered.findViewById<TextView>(R.id.info)
 
 
@@ -64,11 +66,11 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
         val countryFlag = country.findViewById<ImageView>(R.id.flag)
 
         val placeBirth = view.findViewById<View>(R.id.placeBirth)
-        val placeBirthTitle = placeBirth.findViewById<TextView>(R.id.infoTitle)
+        val placeBirthTitle = placeBirth.findViewById<TextView>(R.id.infoTitleLarge)
         val placeBirthInfo = placeBirth.findViewById<TextView>(R.id.info)
 
         val dateBirth = view.findViewById<View>(R.id.dateBirth)
-        val dateBirthTitle = dateBirth.findViewById<TextView>(R.id.infoTitle)
+        val dateBirthTitle = dateBirth.findViewById<TextView>(R.id.infoTitleLarge)
         val dateBirthhInfo = dateBirth.findViewById<TextView>(R.id.info)
 
 
@@ -117,7 +119,5 @@ class DriverStatsFragment(val driverPosition: Int) : Fragment() {
             )
             startActivity(intent, options.toBundle())
         }
-
-        return view
     }
 }

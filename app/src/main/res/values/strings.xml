@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">F1 App</string>
     <string name="main_racing">RACING</string>
@@ -103,6 +104,11 @@ However, his form tailed off after signing that deal, and the Mexican scored jus
 He ended up down in eighth in the drivers’ championship, with Red Bull failing to defend their constructors’ championship and seeing out the season in P3 behind champions McLaren and runners-up Ferrari.\n\n
 
 Throughout the difficult period, Perez remained resolute that he would race for the team next year, but following discussions with Red Bull, they’ve agreed to split after four years together.</string>
+    <string name="number_of_laps">Number of laps</string>
+    <string name="first_grand_prix">First grand prix</string>
+    <string name="championship_standing">Championship standing</string>
+    <string name="round">Round</string>
+    <string name="pts">pts</string>
 
 
 </resources>

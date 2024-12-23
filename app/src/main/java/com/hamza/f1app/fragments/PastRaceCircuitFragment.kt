@@ -56,9 +56,11 @@ class PastRaceCircuitFragment(private val circuitPosition: Int) : Fragment() {
         circuitName.text = pastCircuits[circuitPosition].nom
         circuit.setImageResource(pastCircuits[circuitPosition].Image)
         circuitLength.findViewById<TextView>(R.id.lengthNumber).text = pastCircuits[circuitPosition].length.toString()
-        numberOfLaps.findViewById<TextView>(R.id.infoTitleMini).text = "Number of laps"
+        numberOfLaps.findViewById<TextView>(R.id.infoTitleMini).text =
+            getString(R.string.number_of_laps)
         numberOfLaps.findViewById<TextView>(R.id.info).text = pastCircuits[circuitPosition].laps.toString()
-        firstGrandPrix.findViewById<TextView>(R.id.infoTitleMini).text = "First grand prix"
+        firstGrandPrix.findViewById<TextView>(R.id.infoTitleMini).text =
+            getString(R.string.first_grand_prix)
         firstGrandPrix.findViewById<TextView>(R.id.info).text = pastCircuits[circuitPosition].firstGP.toString()
         raceDistance.findViewById<TextView>(R.id.number).text = pastCircuits[circuitPosition].distance.toString()
         lapRecord.findViewById<TextView>(R.id.lap_record_number).text = pastCircuits[circuitPosition].LapRecord.get("Time").toString()

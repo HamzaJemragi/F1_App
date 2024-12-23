@@ -15,6 +15,7 @@
         android:id="@+id/race_distance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="@string/race_distance_title" />
 
     <LinearLayout
@@ -34,6 +35,7 @@
             android:id="@+id/km"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:layout_marginStart="7dp"
             android:text="@string/distance_unit_km" />
 

@@ -102,6 +102,10 @@ Il a terminé à la huitième place du championnat des pilotes, Red Bull n’aya
 
 Malgré cette période difficile, Perez a maintenu qu’il courrait pour l’équipe l’année prochaine, mais après des discussions avec Red Bull, ils ont convenu de se séparer après quatre années ensemble.</string>
 
-
+    <string name="number_of_laps">Nombre de tours</string>
+    <string name="first_grand_prix">Premier grand prix</string>
+    <string name="championship_standing">Classement du championnat</string>
+    <string name="round">Rond</string>
+    <string name="pts">pts</string>
 
 </resources>

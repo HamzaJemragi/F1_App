@@ -1,7 +1,7 @@
 package com.hamza.f1app.data
-
 import com.hamza.f1app.Models.Constructor
 import com.hamza.f1app.Models.Driver
+import com.hamza.f1app.Models.Resultat
 import com.hamza.f1app.R
 
 
@@ -218,7 +218,7 @@ val drivers2021 = listOf(
     Driver(
         21,
         "Daniel",
-        "Riccardo",
+        "Ricciardo",
         5,
         "Australia",
         115,
@@ -431,5 +431,27 @@ val constructors2021 = listOf(
     )
 )
 
-
-
+val Races2021 = listOf(
+    listOf(
+        Resultat(1, drivers2021[9], "1:32:03.897", 25),
+        Resultat(2, drivers2021[11], "+0.745s", 18),
+        Resultat(3, drivers2021[16], "+37.383s", 16),
+        Resultat(4, drivers2021[8], "+46.466s", 12),
+        Resultat(5, drivers2021[15], "+52.047s", 10),
+        Resultat(6, drivers2021[1], "+59.090s", 8),
+        Resultat(7, "Daniel Ricciardo", "+66.004s", 6),
+        Resultat(8, "Carlos Sainz", "+67.100s", 4),
+        Resultat(9, "Yuki Tsunoda", "+85.692s", 2),
+        Resultat(10, "Lance Stroll", "+86.713s", 1),
+        Resultat(11, "Kimi Räikkönen", "+88.864s", 0),
+        Resultat(12, "Antonio Giovinazzi", "+89.453s", 0),
+        Resultat(13, "Esteban Ocon", "+98.728s", 0),
+        Resultat(14, "George Russell", "+99.742s", 0),
+        Resultat(15, "Sebastian Vettel", "+1 lap", 0),
+        Resultat(16, "Mick Schumacher", "+1 lap", 0),
+        Resultat(17, "Pierre Gasly", "+1 lap", 0),
+        Resultat(18, "Nicholas Latifi", "+1 lap", 0),
+        Resultat(19, "Fernando Alonso", "DNF", 0),
+        Resultat(20, "Nikita Mazepin", "DNF", 0)
+    ),
+)

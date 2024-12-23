@@ -47,29 +47,29 @@ class ConstructorinfoActivity : AppCompatActivity() {
         val totalPts = standingInfo.findViewById<TextView>(R.id.totalPts)
 
         val firstYear = findViewById<View>(R.id.firstYear)
-        val firstYearTitle = firstYear.findViewById<TextView>(R.id.infoTitle)
+        val firstYearTitle = firstYear.findViewById<TextView>(R.id.infoTitleMini)
         val firstYearInfo = firstYear.findViewById<TextView>(R.id.info)
 
         val highestFinish = findViewById<View>(R.id.highestFinish)
-        val highestFinishTitle = highestFinish.findViewById<TextView>(R.id.infoTitle)
+        val highestFinishTitle = highestFinish.findViewById<TextView>(R.id.infoTitleMini)
         val highestFinishInfo = highestFinish.findViewById<TextView>(R.id.info)
 
         val constructorChampionships = findViewById<View>(R.id.constructorChampionships)
         val constructorChampionshipsTitle =
-            constructorChampionships.findViewById<TextView>(R.id.infoTitle)
+            constructorChampionships.findViewById<TextView>(R.id.infoTitleMini)
         val constructorChampionshipsInfo =
             constructorChampionships.findViewById<TextView>(R.id.info)
 
         val polePositions = findViewById<View>(R.id.polePositions)
-        val polePositionsTitle = polePositions.findViewById<TextView>(R.id.infoTitle)
+        val polePositionsTitle = polePositions.findViewById<TextView>(R.id.infoTitleMini)
         val polePositionsInfo = polePositions.findViewById<TextView>(R.id.info)
 
         val powerUnit = findViewById<View>(R.id.powerUnit)
-        val powerUnitTitle = powerUnit.findViewById<TextView>(R.id.infoTitle)
+        val powerUnitTitle = powerUnit.findViewById<TextView>(R.id.infoTitleLarge)
         val powerUnitInfo = powerUnit.findViewById<TextView>(R.id.info)
 
         val teamChief = findViewById<View>(R.id.teamChief)
-        val teamChiefTitle = teamChief.findViewById<TextView>(R.id.infoTitle)
+        val teamChiefTitle = teamChief.findViewById<TextView>(R.id.infoTitleLarge)
         val teamChiefInfo = teamChief.findViewById<TextView>(R.id.info)
 
         val driver1 = findViewById<ConstraintLayout>(R.id.driver1)
@@ -81,7 +81,7 @@ class ConstructorinfoActivity : AppCompatActivity() {
         val drivername2 = findViewById<TextView>(R.id.drivername2)
 
         val chassis= findViewById<View>(R.id.chassis)
-        val chassisTitle = chassis.findViewById<TextView>(R.id.infoTitle)
+        val chassisTitle = chassis.findViewById<TextView>(R.id.infoTitleLarge)
         val chassisInfo = chassis.findViewById<TextView>(R.id.info)
 
         line.setBackgroundColor(getColor(constructors[constructorPosition].construcorColor))

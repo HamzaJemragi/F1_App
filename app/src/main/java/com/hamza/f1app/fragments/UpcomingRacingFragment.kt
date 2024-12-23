@@ -27,7 +27,7 @@ class UpcomingRacingFragment : Fragment(R.layout.recyclerview_upcoming_racing_fr
                 upcomingRaces.add(races[i])
             }
         }
-        val adapter = UpcomingRaceAdapter(upcomingRaces, object : UpcomingRaceAdapter.OnItemClickListener {
+        val adapter = UpcomingRaceAdapter(requireContext(), upcomingRaces, object : UpcomingRaceAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(context, UpcomingRaceInfosActivity::class.java)
                 intent.putExtra("raceId", position)
