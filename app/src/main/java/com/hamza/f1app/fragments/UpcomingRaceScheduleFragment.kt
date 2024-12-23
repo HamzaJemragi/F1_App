@@ -98,7 +98,12 @@ class UpcomingRaceScheduleFragment(val raceId: Int): Fragment() {
         timeCard.setOnClickListener{
             val intent = Intent(context, UpcomingRaceResultActivity::class.java)
             intent.putExtra("raceId", raceId)
-            startActivity(intent)
+            val options = android.app.ActivityOptions.makeCustomAnimation(
+                requireContext(),
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
+            startActivity(intent, options.toBundle())
         }
     }
 }

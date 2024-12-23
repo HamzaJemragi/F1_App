@@ -67,4 +67,9 @@ class PastRaceInfosActivity: AppCompatActivity() {
             else -> throw IllegalArgumentException("Invalid position")
         }
     }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
 }

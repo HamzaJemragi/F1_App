@@ -431,6 +431,7 @@ val constructors2021 = listOf(
     )
 )
 
+/*
 val Races2021 = listOf(
     listOf(
         Resultat(1, drivers2021[9], "1:32:03.897", 25),
@@ -454,4 +455,4 @@ val Races2021 = listOf(
         Resultat(19, "Fernando Alonso", "DNF", 0),
         Resultat(20, "Nikita Mazepin", "DNF", 0)
     ),
-)
+)*/

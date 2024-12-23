@@ -85,7 +85,12 @@ class PastRaceScheduleFragment(val raceId: Int): Fragment() {
         button.setOnClickListener {
             val intent = Intent(context, PastRaceResultActivity::class.java)
             intent.putExtra("raceId", raceId)
-            startActivity(intent)
+            val options = android.app.ActivityOptions.makeCustomAnimation(
+                requireContext(),
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
+            startActivity(intent, options.toBundle())
         }
         reliveTheActionText.text = getString(R.string.relive_the_action)
         raceTitleText.text = pastRaces[raceId].nom
@@ -99,7 +104,12 @@ class PastRaceScheduleFragment(val raceId: Int): Fragment() {
         timeCard.setOnClickListener{
             val intent = Intent(context, PastRaceResultActivity::class.java)
             intent.putExtra("raceId", raceId)
-            startActivity(intent)
+            val options = android.app.ActivityOptions.makeCustomAnimation(
+                requireContext(),
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
+            startActivity(intent, options.toBundle())
         }
     }
 }

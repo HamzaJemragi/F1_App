@@ -73,4 +73,8 @@ class UpcomingRaceResultActivity: AppCompatActivity() {
         rolexCard.findViewById<TextView>(R.id.hoursTV).text = hoursLeft.toString()
         rolexCard.findViewById<TextView>(R.id.minsTV).text = minutesLeft.toString()
     }
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
 }

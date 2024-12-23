@@ -31,7 +31,12 @@ class UpcomingRacingFragment : Fragment(R.layout.recyclerview_upcoming_racing_fr
             override fun onItemClick(position: Int) {
                 val intent = Intent(context, UpcomingRaceInfosActivity::class.java)
                 intent.putExtra("raceId", position)
-                startActivity(intent)
+                val options = android.app.ActivityOptions.makeCustomAnimation(
+                    requireContext(),
+                    R.anim.slide_in_right,
+                    R.anim.slide_out_left
+                )
+                startActivity(intent, options.toBundle())
             }
         })
         recyclerView.adapter = adapter
