@@ -16,7 +16,6 @@ val countries2021 = listOf(
     Country("Monaco", R.drawable.flag_monaco),
     Country("Azerbaijan", R.drawable.flag_azrabidjan),
     Country("France", R.drawable.flag_france),
-    Country("Saudi Arabia", R.drawable.flag_saudi),
     Country("Styria", R.drawable.flag_austria),
     Country("Austria", R.drawable.flag_austria),
     Country("Great Britain", R.drawable.flag_uk),
