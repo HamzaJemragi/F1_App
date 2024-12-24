@@ -42,7 +42,7 @@ class SplachActivity : AppCompatActivity() {
             f1Logo.startAnimation(animFadeIn)
 
             Handler(Looper.getMainLooper()).postDelayed({
-                val intent = Intent(this, SecondActivity::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 val options = android.app.ActivityOptions.makeCustomAnimation(
                     this,
                     R.anim.slide_in_right,

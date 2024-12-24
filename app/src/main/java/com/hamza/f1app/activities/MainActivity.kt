@@ -1,70 +1,104 @@
 package com.hamza.f1app.activities
 
-import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
-import android.os.Build
+import android.graphics.Color
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.view.View
-import android.widget.LinearLayout
+import android.widget.FrameLayout
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.transition.Visibility
+import androidx.fragment.app.Fragment
 import com.hamza.f1app.R
+import com.hamza.f1app.fragments.ConstructorFragment
+import com.hamza.f1app.fragments.DriversFragment
+import com.hamza.f1app.fragments.LatestFragment
+import com.hamza.f1app.fragments.RacingFragment
+import com.hamza.f1app.fragments.StandingFragment
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
+
+    @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        setContentView(R.layout.activity_second)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.secondActivity)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val main = findViewById<LinearLayout>(R.id.main)
-        val racingCard = findViewById<CardView>(R.id.racingCard)
-        val driversCard = findViewById<CardView>(R.id.driversCard)
-        val constructorsCard = findViewById<CardView>(R.id.constructorsCard)
-        val standingsCard = findViewById<CardView>(R.id.standingsCard)
-
-//        Handler(Looper.getMainLooper()).postDelayed({
-//            hide(racingCard)
-//            hide(driversCard)
-//            hide(constructorsCard)
-//            hide(standingsCard)
-//            main.visibility=LinearLayout.GONE
-//        },500)
-
-//        main.visibility = LinearLayout.VISIBLE
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
+        val frameLayout = findViewById<FrameLayout>(R.id.frameLayout)
+        val bottomNavigationView = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_nav)
 
+        val homeActivity = LatestFragment()
+        val racingFragment = RacingFragment()
+        val driversFragment = DriversFragment()
+        val constructorsFragment = ConstructorFragment()
+        val standingsFragment = StandingFragment()
 
+        makeCurrentFragment(homeActivity)
 
-
-        translater(racingCard, 1000)
-        translater(driversCard, 1100)
-        translater(constructorsCard, 1200)
-        translater(standingsCard, 1300)
-
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.latest -> makeCurrentFragment(homeActivity)
+                R.id.racing -> makeCurrentFragment(racingFragment)
+                R.id.drivers -> makeCurrentFragment(driversFragment)
+                R.id.constructors -> makeCurrentFragment(constructorsFragment)
+                R.id.standings -> makeCurrentFragment(standingsFragment)
+            }
+            true
+        }
     }
 
-    private fun translater(card: CardView, duration: Long) {
-        val animator = ObjectAnimator.ofFloat(card, View.TRANSLATION_X, 0f)
-        animator.duration = duration
-        animator.start()
-    }
+    private fun makeCurrentFragment(fragment: Fragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frameLayout, fragment)
+            commit()
+        }
 
-    private fun hide(card: CardView) {
-        val animator = ObjectAnimator.ofFloat(card, View.TRANSLATION_X, 1500f)
-        animator.repeatCount = 1
-        animator.start()
+
+    override fun finish() {
+        val titleView = TextView(this).apply {
+            text = getString(R.string.dialogAlert)
+            setTextColor(Color.BLACK)
+            textSize = 20f
+            textAlignment = TextView.TEXT_ALIGNMENT_CENTER
+            setPadding(0, 50, 0, 0)
+        }
+
+
+        val builder = AlertDialog.Builder(this)
+
+        builder.setMessage(getString(R.string.dialogExit))
+
+
+        builder.setCancelable(false)
+
+        builder.setPositiveButton(getString(R.string.dialogYes)) {
+                dialog, which -> super.finish()
+        }
+
+        builder.setNegativeButton(getString(R.string.dialogNo)) {
+                dialog, which -> dialog.cancel()
+        }
+
+        builder.setCustomTitle(titleView)
+
+
+        val alertDialog = builder.create()
+
+        alertDialog.setOnShowListener {
+            alertDialog.window?.setBackgroundDrawableResource(android.R.color.white)
+            alertDialog.findViewById<TextView>(android.R.id.message)?.setTextColor(Color.BLACK)
+        }
+        alertDialog.show()
     }
 }
