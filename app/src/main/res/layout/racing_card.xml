@@ -85,6 +85,7 @@
             <TextView
                 android:id="@+id/eventTitle"
                 android:layout_width="match_parent"
+                android:textColor="@color/darkGray"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textSize="11sp" />

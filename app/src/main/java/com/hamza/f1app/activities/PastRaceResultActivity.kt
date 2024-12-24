@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.R
 import com.hamza.f1app.adapters.RecyclerViewPastRaceResultAdapter
 import com.hamza.f1app.data.resultats
+import com.hamza.f1app.data.resultats2021
 
 class PastRaceResultActivity: AppCompatActivity() {
 
@@ -27,9 +28,14 @@ class PastRaceResultActivity: AppCompatActivity() {
         }
         window.statusBarColor = ContextCompat.getColor(this, R.color.f1red)
         val raceId = intent?.extras?.getInt("raceId")!!.toInt()
+        val season = intent?.extras?.getString("season")!!
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = RecyclerViewPastRaceResultAdapter(resultats[raceId], this)
+        if (season == "2024") {
+            recyclerView.adapter = RecyclerViewPastRaceResultAdapter(resultats[raceId], this)
+        } else if (season == "2021") {
+            recyclerView.adapter = RecyclerViewPastRaceResultAdapter(resultats2021[raceId], this)
+        }
     }
 }

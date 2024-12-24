@@ -47,8 +47,8 @@
     <string name="race_distance_title">Distance de la Course</string>
     <string name="grand_prix_weekend">WEEK-END DU GRAND PRIX</string>
     <string name="days">JOURS</string>
-    <string name="hrs">HEURES</string>
-    <string name="mins">MINUTES</string>
+    <string name="hrs">HRS</string>
+    <string name="mins">MINS</string>
     <string name="rolex_logo">logo Rolex</string>
     <string name="Upcoming">À Venir</string>
     <string name="Past">Passé</string>

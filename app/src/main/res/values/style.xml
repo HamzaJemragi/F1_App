@@ -178,7 +178,9 @@
         <item name="android:textColor">@color/f1red</item>
     </style>
 
-
+    <style name="spinnerText" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/darkGray</item>
+    </style>
 
     <!-- FOR TEST -->
     <style name="BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">

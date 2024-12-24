@@ -50,6 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginVertical="7dp"
+        android:textColor="@color/white"
         android:background="@drawable/view_results_button"
         android:text="@string/view_results_button"
         app:layout_constraintWidth_percent="0.95"

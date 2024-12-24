@@ -4,6 +4,7 @@ import com.hamza.f1app.Models.Race
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
@@ -13,6 +14,7 @@ import com.hamza.f1app.R
 import com.hamza.f1app.activities.PastRaceInfosActivity
 import com.hamza.f1app.adapters.PastRaceAdapter
 import com.hamza.f1app.data.races
+import com.hamza.f1app.data.races2021
 
 class PastRacingFragment : Fragment(R.layout.recyclerview_past_racing_fragment) {
     override fun onViewCreated(
@@ -24,22 +26,6 @@ class PastRacingFragment : Fragment(R.layout.recyclerview_past_racing_fragment) 
         val spinner = view.findViewById<Spinner>(R.id.spinner)
         val recyclerView = view.findViewById<RecyclerView>(R.id.racingRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val pastRaces = mutableListOf<Race>()
-        for (i in (0..< races.size)) {
-            if (races[i].resultats != null) {
-                pastRaces.add(races[i])
-            }
-        }
-
-        val adapter = PastRaceAdapter(requireContext(), pastRaces, object : PastRaceAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int) {
-                val intent = Intent(context, PastRaceInfosActivity::class.java)
-                intent.putExtra("raceId", position)
-                startActivity(intent)
-            }
-        })
-        recyclerView.adapter = adapter
-
         val years = (2024 downTo 1950).toList()
 
         val spinnerAdapter =
@@ -47,13 +33,68 @@ class PastRacingFragment : Fragment(R.layout.recyclerview_past_racing_fragment) 
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = spinnerAdapter
 
-//        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-//                val selectedItem = parent.getItemAtPosition(position).toString()
-//                Toast.makeText(this@RacingActivity, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
-//            }
-//
-//            override fun onNothingSelected(parent: AdapterView<*>) {}
-//        }
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+                val selectedItem = parent.getItemAtPosition(position).toString()
+                if (selectedItem == "2024") {
+                    val pastRaces = mutableListOf<Race>()
+                    for (i in (0..<races.size)) {
+                        if (races[i].resultats != null) {
+                            pastRaces.add(races[i])
+                        }
+                    }
+
+                    val adapter = PastRaceAdapter(
+                        requireContext(),
+                        pastRaces,
+                        object : PastRaceAdapter.OnItemClickListener {
+                            override fun onItemClick(position: Int) {
+                                val intent = Intent(context, PastRaceInfosActivity::class.java)
+                                intent.putExtra("raceId", position)
+                                intent.putExtra("season", selectedItem)
+                                startActivity(intent)
+                            }
+                        })
+                    recyclerView.adapter = adapter
+                } else if (selectedItem == "2021") {
+                    val pastRaces = mutableListOf<Race>()
+                    for (i in (0..<races2021.size)) {
+                        if (races2021[i].resultats != null) {
+                            pastRaces.add(races2021[i])
+                        }
+                    }
+
+                    val adapter = PastRaceAdapter(
+                        requireContext(),
+                        pastRaces,
+                        object : PastRaceAdapter.OnItemClickListener {
+                            override fun onItemClick(position: Int) {
+                                val intent = Intent(context, PastRaceInfosActivity::class.java)
+                                intent.putExtra("raceId", position)
+                                intent.putExtra("season", selectedItem)
+                                startActivity(intent)
+                            }
+                        })
+                    recyclerView.adapter = adapter
+                } else {
+                    val pastRaces = mutableListOf<Race>()
+
+                    val adapter = PastRaceAdapter(
+                        requireContext(),
+                        pastRaces,
+                        object : PastRaceAdapter.OnItemClickListener {
+                            override fun onItemClick(position: Int) {
+                                val intent = Intent(context, PastRaceInfosActivity::class.java)
+                                intent.putExtra("raceId", position)
+                                intent.putExtra("season", selectedItem)
+                                startActivity(intent)
+                            }
+                        })
+                    recyclerView.adapter = adapter
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
+        }
     }
 }

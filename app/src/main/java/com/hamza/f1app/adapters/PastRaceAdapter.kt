@@ -11,7 +11,6 @@ import androidx.core.content.ContextCompat.getString
 import androidx.recyclerview.widget.RecyclerView
 import com.hamza.f1app.Models.Race
 import com.hamza.f1app.R
-import com.hamza.f1app.activities.PastRaceInfosActivity
 
 class PastRaceAdapter(
     private val context: Context,

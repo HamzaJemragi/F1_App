@@ -46,6 +46,7 @@
 
                 <TextView
                     android:id="@+id/year"
+                    android:textColor="@color/darkGray"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp" />
@@ -54,6 +55,7 @@
 
             <TextView
                 android:id="@+id/circuitName"
+                android:textColor="@color/darkGray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

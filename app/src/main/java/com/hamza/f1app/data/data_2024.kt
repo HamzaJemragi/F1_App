@@ -1,7 +1,5 @@
 package com.hamza.f1app.data
 
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.core.content.ContextCompat.getString
 import com.hamza.f1app.Models.Circuit
 import com.hamza.f1app.Models.Constructor
 import com.hamza.f1app.Models.Driver
@@ -37,7 +35,6 @@ val countries = listOf(
     Country("Qatar", R.drawable.flag_qatar),
     Country("Abu Dhabi", R.drawable.flag_abudhabi)
 )
-
 
 val circuits = listOf(
     Circuit(
@@ -282,7 +279,6 @@ val circuits = listOf(
         24
     )
 )
-
 
 var drivers = listOf(
     Driver(
@@ -687,7 +683,6 @@ var drivers = listOf(
     ),
 )
 
-
 val constructors = listOf(
     Constructor(
         1,
@@ -749,6 +744,7 @@ val constructors = listOf(
         listOf(drivers[11], drivers[18]), R.drawable.car_rb, 1, 0, "1 (x2)"
     )
 )
+
 val Bio = mapOf<Int, String>(
     1 to "Born in London but racing under the flag of Thailand, Alexander Albon’s first word was in fact Italian. That word was Ferrari – though it was with another Italian team that he got his big F1 break.\n" +
             "\n" +
@@ -1292,9 +1288,29 @@ val races = listOf(
     )
 )
 
-
 var latest = listOf(
-    Latest(1, R.string.feature,R.string.news_lawsonTitle,"19-04-2024",R.drawable.news_lawson,R.string.news_lawsonContent),
-    Latest(2, R.string.news,R.string.news_bottasTitle,"19-04-2024",R.drawable.news_bottas,R.string.news_bottasContent),
-    Latest(3, R.string.news,R.string.news_perezTitle,"19-04-2024",R.drawable.news_perez,R.string.news_perezContent)
+    Latest(
+        1,
+        R.string.feature,
+        R.string.news_lawsonTitle,
+        "19-04-2024",
+        R.drawable.news_lawson,
+        R.string.news_lawsonContent
+    ),
+    Latest(
+        2,
+        R.string.news,
+        R.string.news_bottasTitle,
+        "19-04-2024",
+        R.drawable.news_bottas,
+        R.string.news_bottasContent
+    ),
+    Latest(
+        3,
+        R.string.news,
+        R.string.news_perezTitle,
+        "19-04-2024",
+        R.drawable.news_perez,
+        R.string.news_perezContent
+    )
 )
