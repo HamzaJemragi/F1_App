@@ -18,21 +18,23 @@
             android:layout_height="wrap_content"
             android:textColor="@color/darkGray"
             android:layout_marginHorizontal="20dp"
-            app:layout_constraintWidth_percent="0.05"
+            app:layout_constraintWidth_percent="0.075"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"/>
 
         <View
             android:id="@+id/viewResult"
             android:layout_width="2dp"
             android:layout_height="35dp"
             android:layout_marginVertical="10dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
             android:background="@color/mercedesColor"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/positionValue" />
+            app:layout_constraintStart_toEndOf="@id/positionValue"
+            app:layout_constraintEnd_toStartOf="@id/driverLastNameValue"/>
 
         <TextView
             android:id="@+id/driverLastNameValue"

@@ -86,7 +86,12 @@ class PastRaceScheduleFragment(val raceId: Int, val season: String): Fragment() 
                 val intent = Intent(context, PastRaceResultActivity::class.java)
                 intent.putExtra("raceId", raceId)
                 intent.putExtra("season", season)
-                startActivity(intent)
+                val options = android.app.ActivityOptions.makeCustomAnimation(
+                    requireContext(),
+                    R.anim.slide_in_right,
+                    R.anim.slide_out_left
+                )
+                startActivity(intent, options.toBundle())
             }
             reliveTheActionText.text = getString(R.string.relive_the_action)
             raceTitleText.text = pastRaces[raceId].nom
@@ -101,7 +106,12 @@ class PastRaceScheduleFragment(val raceId: Int, val season: String): Fragment() 
                 val intent = Intent(context, PastRaceResultActivity::class.java)
                 intent.putExtra("raceId", raceId)
                 intent.putExtra("season", season)
-                startActivity(intent)
+                val options = android.app.ActivityOptions.makeCustomAnimation(
+                    requireContext(),
+                    R.anim.slide_in_right,
+                    R.anim.slide_out_left
+                )
+                startActivity(intent, options.toBundle())
             }
         } else if (season == "2021") {
             for (i in (0..<races2021.size)) {
@@ -155,7 +165,12 @@ class PastRaceScheduleFragment(val raceId: Int, val season: String): Fragment() 
                 val intent = Intent(context, PastRaceResultActivity::class.java)
                 intent.putExtra("raceId", raceId)
                 intent.putExtra("season", season)
-                startActivity(intent)
+                val options = android.app.ActivityOptions.makeCustomAnimation(
+                    requireContext(),
+                    R.anim.slide_in_right,
+                    R.anim.slide_out_left
+                )
+                startActivity(intent, options.toBundle())
             }
             reliveTheActionText.text = getString(R.string.relive_the_action)
             raceTitleText.text = pastRaces[raceId].nom
@@ -170,7 +185,12 @@ class PastRaceScheduleFragment(val raceId: Int, val season: String): Fragment() 
                 val intent = Intent(context, PastRaceResultActivity::class.java)
                 intent.putExtra("raceId", raceId)
                 intent.putExtra("season", season)
-                startActivity(intent)
+                val options = android.app.ActivityOptions.makeCustomAnimation(
+                    requireContext(),
+                    R.anim.slide_in_right,
+                    R.anim.slide_out_left
+                )
+                startActivity(intent, options.toBundle())
             }
         }
     }

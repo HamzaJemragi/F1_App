@@ -38,4 +38,10 @@ class PastRaceResultActivity: AppCompatActivity() {
             recyclerView.adapter = RecyclerViewPastRaceResultAdapter(resultats2021[raceId], this)
         }
     }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+
+    }
 }

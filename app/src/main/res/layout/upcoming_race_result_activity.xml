@@ -15,14 +15,18 @@
         android:orientation="vertical"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imageView"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/pastRacingTextView"
             style="@style/TitlesFontStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RACE RESULT"/>
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/race_result_title"/>
 
     </LinearLayout>
 
@@ -41,7 +45,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintHeight_percent="0.155"
-        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintWidth_percent="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"

@@ -10,15 +10,18 @@
     <LinearLayout
         android:id="@+id/racingLinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="vertical"
         android:background="@color/f1red"
+        app:layout_constraintHeight_percent="0.06"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center">
 
         <TextView
             style="@style/TitlesFontStyle"
             android:id="@+id/pastRacingTextView"
+            android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
