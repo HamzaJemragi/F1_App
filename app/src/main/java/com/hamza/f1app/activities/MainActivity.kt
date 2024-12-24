@@ -28,7 +28,7 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_second)
+        setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.secondActivity)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
